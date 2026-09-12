@@ -411,7 +411,7 @@ public final class ModuleManager {
     // ── tick ─────────────────────────────────────────────────────────────────
     public boolean onKeyPressed(int keyCode) {
         if (clickGui.getKeybind().matches(keyCode)) {
-            clickGui.toggle();
+            openGuiAction.run();
             return true;
         }
         boolean handled = false;
