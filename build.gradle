@@ -1,0 +1,80 @@
+plugins {
+    id 'fabric-loom' version '1.16.3'
+}
+
+version = '1.0.0'
+group = 'com.feclient'
+base { archivesName = 'feclient' }
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+    maven { url = 'https://repo.spongepowered.org/maven' }
+    // Keep only essential repos; remove custom ones that may not work
+    maven { name = "CCBlueX Releases"; url = uri("https://maven.ccbluex.net/releases") }
+    maven { name = "CCBlueX Snapshots"; url = uri("https://maven.ccbluex.net/snapshots") }
+    maven { name = "Jitpack"; url = uri("https://jitpack.io") }
+}
+
+configurations.all {
+    exclude group: 'com.github.ccbluex', module: 'minecraftauth'
+}
+
+configurations {
+    // Keep shade for local imgui JARs only
+    shade {
+        canBeResolved = true
+    }
+}
+
+dependencies {
+    // Minecraft base
+    minecraft "com.mojang:minecraft:1.21.11"
+    mappings "net.fabricmc:yarn:1.21.11+build.6:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.19.3"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11"
+
+    // From 67Client - NanoVG (not in vanilla MC, must be shaded)
+    implementation "org.lwjgl:lwjgl-nanovg:3.3.3"
+    shade "org.lwjgl:lwjgl-nanovg:3.3.3"
+    shade "org.lwjgl:lwjgl-nanovg:3.3.3:natives-windows"
+
+    // From CodeEngine – local JARs
+    implementation files('libs/fabric-gui-imgui-1.21.11-1.0.11+imgui.1.92.0.jar')
+    implementation files('libs/imgui-java-binding-1.92.0.jar', 'libs/imgui-java-lwjgl3-1.92.0.jar')
+    shade files('libs/imgui-java-binding-1.92.0.jar', 'libs/imgui-java-lwjgl3-1.92.0.jar', 'libs/imgui-java-natives-windows-1.92.0.jar')
+
+    // mixin AP removed — loom handles mixin at runtime
+}
+
+loom {
+    mixin {
+        defaultRefmapName = 'feclient-refmap.json'
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+    withSourcesJar()
+}
+
+processResources {
+    filesMatching('fabric.mod.json') {
+        expand(version: project.version)
+    }
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    // Only shade the local imgui JARs (from configurations.shade)
+    from(configurations.shade.files.collect { zipTree(it) }) {
+        exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+    }
+}

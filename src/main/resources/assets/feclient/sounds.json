@@ -1,0 +1,16 @@
+{
+	"ui.gui_open": {"sounds": ["feclient:ui/gui_open"]},
+	"ui.gui_close": {"sounds": ["feclient:ui/gui_close"]},
+	"ui.hover": {"sounds": ["feclient:ui/hover"]},
+	"ui.toggle_on": {"sounds": ["feclient:ui/toggle_on"]},
+	"ui.toggle_off": {"sounds": ["feclient:ui/toggle_off"]},
+	"ui.slider": {"sounds": ["feclient:ui/slider"]},
+	"ui.select": {"sounds": ["feclient:ui/select"]},
+	"ui.keybind": {"sounds": ["feclient:ui/keybind"]},
+	"ui.notify_on": {"sounds": ["feclient:ui/notify_on"]},
+	"ui.notify_off": {"sounds": ["feclient:ui/notify_off"]},
+	"startup.sad": {"sounds": [{"name": "feclient:startup/startup_sad", "stream": true}]},
+	"startup.song": {"sounds": [{"name": "feclient:startup/startup_song", "stream": true}]},
+	"startup.tiki": {"sounds": [{"name": "feclient:startup/startup_tiki", "stream": true}]},
+	"startup.main": {"sounds": [{"name": "feclient:startup/startup_main", "stream": true}]}
+}

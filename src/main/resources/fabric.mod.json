@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "feclient",
+  "version": "${version}",
+  "name": "feClient",
+  "description": "feClient — built by fede",
+  "authors": ["fede"],
+  "contact": {},
+  "license": "All Rights Reserved",
+  "icon": "assets/feclient/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.fede.FeClient"
+    ]
+  },
+  "mixins": [
+    "feclient.mixins.json",
+    "feclient.nyx.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21"
+  }
+}

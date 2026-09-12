@@ -1,0 +1,17 @@
+{
+  "ui.gui_open": {
+    "sounds": [
+      "water:ui/gui_open"
+    ]
+  },
+  "ui.gui_close": {
+    "sounds": [
+      "water:ui/gui_close"
+    ]
+  },
+  "ui.module_on": {
+    "sounds": [
+      "water:ui/module_on"
+    ]
+  }
+}

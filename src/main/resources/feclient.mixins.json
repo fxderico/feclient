@@ -1,0 +1,42 @@
+{
+  "required": true,
+  "package": "dev.fede.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "AbstractClientPlayerMixin",
+    "AbstractContainerScreenAccessor",
+    "CameraFreeLookMixin",
+    "CameraFreecamMixin",
+    "ChatComponentMixin",
+    "ClientInputAccessor",
+    "ClientPacketListenerMixin",
+    "EntityFreeLookMixin",
+    "EntityFreecamMixin",
+    "EntityHitboxMixin",
+    "EquipmentLayerRendererMixin",
+    "KeyMappingAccessor",
+    "EntityNameTagMixin",
+    "GameRendererMixin",
+    "GuiCrosshairMixin",
+    "GuiNametagEquipmentMixin",
+    "GuiSidebarMixin",
+    "KeyboardInputFreecamMixin",
+    "KeyboardHandlerMixin",
+    "LevelRendererMixin",
+    "LightPacketMixin",
+    "LightTextureMixin",
+    "LivingEntityJumpMixin",
+    "LivingEntitySwingMixin",
+    "LocalPlayerFreecamMixin",
+    "MinecraftAccessor",
+    "MouseHandlerFreecamMixin",
+    "MouseHandlerMixin",
+    "MultiPlayerGameModeAttackMixin",
+    "PlayerTabOverlayMixin",
+    "XRayBlockCullMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "feclient.mixins.refmap.json"
+}

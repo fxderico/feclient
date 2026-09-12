@@ -1,0 +1,18 @@
+{
+    "vertex": "hysteria:tapered_line_vertex",
+    "fragment": "hysteria:tapered_line_fragment",
+    "samplers": [],
+    "uniforms": [
+        {
+            "name": "Uniforms",
+            "type": "matrix4x4",
+            "count": 16,
+            "values": [
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ]
+        }
+    ]
+}
