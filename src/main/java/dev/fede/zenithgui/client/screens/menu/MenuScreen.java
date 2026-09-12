@@ -99,6 +99,7 @@ public class MenuScreen extends CustomScreen {
         this.animationClose.setValue(0.0F);
         this.animationClose.update(1.0F);
         if (!this.initialized) {
+            this.initialize();
             this.searchField = new TextBox(
                 new Vector2f(this.boxX + this.boxWidth - 128.0F - 8.0F, this.boxY + 8.0F), Fonts.MEDIUM.getFont(7.0F), "Search", 100.0F
             );
@@ -481,6 +482,7 @@ public class MenuScreen extends CustomScreen {
 
     @Override
     public void render(UIContext context, float mouseX, float mouseY) {
+        renderTop(context, mouseX, mouseY);
     }
 
         public int getColumns() {
