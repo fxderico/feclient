@@ -25,7 +25,10 @@ public class KeyboardHandlerMixin {
    )
    private void FeClient$dispatchModuleKeybinds(long window, int action, KeyInput keyEvent, CallbackInfo ci) {
       MinecraftClient minecraft = MinecraftClient.getInstance();
-      if (FeClient.modules() != null && action == 1) {
+      if (FeClient.modules() == null) return;
+
+      // PRESS (action=1): open or toggle the GUI
+      if (action == 1) {
          if (minecraft.currentScreen == null && minecraft.world != null) {
             if (FeClient.modules().onKeyPressed(keyEvent.key())) {
                ci.cancel();
@@ -33,6 +36,17 @@ public class KeyboardHandlerMixin {
          } else {
             if ((keyEvent.key() == 340 || keyEvent.key() == 344) && minecraft.currentScreen != null && shiftOpensGui(minecraft.currentScreen)) {
                minecraft.setScreen(new ClickGuiScreen(minecraft.currentScreen));
+               ci.cancel();
+            }
+         }
+      }
+
+      // REPEAT (action=2): swallow repeat events for the GUI keybind so holding
+      // the key doesn't immediately close the screen that was just opened on PRESS.
+      if (action == 2) {
+         if (minecraft.currentScreen instanceof ClickGuiScreen) {
+            int key = keyEvent.key();
+            if (key == 340 || key == 344 || (FeClient.modules() != null && FeClient.modules().clickGui.getKeybind().matches(key))) {
                ci.cancel();
             }
          }
