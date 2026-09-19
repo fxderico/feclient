@@ -29,7 +29,13 @@ public class ChunkFinderModule extends Module {
    private static volatile ChunkFinderModule chunkFinderModule;
 
    public ChunkFinderModule() {
-      super("ChunkFinder", "Wireframe overlay on newly-loaded chunks — reveals server chunk-streaming pattern", Category.DONUTSMP);
+      // renamed from "ChunkFinder" — collided (different exact string) with
+      // native ChunkFinderModule's "Chunk Finder", an unrelated tool despite
+      // the near-identical name: native highlights chunks matching a rare
+      // world signal (base-detection heuristic), this one wireframes every
+      // newly-streamed chunk (a network/render diagnostic). Both real,
+      // renamed to stop looking like a broken duplicate in the GUI.
+      super("Chunk Stream", "Wireframe overlay on newly-loaded chunks — reveals server chunk-streaming pattern", Category.DONUTSMP);
       this.run6(new Setting[]{this.displayMs, this.alpha, this.seenTtl, this.color});
       run3();
    }

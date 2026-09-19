@@ -28,7 +28,12 @@ public class AutoTotemModule extends Module {
    private InventoryScreen class490;
 
    public AutoTotemModule() {
-      super("AutoTotem", "Keeps a Totem of Undying in the offhand — health-triggered or instant-refill.", Category.COMBAT);
+      // renamed from "AutoTotem" — collided (different exact string) with
+      // native AutoTotemModule's "Auto Totem", a different mechanism:
+      // native is hotbar-select + F-swap (+ inventory swap when needed),
+      // this one is health-triggered/instant-refill. Both real, renamed to
+      // stop looking like a broken duplicate in the GUI.
+      super("Totem Guard", "Keeps a Totem of Undying in the offhand — health-triggered or instant-refill.", Category.COMBAT);
       this.run6(new Setting[]{this.mode, this.healthThreshold, this.onlyIfDamageIncoming, this.delayTicks, this.notifyOnSwap, this.openInventory});
       this.healthThreshold.visibleWhen(this::getBoolean3);
       this.onlyIfDamageIncoming.visibleWhen(this::getBoolean2);

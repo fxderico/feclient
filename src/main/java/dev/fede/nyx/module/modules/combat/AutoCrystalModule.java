@@ -48,7 +48,13 @@ public class AutoCrystalModule extends Module {
    private BlockPos class2338;
 
    public AutoCrystalModule() {
-      super("AutoCrystal", "Places and detonates end crystals on nearby targets", Category.COMBAT);
+      // renamed from "AutoCrystal" — that collided (different exact string,
+      // so register()'s dedup missed it) with native AutoCrystalModule's
+      // "Auto Crystal", a genuinely different tool: native is an RMB-held
+      // manual place+break macro, this one is a fully autonomous aura that
+      // places/detonates on its own. Both are real, both stay — renamed so
+      // the GUI doesn't look like it has a broken duplicate.
+      super("Crystal Aura", "Places and detonates end crystals on nearby targets", Category.COMBAT);
       this.placeBox.visibleWhen(this.renderPredictions::getValue);
       this.breakBox.visibleWhen(this.renderPredictions::getValue);
       this.maxSelfDamage.visibleWhen(this.antiSuicide::getValue);

@@ -13,7 +13,7 @@ public class ZoomModule extends Module {
    private long lastNanos = 0L;
 
    public ZoomModule() {
-      super("Zoom", "Optical zoom on a key", Category.RENDER);
+      super("Zoom", "Optical zoom on a key", Category.MISC);
    }
 
    public double currentFactor() {

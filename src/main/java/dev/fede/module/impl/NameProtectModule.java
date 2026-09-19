@@ -42,7 +42,7 @@ public class NameProtectModule extends Module {
    private ClientPlayNetworkHandler lastConnection = null;
 
    public NameProtectModule() {
-      super("NameProtect", "Hides player names in clips", Category.CLIENT);
+      super("NameProtect", "Hides player names in clips", Category.MISC);
    }
 
    private String selfName() {

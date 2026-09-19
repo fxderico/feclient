@@ -389,7 +389,11 @@ public final class ModuleManager {
         h2o(new dev.fede.water.module.modules.misc.AutoMine(),            Category.PLAYER);
         h2o(new dev.fede.water.module.modules.misc.HomeSetter(),          Category.PLAYER);
         h2o(new dev.fede.water.module.modules.misc.Sprint(),              Category.MOVEMENT);
-        h2o(new dev.fede.water.module.modules.misc.ChatMacro(),           Category.PLAYER);
+        // water's ChatMacro removed — genuinely the same feature as native
+        // ChatMacroModule (bindable chat macros), just fewer settings (5
+        // fixed slots, no "send instantly" preview toggle). Different exact
+        // name ("Chat Macro" vs "ChatMacro") meant register()'s dedup never
+        // caught it, so both sat in the GUI as separate entries.
 
         // RENDER — all water render modules removed (decompiler type errors)
     }
