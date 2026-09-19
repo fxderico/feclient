@@ -1,0 +1,22 @@
+# Per-version dependency coordinates. See https://stonecutter.kikugie.dev/wiki/config/properties
+mod.id = "feclient"
+mod.version = "1.0.0"
+deps.fabric_loader = "0.19.5"
+# loom-back-compat needs to know which loom (remap) version to use per
+# mapping scheme it picks — this is its own version, not fabric-loom's.
+loomx.loom_version = "1.17-SNAPSHOT"
+
+["1.21.11"]
+deps.fabric_api = "0.141.6+1.21.11"
+# only version on the list still using Yarn mappings — 26.1+ uses Mojang's
+# official mappings instead (loom-back-compat handles picking the right one).
+deps.yarn = "1.21.11+build.6:v2"
+
+["26.1.x"]
+deps.fabric_api = "0.155.3+26.1.2"
+
+["26.2"]
+deps.fabric_api = "0.161.0+26.2"
+
+["26.3"]
+deps.fabric_api = "0.161.0+26.3"

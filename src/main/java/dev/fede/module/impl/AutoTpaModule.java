@@ -24,7 +24,7 @@ public class AutoTpaModule extends Module {
    private String lastSent;
 
    public AutoTpaModule() {
-      super("AutoTPA", "Spams TPA requests at a target on a humanized timer.", Category.MISC);
+      super("AutoTPA", "Spams TPA requests at a target on a humanized timer.", Category.DONUT);
    }
 
    @Override

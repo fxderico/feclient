@@ -33,7 +33,7 @@ public class CustomGlintModule extends Module {
    public final SliderSetting speed = this.addSetting(new SliderSetting("Speed", "Rainbow cycle speed", 100.0, 10.0, 300.0, 10.0, "%"));
 
    public CustomGlintModule() {
-      super("CustomGlint", "Recolors or restyles the enchantment glint", Category.MISC);
+      super("CustomGlint", "Recolors or restyles the enchantment glint", Category.ADDONS);
       this.mode.visibleWhen(() -> this.style.check("Default"));
       this.color.visibleWhen(() -> this.style.check("Default") && this.mode.check("Solid"));
       this.speed.visibleWhen(() -> this.style.check("Default") && this.mode.check("Rainbow"));

@@ -14,6 +14,7 @@ import dev.fede.render.JumpCircleRenderer;
 import dev.fede.render.MiscBlockEspRenderer;
 import dev.fede.render.StorageEspRenderer;
 import dev.fede.render.SusChunkRenderer;
+import dev.fede.render.SeedCaveXrayRenderer;
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.render.VertexConsumerProvider.Immediate;
 import net.minecraft.client.render.state.OutlineRenderState;
@@ -64,12 +65,20 @@ public class LevelRendererMixin {
             HoleEspRenderer.render(bufferSource, poseStack, levelRenderState.cameraRenderState.pos, modules.debugHoleEsp);
          }
 
+         if (translucentPass && modules.xRay != null && modules.xRay.isEnabled()) {
+            SeedCaveXrayRenderer.render(bufferSource, poseStack, levelRenderState.cameraRenderState.pos, modules.xRay);
+         }
+
          if (translucentPass && modules.playerEsp != null && modules.playerEsp.isEnabled()) {
             EntityEspRenderer.renderPlayers(bufferSource, poseStack, levelRenderState.cameraRenderState.pos, modules.playerEsp);
          }
 
          if (translucentPass && modules.mobEsp != null && modules.mobEsp.isEnabled()) {
             EntityEspRenderer.renderMobs(bufferSource, poseStack, levelRenderState.cameraRenderState.pos, modules.mobEsp);
+         }
+
+         if (translucentPass && modules.friendlyMobEsp != null && modules.friendlyMobEsp.isEnabled()) {
+            EntityEspRenderer.renderFriendlyMobs(bufferSource, poseStack, levelRenderState.cameraRenderState.pos, modules.friendlyMobEsp);
          }
 
          if (translucentPass && modules.jumpCircles != null && modules.jumpCircles.isEnabled()) {

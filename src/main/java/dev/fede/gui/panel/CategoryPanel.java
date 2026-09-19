@@ -25,6 +25,10 @@ public class CategoryPanel extends Panel {
       for (Module module : modules.inCategory(category)) {
          this.entries.add(new ModuleEntry(module, themes, state));
       }
+      // was raw registration order (whatever order things got merged in over
+      // time — effectively random). sort alphabetically by display name so
+      // the list is actually scannable, same as most clickgui clients.
+      this.entries.sort((a, b) -> a.getModule().getDisplayName().compareToIgnoreCase(b.getModule().getDisplayName()));
    }
 
    public void setFilter(String query) {

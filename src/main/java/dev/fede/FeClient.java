@@ -1,5 +1,6 @@
 package dev.fede;
 
+import dev.fede.command.ViewCoordsCommand;
 import dev.fede.config.ConfigManager;
 import dev.fede.config.ConfigStore;
 import dev.fede.gui.ClickGuiScreen;
@@ -9,6 +10,7 @@ import dev.fede.module.Category;
 import dev.fede.module.ModuleManager;
 import dev.fede.module.impl.FreecamModule;
 import dev.fede.notification.NotificationManager;
+import dev.fede.render.EntityEspRenderer;
 import dev.fede.render.MotionBlurRenderer;
 import dev.fede.render.OverlayRenderer;
 import dev.fede.render.SusChunkRenderer;
@@ -28,8 +30,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * feClient — merged from 67Client (base), CodeEngine, and WaterSRC.
- * Primary GUI: 67Client NanoVG ClickGUI.
+ * feClient — merged from three source clients: the native base, CodeEngine, and WaterSRC.
+ * Primary GUI: the native NanoVG ClickGUI.
  * Module pool: all three clients, unified under ModuleManager.
  */
 public class FeClient implements ClientModInitializer {
@@ -102,12 +104,16 @@ public class FeClient implements ClientModInitializer {
         startupSoundPlayed = true; // set to true so it never fires
 
         GambleRiggerOverlay.register();
+        ViewCoordsCommand.register();
         spotify.start();
 
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> clearSusState());
         ClientPlayConnectionEvents.DISCONNECT.register((handler, client)       -> clearSusState());
 
-        ClientTickEvents.END_CLIENT_TICK.register(client -> modules.onTick());
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            modules.onTick();
+            EntityEspRenderer.tickGlow();
+        });
         ClientTickEvents.START_CLIENT_TICK.register(client -> {
             FreecamModule f = modules.freecam;
             if (f != null && f.isActive()) FreecamModule.reapplyBodyInput(client);
@@ -133,5 +139,6 @@ public class FeClient implements ClientModInitializer {
         if (modules.hitParticles      != null) modules.hitParticles.clear();
         if (modules.customAccessories != null) modules.customAccessories.clear();
         MotionBlurRenderer.reset();
+        EntityEspRenderer.clearGlow();
     }
 }

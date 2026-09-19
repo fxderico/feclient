@@ -20,7 +20,7 @@ public class CoordSnapperModule extends Module {
    private String lastCopied = "";
 
    public CoordSnapperModule() {
-      super("CoordSnapper", "Copies looked-at coordinates with one key.", Category.MISC);
+      super("CoordSnapper", "Copies looked-at coordinates with one key.", Category.CLIENT);
    }
 
    public String lastCopied() {

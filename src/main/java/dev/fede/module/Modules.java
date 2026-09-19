@@ -1,6 +1,6 @@
 package dev.fede.module;
 
-import dev.fede.zenithgui.client.screens.menu.MenuScreen;
+import dev.fede.gui.ClickGuiScreen;
 import dev.fede.render.SusChunkRenderer;
 import dev.fede.settings.BooleanSetting;
 import dev.fede.settings.ColorSetting;
@@ -44,7 +44,11 @@ public final class Modules {
          // Defer to next tick so we're not opening a screen inside a screen event.
          MinecraftClient mc = MinecraftClient.getInstance();
          mc.execute(() -> {
-            mc.setScreen(new MenuScreen());
+            // was opening zenithgui's MenuScreen here — inconsistent with the
+            // keybind path (FeClient wires the keybind to ClickGuiScreen), so
+            // clicking this module vs pressing the key opened two different
+            // menus. now both paths agree.
+            mc.setScreen(new ClickGuiScreen());
             setEnabled(false); // ClickGUI isn't a persistent on/off toggle
          });
       }

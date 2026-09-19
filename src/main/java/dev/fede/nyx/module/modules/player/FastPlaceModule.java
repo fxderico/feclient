@@ -19,8 +19,14 @@ public class FastPlaceModule extends Module {
       this.run6(new Setting[]{this.delay, this.onlyBlocks});
    }
 
+   // was run2() (onDisable — see the run()/run2()/run3() = enable/disable/tick
+   // convention every sibling module in this package follows, e.g. AutoEatModule,
+   // AutoToolModule). that meant the actual cooldown-suppression only fired once,
+   // the instant you turned the module OFF — the opposite of useless-but-harmless,
+   // it just plain never worked while enabled. run3() is onTick, which is what
+   // "removes the delay between right-click placements" actually needs.
    @Override
-   public void run2() {
+   public void run3() {
       if (class310.player != null && class310.world != null) {
          if (this.onlyBlocks.getValue()) {
             ItemStack var1 = class310.player.getMainHandStack();

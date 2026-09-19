@@ -4,7 +4,38 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
+        maven { name = 'KikuGie Releases'; url = 'https://maven.kikugie.dev/releases' }
+        maven { name = 'KikuGie Snapshots'; url = 'https://maven.kikugie.dev/snapshots' }
         gradlePluginPortal()
     }
 }
+
+plugins {
+    id 'dev.kikugie.stonecutter' version '0.9.8'
+}
+// loom-back-compat dropped: its dependency-block interception (mappings,
+// modImplementation, everything) uses kotlin functions with reified
+// generics that throw "can only be inlined at compilation time" the moment
+// groovy calls them directly — hit that on 3 different lines in a row, not
+// a one-off. going with the plain, groovy-native split instead, the exact
+// one already proven working tonight for the standalone 26.2 build:
+// `mappings "net.fabricmc:yarn:..."` for 1.21.11, `loom.officialMojangMappings()`
+// for 26.x, no extra plugin needed.
+
+stonecutter {
+    create(rootProject) {
+        versions('1.21.11')
+        // 26.1/26.1.1/26.1.2 share one fabric-api build on modrinth — one
+        // version node. built against base "26.1" specifically, not the
+        // later patches — loom couldn't find official mojang mappings
+        // published for 26.1.2 (or 26.1.1); patch-only releases don't
+        // always get their own fresh mappings file if the client jar's
+        // obfuscation didn't change from the version before it.
+        // version('26.1.x', '26.1')
+        // version('26.2', '26.2')
+        // version('26.3', '26.3')
+        vcsVersion = '1.21.11'
+    }
+}
+
 rootProject.name = 'feclient'

@@ -14,7 +14,7 @@ import net.minecraft.util.math.RotationAxis;
 import net.minecraft.util.math.Vec3d;
 
 public final class JumpCircleRenderer {
-   private static final Identifier TEXTURE_67 = Identifier.of("feclient", "textures/misc/fe_logo.png");
+   private static final Identifier TEXTURE_LOGO = Identifier.of("feclient", "textures/misc/fe_logo.png");
    private static final Identifier TEXTURE_RING = Identifier.of("feclient", "textures/misc/ring.png");
    private static final float POP_IN_TIME = 0.25F;
    private static final float FADE_OUT_TIME = 0.4F;
@@ -38,7 +38,7 @@ public final class JumpCircleRenderer {
          if (!circles.isEmpty()) {
             float size = module.size.getFloat();
             int baseRgb = currentBaseRgb(module);
-            VertexConsumer decalBuffer = bufferSource.getBuffer(RenderLayers.entityTranslucentEmissive(TEXTURE_67));
+            VertexConsumer decalBuffer = bufferSource.getBuffer(RenderLayers.entityTranslucentEmissive(TEXTURE_LOGO));
 
             for (JumpCirclesModule.JumpCircle circle : circles) {
                renderDecal(poseStack, decalBuffer, circle, cam, now, lifetime, size, baseRgb);

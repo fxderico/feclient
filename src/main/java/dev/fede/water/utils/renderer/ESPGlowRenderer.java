@@ -193,7 +193,10 @@ public final class ESPGlowRenderer {
    private static String loadShader(String var0) {
       try {
          String var2;
-         try (InputStream var1 = ESPGlowRenderer.class.getResourceAsStream("/assets/water/shaders/" + var0)) {
+         // was "/assets/water/shaders/" — dead path since the original-client
+         // merge moved everything under the feclient resource namespace;
+         // this class never actually loaded a shader successfully until now.
+         try (InputStream var1 = ESPGlowRenderer.class.getResourceAsStream("/assets/feclient/water/shaders/" + var0)) {
             if (var1 == null) {
                throw new RuntimeException("Not found: " + var0);
             }

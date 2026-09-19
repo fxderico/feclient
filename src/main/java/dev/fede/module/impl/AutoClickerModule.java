@@ -26,7 +26,7 @@ public class AutoClickerModule extends Module {
    private int rightTimer;
 
    public AutoClickerModule() {
-      super("AutoClicker", "Automatically clicks.", Category.MISC);
+      super("AutoClicker", "Automatically clicks.", Category.COMBAT);
       this.leftDelay.visibleWhen(() -> this.leftMode.check("Press"));
       this.rightDelay.visibleWhen(() -> this.rightMode.check("Press"));
    }

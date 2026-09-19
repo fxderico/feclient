@@ -65,6 +65,10 @@ public class ClickGuiScreen extends Screen implements NvgDrawable {
       ThemeManager themes = FeClient.themes();
 
       for (Category category : Category.values()) {
+         // skip categories with zero registered modules — an empty tab (Misc
+         // and Themes both land here once their contents get sorted into
+         // better-fitting categories) is just clutter, not a real section.
+         if (modules.inCategory(category).isEmpty()) continue;
          this.panels.add(new CategoryPanel(category, modules, themes, STATE));
       }
 

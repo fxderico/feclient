@@ -9,7 +9,6 @@ import dev.fede.nyx.module.modules.addons.GlintCustomiserModule;
 import dev.fede.nyx.module.modules.addons.HitParticlesModule;
 import dev.fede.nyx.module.modules.addons.KillEffectsModule;
 import dev.fede.nyx.module.modules.addons.PlayerParticlesModule;
-import dev.fede.nyx.module.modules.addons.SpotifyHUDModule;
 import dev.fede.nyx.module.modules.client.ChatFilter;
 import dev.fede.nyx.module.modules.client.ChromaXPModule;
 import dev.fede.nyx.module.modules.client.ClickGUIModule;
@@ -264,7 +263,6 @@ public final class ModuleManager {
       this.run2(new HitParticlesModule());
       this.run2(new BreakParticlesModule());
       this.run2(new DragonWingsModule());
-      this.run2(new SpotifyHUDModule());
       this.run2(new KillEffectsModule());
       this.list.sort(ModuleManager::intOf);
    }

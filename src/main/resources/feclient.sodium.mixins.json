@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "package": "dev.fede.mixin.sodium",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "dev.fede.mixin.sodium.SodiumMixinPlugin",
+  "client": [
+    "SodiumXRayCullMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "feclient.sodium.mixins.refmap.json"
+}

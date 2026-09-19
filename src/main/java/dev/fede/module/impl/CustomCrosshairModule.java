@@ -25,7 +25,7 @@ public class CustomCrosshairModule extends Module {
    public final BooleanSetting hideVanilla = this.addSetting(new BooleanSetting("Hide Vanilla", "Hide Minecraft's default crosshair", true));
 
    public CustomCrosshairModule() {
-      super("CustomCrosshair", "Draws a custom crosshair", Category.MISC);
+      super("CustomCrosshair", "Draws a custom crosshair", Category.RENDER);
    }
 
    public boolean shouldHideVanilla() {

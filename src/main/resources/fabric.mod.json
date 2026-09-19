@@ -16,7 +16,8 @@
   },
   "mixins": [
     "feclient.mixins.json",
-    "feclient.nyx.mixins.json"
+    "feclient.nyx.mixins.json",
+    "feclient.sodium.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.0",

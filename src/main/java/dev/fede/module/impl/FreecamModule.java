@@ -11,6 +11,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.option.Perspective;
 import net.minecraft.client.world.ClientChunkManager;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.PlayerInput;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
@@ -52,6 +53,13 @@ public class FreecamModule extends Module {
    private int lastSyncedLoadDistance = Integer.MIN_VALUE;
    private boolean activationPending;
    private boolean active = false;
+   // set by ViewModule ("spectate this player"): when non-null, onTick()
+   // drives currentX/Y/Z/Yaw/Pitch from the target's own position each tick
+   // instead of reading WASD, everything else (camera hijack via
+   // CameraFreecamMixin, chunk loading via syncFreecamChunkLoading) is
+   // reused as-is.
+   private Entity followTarget;
+   private boolean activatedByFollow;
    private boolean latchedForward;
    private boolean latchedBack;
    private boolean latchedLeft;
@@ -62,7 +70,7 @@ public class FreecamModule extends Module {
    private int autopilotWarmupTicks;
 
    public FreecamModule() {
-      super("Freecam", "Detached camera (WASD = fly). Body can keep walking; mining uses real aim.", Category.MISC);
+      super("Freecam", "Detached camera (WASD = fly). Body can keep walking; mining uses real aim.", Category.MOVEMENT);
       instance = this;
    }
 
@@ -82,6 +90,8 @@ public class FreecamModule extends Module {
       this.clearMovementLatches();
       this.activationPending = false;
       this.active = false;
+      this.followTarget = null;
+      this.activatedByFollow = false;
       if (this.switchedPerspectiveForBody) {
          mc.options.setPerspective(this.perspectiveBeforeFreecam);
          this.switchedPerspectiveForBody = false;
@@ -256,12 +266,62 @@ public class FreecamModule extends Module {
       this.autopilotWarmupTicks = 0;
    }
 
+   /** Called by ViewModule when it starts spectating someone. Turns freecam on if it isn't already, and switches it into follow mode instead of WASD flight. */
+   public void startFollowing(Entity target) {
+      if (!this.isEnabled()) {
+         this.activatedByFollow = true;
+         this.setEnabled(true);
+      }
+      this.followTarget = target;
+   }
+
+   /** Called by ViewModule when spectating stops. Only turns freecam back off if ViewModule was the one that turned it on. */
+   public void stopFollowing() {
+      this.followTarget = null;
+      if (this.activatedByFollow) {
+         this.activatedByFollow = false;
+         this.setEnabled(false);
+      }
+   }
+
+   public boolean isFollowing() {
+      return this.followTarget != null;
+   }
+
    @Override
    public void onTick() {
       MinecraftClient client = MinecraftClient.getInstance();
       if (this.isEnabled()) {
          this.tryCompleteActivation(client);
          if (this.active && client.player != null) {
+            if (this.followTarget != null) {
+               if (!this.followTarget.isAlive() || this.followTarget.getEntityWorld() != client.world) {
+                  // target died, disconnected, or we changed worlds — nothing
+                  // sane to follow anymore. ViewModule notices via
+                  // isFollowing() going false-equivalent (target gone) and
+                  // disables itself; freecam itself just idles at the last spot.
+                  this.followTarget = null;
+                  if (this.activatedByFollow) {
+                     this.activatedByFollow = false;
+                     this.setEnabled(false);
+                  }
+                  return;
+               }
+
+               this.prevX = this.currentX;
+               this.prevY = this.currentY;
+               this.prevZ = this.currentZ;
+               this.prevYaw = this.currentYaw;
+               this.prevPitch = this.currentPitch;
+               this.currentX = this.followTarget.getX();
+               this.currentY = this.followTarget.getY() + this.followTarget.getStandingEyeHeight();
+               this.currentZ = this.followTarget.getZ();
+               this.currentYaw = this.followTarget.getYaw();
+               this.currentPitch = this.followTarget.getPitch();
+               this.syncFreecamChunkLoading(client);
+               return;
+            }
+
             if (this.autopilotWarmupTicks > 0) {
                this.autopilotWarmupTicks--;
                this.mergeAutopilotFromCurrentState(client);

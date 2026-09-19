@@ -36,12 +36,23 @@ public class EntityNameTagMixin {
          if (nameTagsOn) {
             String display = state.displayName.getString();
             if (isLocalPlayer(display)) {
-               if (nameTags.hideOwnTag.get() || nameTags.players.get() && nameTags.self.get()) {
+               // was `hideOwnTag || (players && self)` — hideOwnTag defaults to true and
+               // self defaults to false, so with default settings your own vanilla tag
+               // vanished the moment NameTags was enabled, with nothing drawn in its
+               // place (WorldNametagRenderer only draws a self tag when self.get() is
+               // true). "Hide Own Tag"'s own description says it should only apply
+               // when Self is on ("only the module's Self tag shows").
+               if (nameTags.self.get() && nameTags.hideOwnTag.get()) {
                   ci.cancel();
                   return;
                }
             } else if (isOnlinePlayer(display)) {
-               if (nameTags.players.get() || nameTags.hidePlayerTags.get()) {
+               // same bug as the self-tag one, just one branch down — was
+               // `players || hidePlayerTags` (OR), so having "Players" on at
+               // all (the default) force-hid every online player's vanilla
+               // tag regardless of what hidePlayerTags was actually set to,
+               // making that setting a no-op. needs both, same as self/hideOwnTag.
+               if (nameTags.players.get() && nameTags.hidePlayerTags.get()) {
                   ci.cancel();
                   return;
                }

@@ -52,7 +52,7 @@ public class GambleRiggerModule extends Module {
       super(
          "GambleRigger",
          "Rig a dispenser/dropper gamble — a fake slot-panel keypad that pulls every slot but the one you keep, then restores the exact layout.",
-         Category.MISC
+         Category.DONUT
       );
    }
 

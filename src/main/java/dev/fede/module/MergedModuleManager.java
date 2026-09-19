@@ -4,28 +4,28 @@ package dev.fede.module;
  * Inventory of every module registered in feClient.
  *
  * SOURCE KEY:
- *   [67]   — from 67Client (dev.sixseven → dev.fede)
+ *   [NAT]   — from the native base client (dev.sixseven → dev.fede)
  *   [NYX]  — from CodeEngine (dev.nyx → dev.fede.nyx)
  *   [H2O]  — from WaterSRC   (com.water → dev.fede.water)
  *
  * Modules that appear in multiple clients are registered ONCE using
- * the best implementation (generally 67Client's for shared ones).
+ * the best implementation (generally the native base client's for shared ones).
  * Unique modules from each client all appear.
  *
  * ─── COMBAT ───────────────────────────────────────────────────────
- *  AutoCrystal          [67+NYX+H2O]   — 67Client impl (most advanced)
- *  AutoTotem            [67+NYX+H2O]
- *  AutoInventoryTotem   [67+H2O]
- *  AnchorMacro          [67+H2O]
- *  DoubleAnchor         [67+H2O]
- *  AimAssist            [67]
- *  MaceSwap             [67]
- *  MaceBomber           [67]
- *  ElytraSwap           [67]
- *  HoverTotem           [67+H2O]
- *  ShieldBreaker        [67+H2O]
- *  Triggerbot           [67+NYX+H2O]
- *  HitBox               [67+NYX+H2O]
+ *  AutoCrystal          [NAT+NYX+H2O]   — native-base impl (most advanced)
+ *  AutoTotem            [NAT+NYX+H2O]
+ *  AutoInventoryTotem   [NAT+H2O]
+ *  AnchorMacro          [NAT+H2O]
+ *  DoubleAnchor         [NAT+H2O]
+ *  AimAssist            [NAT]
+ *  MaceSwap             [NAT]
+ *  MaceBomber           [NAT]
+ *  ElytraSwap           [NAT]
+ *  HoverTotem           [NAT+H2O]
+ *  ShieldBreaker        [NAT+H2O]
+ *  Triggerbot           [NAT+NYX+H2O]
+ *  HitBox               [NAT+NYX+H2O]
  *  KillAura             [NYX]
  *  Reach                [NYX]
  *  Velocity             [NYX]
@@ -41,9 +41,9 @@ package dev.fede.module;
  *  AutoDoubleHand       [H2O]
  *
  * ─── MOVEMENT ─────────────────────────────────────────────────────
- *  AutoWalk             [67+NYX+H2O]
- *  FreeLook             [67+NYX+H2O]
- *  Freecam              [67+NYX+H2O]
+ *  AutoWalk             [NAT+NYX+H2O]
+ *  FreeLook             [NAT+NYX+H2O]
+ *  Freecam              [NAT+NYX+H2O]
  *  Sprint               [NYX+H2O]
  *  Speed                [NYX]
  *  Fly                  [NYX]
@@ -64,12 +64,12 @@ package dev.fede.module;
  *  Strafe               [NYX]
  *
  * ─── PLAYER ───────────────────────────────────────────────────────
- *  FastUse              [67+NYX]
- *  AutoTpa              [67+H2O]
- *  SwingSpeed           [67+H2O]
- *  CoordSnapper         [67+H2O]
- *  ChatMacro            [67+H2O]
- *  AutoClicker          [67+NYX]
+ *  FastUse              [NAT+NYX]
+ *  AutoTpa              [NAT+H2O]
+ *  SwingSpeed           [NAT+H2O]
+ *  CoordSnapper         [NAT+H2O]
+ *  ChatMacro            [NAT+H2O]
+ *  AutoClicker          [NAT+NYX]
  *  AntiAFK              [NYX]
  *  AutoEat              [NYX]
  *  AutoFish             [NYX]
@@ -87,23 +87,23 @@ package dev.fede.module;
  *  TunnelBaseFinder     [H2O]
  *
  * ─── RENDER ───────────────────────────────────────────────────────
- *  PlayerEsp            [67+NYX+H2O]
- *  StorageEsp           [67+NYX+H2O]
- *  BlockEsp             [67+H2O]
- *  BlockEntityEsp       [67]
- *  DebugHoleEsp         [67+H2O]
- *  MobEsp               [67]
- *  FullBright           [67+NYX+H2O]
- *  Zoom                 [67+NYX]
- *  CustomFov            [67]
- *  CustomCrosshair      [67]
- *  CustomGlint          [67+NYX]
- *  JumpCircles          [67+H2O]
- *  NameTags             [67+NYX+H2O]
- *  MotionBlur           [67]
- *  HitParticles         [67+NYX]
- *  RegionMap            [67+NYX+H2O]
- *  SpawnerNametags      [67]
+ *  PlayerEsp            [NAT+NYX+H2O]
+ *  StorageEsp           [NAT+NYX+H2O]
+ *  BlockEsp             [NAT+H2O]
+ *  BlockEntityEsp       [NAT]
+ *  DebugHoleEsp         [NAT+H2O]
+ *  MobEsp               [NAT]
+ *  FullBright           [NAT+NYX+H2O]
+ *  Zoom                 [NAT+NYX]
+ *  CustomFov            [NAT]
+ *  CustomCrosshair      [NAT]
+ *  CustomGlint          [NAT+NYX]
+ *  JumpCircles          [NAT+H2O]
+ *  NameTags             [NAT+NYX+H2O]
+ *  MotionBlur           [NAT]
+ *  HitParticles         [NAT+NYX]
+ *  RegionMap            [NAT+NYX+H2O]
+ *  SpawnerNametags      [NAT]
  *  ESP                  [NYX]
  *  NoHurtCam            [NYX]
  *  StashFinder          [NYX+H2O]
@@ -152,15 +152,15 @@ package dev.fede.module;
  *  AutoRender           [H2O]
  *
  * ─── DONUT ────────────────────────────────────────────────────────
- *  ChunkFinder          [67+NYX]
- *  RegionMap            [67+NYX+H2O]   (registered once)
- *  SpawnerProtect       [67+NYX+H2O]
- *  FakeRoles            [67+H2O]
- *  FakeStats            [67+H2O]
- *  FakePay              [67]
- *  StaffList            [67+H2O]
- *  GambleRigger         [67]
- *  ArmorTrimHider       [67]
+ *  ChunkFinder          [NAT+NYX]
+ *  RegionMap            [NAT+NYX+H2O]   (registered once)
+ *  SpawnerProtect       [NAT+NYX+H2O]
+ *  FakeRoles            [NAT+H2O]
+ *  FakeStats            [NAT+H2O]
+ *  FakePay              [NAT]
+ *  StaffList            [NAT+H2O]
+ *  GambleRigger         [NAT]
+ *  ArmorTrimHider       [NAT]
  *  AntiTrap             [NYX+H2O]
  *  AutoSell             [NYX]
  *  AutoSpawnerSell      [NYX]
@@ -179,10 +179,10 @@ package dev.fede.module;
  *  SuspiciousChunkFinder [H2O]
  *
  * ─── ADDONS ───────────────────────────────────────────────────────
- *  CustomAccessories    [67]
- *  SkinProtect          [67]
- *  NameProtect          [67+H2O]
- *  WeatherNotifier      [67+H2O]
+ *  CustomAccessories    [NAT]
+ *  SkinProtect          [NAT]
+ *  NameProtect          [NAT+H2O]
+ *  WeatherNotifier      [NAT+H2O]
  *  BlockGlow            [NYX]
  *  BlockOutline         [NYX]
  *  GlintCustomiser      [NYX]
@@ -192,10 +192,10 @@ package dev.fede.module;
  *  PlayerParticles      [NYX]
  *
  * ─── CLIENT ───────────────────────────────────────────────────────
- *  HUD                  [67]
- *  ClickGUI             [67 — NanoVG]
- *  Spotify              [67+NYX+H2O]
- *  ConfigShare          [67]
+ *  HUD                  [NAT]
+ *  ClickGUI             [NAT — NanoVG]
+ *  Spotify              [NAT+NYX+H2O]
+ *  ConfigShare          [NAT]
  *  Friends              [H2O]
  *  DiscordRPC           [NYX+H2O]
  *  CustomTitle          [NYX]

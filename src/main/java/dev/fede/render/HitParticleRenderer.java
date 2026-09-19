@@ -17,7 +17,7 @@ import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3f;
 
 public final class HitParticleRenderer {
-   private static final Identifier TEXTURE_67 = Identifier.of("feclient", "textures/misc/fe_logo.png");
+   private static final Identifier TEXTURE_LOGO = Identifier.of("feclient", "textures/misc/fe_logo.png");
    private static final int HEART_SEGMENTS = 20;
    private static final float[] HEART_X = new float[21];
    private static final float[] HEART_Y = new float[21];
@@ -89,7 +89,7 @@ public final class HitParticleRenderer {
 
             FlatOverlay.flush(bufferSource);
             if (any67) {
-               VertexConsumer glyphs = bufferSource.getBuffer(RenderLayers.entityTranslucentEmissive(TEXTURE_67));
+               VertexConsumer glyphs = bufferSource.getBuffer(RenderLayers.entityTranslucentEmissive(TEXTURE_LOGO));
 
                for (HitParticlesModule.HitParticle pxx : particles) {
                   if (pxx.styleId == 3) {

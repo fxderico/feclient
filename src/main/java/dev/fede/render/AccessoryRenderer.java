@@ -24,7 +24,7 @@ import net.minecraft.util.math.Vec3d;
 import org.joml.Vector3f;
 
 public final class AccessoryRenderer {
-   private static final Identifier TEXTURE_67 = Identifier.of("feclient", "textures/misc/fe_logo.png");
+   private static final Identifier TEXTURE_LOGO = Identifier.of("feclient", "textures/misc/fe_logo.png");
    private static final int CAPE_COLS = 7;
    private static final int CAPE_ROWS = 9;
    private static final float CAPE_WIDTH = 0.62F;
@@ -112,7 +112,7 @@ public final class AccessoryRenderer {
          FlatOverlay.flush(bufferSource);
          boolean crownOn = module.crown.get() && !firstPersonHidden;
          if (cape67 || crownOn) {
-            VertexConsumer glyphs = bufferSource.getBuffer(RenderLayers.entityTranslucentEmissive(TEXTURE_67));
+            VertexConsumer glyphs = bufferSource.getBuffer(RenderLayers.entityTranslucentEmissive(TEXTURE_LOGO));
             if (cape67) {
                texCape(glyphs, pose, capeX, capeY, capeZ, fwd, rgb);
             }

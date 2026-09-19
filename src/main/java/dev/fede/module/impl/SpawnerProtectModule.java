@@ -828,7 +828,9 @@ public class SpawnerProtectModule extends Module {
    }
 
    private void sendWebhook(String message) {
-      String urlStr = "";
+      // was hardcoded to "" — meaning this never fired regardless of what you
+      // typed into the Webhook URL setting. reads the real setting now.
+      String urlStr = this.webhookUrl.get().trim();
       if (!urlStr.isEmpty()) {
          String json = "{\"content\": \"" + message.replace("\\", "\\\\").replace("\"", "\\\"") + "\"}";
          new Thread(() -> {

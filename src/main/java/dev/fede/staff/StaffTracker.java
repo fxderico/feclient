@@ -54,7 +54,12 @@ public final class StaffTracker {
    private void scan() {
       MinecraftClient mc = MinecraftClient.getInstance();
       ClientPlayNetworkHandler conn = mc.getNetworkHandler();
-      if (conn != null && mc.player != null) {
+      // mc.world can go null on the same tick the player disconnects (e.g. via
+      // ConfirmDisconnectScreen) while conn/player are still momentarily
+      // non-null — info.getScoreboardTeam() reaches into mc.world internally
+      // and NPEs during that window. real crash, seen in an actual log:
+      // "Cannot invoke class_638.method_8428() because ...field_1687 is null"
+      if (conn != null && mc.player != null && mc.world != null) {
          StaffDetector.DetectConfig cfg = this.module.detectConfig();
          UUID self = mc.player.getUuid();
          Set<UUID> listed = new HashSet<>();

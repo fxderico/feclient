@@ -1,10 +1,12 @@
 package dev.fede.module;
 
-// 67Client native modules — fully qualified to avoid ambiguity with nyx mirrors
+// native modules — fully qualified to avoid ambiguity with nyx mirrors
 import dev.fede.module.impl.AimAssistModule;
 import dev.fede.module.impl.AnchorMacroModule;
+import dev.fede.module.impl.AntiAfkModule;
 import dev.fede.module.impl.ArmorTrimHiderModule;
 import dev.fede.module.impl.AutoClickerModule;
+import dev.fede.module.impl.AutoSprintModule;
 import dev.fede.module.impl.AutoCrystalModule;
 import dev.fede.module.impl.AutoInventoryTotemModule;
 import dev.fede.module.impl.AutoTotemModule;
@@ -28,6 +30,7 @@ import dev.fede.module.impl.FakeStatsModule;
 import dev.fede.module.impl.FastUseModule;
 import dev.fede.module.impl.FreeLookModule;
 import dev.fede.module.impl.FreecamModule;
+import dev.fede.module.impl.FriendlyMobEspModule;
 import dev.fede.module.impl.FullbrightModule;
 import dev.fede.module.impl.GambleRiggerModule;
 import dev.fede.module.impl.HitBoxModule;
@@ -54,6 +57,7 @@ import dev.fede.module.impl.WeatherNotifierModule;
 import dev.fede.module.impl.AutoRespawnModule;
 import dev.fede.module.impl.CriticalsModule;
 import dev.fede.module.impl.XRayModule;
+import dev.fede.module.impl.ViewModule;
 import dev.fede.module.impl.ZoomModule;
 
 // CodeEngine (nyx) modules — each imported with an alias via fully qualified names in the nyx() calls
@@ -70,7 +74,7 @@ import java.util.function.BiConsumer;
 /**
  * Unified ModuleManager for feClient.
  * Registers every module from all three source clients:
- *   67Client  → native modules (direct instantiation)
+ *   native    → native modules (direct instantiation)
  *   CodeEngine → wrapped in NyxModuleBridge
  *   WaterSRC   → wrapped in WaterModuleBridge
  */
@@ -79,7 +83,7 @@ public final class ModuleManager {
     private final List<Module> modules = new ArrayList<>();
     private final Map<Category, List<Module>> byCategory = new LinkedHashMap<>();
 
-    // ── frequently-accessed module references (67Client natives) ─────────────
+    // ── frequently-accessed module references (native modules) ─────────────
     public Modules.ClickGuiModule       clickGui;
     public Modules.HudModule            hud;
     public Modules.SpotifyModule        spotify;
@@ -110,10 +114,12 @@ public final class ModuleManager {
     public AutoInventoryTotemModule     autoInventoryTotem;
     public PlayerEspModule              playerEsp;
     public MobEspModule                 mobEsp;
+    public FriendlyMobEspModule         friendlyMobEsp;
     public BlockEntityEspModule         blockEntityEsp;
     public SpawnerNametagsModule        spawnerNametags;
     public DebugHoleEspModule           debugHoleEsp;
     public FreecamModule                freecam;
+    public ViewModule                   view;
     public AutoTpaModule                autoTpa;
     public JumpCirclesModule            jumpCircles;
     public CustomCrosshairModule        customCrosshair;
@@ -136,6 +142,9 @@ public final class ModuleManager {
     public ArmorTrimHiderModule         armorTrimHider;
     public SpawnerProtectModule         spawnerProtect;
     public GambleRiggerModule           gambleRigger;
+    public AutoSprintModule             autoSprint;
+    public AntiAfkModule                antiAfk;
+    public XRayModule                   xRay;
 
     private Runnable openGuiAction  = () -> {};
     private BiConsumer<Module, Boolean> toggleListener = (m, e) -> {};
@@ -145,13 +154,13 @@ public final class ModuleManager {
         for (Category cat : Category.values()) {
             byCategory.put(cat, new ArrayList<>());
         }
-        register67Client();
+        registerNative();
         registerCodeEngine();
         registerWaterSRC();
     }
 
-    // ── 67Client modules (native) ─────────────────────────────────────────────
-    private void register67Client() {
+    // ── native modules ──────────────────────────────────────────────────────
+    private void registerNative() {
         susChunkFinder = new Modules.SusChunkFinderModule();
 
         register(blockOutline  = new Modules.BlockOutlineModule());
@@ -178,6 +187,7 @@ public final class ModuleManager {
         register(skinProtect        = new SkinProtectModule());
         register(nameProtect        = new NameProtectModule());
         register(freecam            = new FreecamModule());
+        register(view                = new ViewModule());
         register(autoTpa            = new AutoTpaModule());
         register(autoClicker        = new AutoClickerModule());
         register(fastUse            = new FastUseModule());
@@ -188,7 +198,7 @@ public final class ModuleManager {
         register(fakeRoles          = new FakeRolesModule());
         register(armorTrimHider     = new ArmorTrimHiderModule());
         register(customCrosshair    = new CustomCrosshairModule());
-        run("Media/StaffNames/Icons", "Marks media & staff players", Category.MISC,
+        run("Media/StaffNames/Icons", "Marks media & staff players", Category.RENDER,
             new BooleanSetting("Media", "Show media icons", true),
             new BooleanSetting("Staff", "Show staff icons", true),
             new ModeSetting("Position", "Icon position", "Prefix", "Prefix", "Suffix"));
@@ -215,6 +225,7 @@ public final class ModuleManager {
         register(fullbright         = new FullbrightModule());
         register(playerEsp          = new PlayerEspModule());
         register(mobEsp             = new MobEspModule());
+        register(friendlyMobEsp     = new FriendlyMobEspModule());
         register(spawnerNametags    = new SpawnerNametagsModule());
 
         register(hitParticles       = new HitParticlesModule());
@@ -225,6 +236,8 @@ public final class ModuleManager {
         // ── Zenith-ported native modules (take priority over nyx duplicates) ──
         register(new CriticalsModule());    // custom mixin — no auth gate
         register(new AutoRespawnModule());  // pure onTick — no auth gate
+        register(autoSprint         = new AutoSprintModule());
+        register(antiAfk            = new AntiAfkModule());
     }
 
     // ── CodeEngine modules (bridged) ──────────────────────────────────────────
@@ -294,7 +307,7 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.render.NametagsModule(),       Category.RENDER);
         nyx(new dev.fede.nyx.module.modules.render.HealthTagsModule(),     Category.RENDER);
         nyx(new dev.fede.nyx.module.modules.render.ArrowESPModule(),       Category.RENDER);
-        register(new dev.fede.module.impl.XRayModule());           // native XRay (no auth gate)
+        register(xRay = new XRayModule());                         // native XRay (no auth gate) — seed cave-diff lives inside it now
         nyx(new dev.fede.nyx.module.modules.render.ClearWorldModule(),     Category.RENDER);
         nyx(new dev.fede.nyx.module.modules.render.ItemPhysicsModule(),    Category.RENDER);
         nyx(new dev.fede.nyx.module.modules.render.ViewModelModule(),      Category.RENDER);
@@ -346,7 +359,12 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.addons.HitParticlesModule(),     Category.ADDONS);
         nyx(new dev.fede.nyx.module.modules.addons.BreakParticlesModule(),   Category.ADDONS);
         nyx(new dev.fede.nyx.module.modules.addons.DragonWingsModule(),      Category.ADDONS);
-        nyx(new dev.fede.nyx.module.modules.addons.SpotifyHUDModule(),       Category.ADDONS);
+        // SpotifyHUDModule (nyx) removed — it registered under the same name as
+        // the live native Modules.SpotifyModule ("SpotifyHUD"), and register()
+        // dedupes by name with native registered first, so this nyx one (and
+        // its SmtcMediaClient/SpotifyClient + smtc-now-playing.ps1) was dead,
+        // unreachable code. Deleted rather than left as silent dead weight —
+        // it was also one of the two bundled .ps1 files a jar scan flags.
         nyx(new dev.fede.nyx.module.modules.addons.KillEffectsModule(),      Category.ADDONS);
         nyx(new dev.fede.nyx.module.modules.addons.PlayerParticlesModule(),  Category.ADDONS);
 

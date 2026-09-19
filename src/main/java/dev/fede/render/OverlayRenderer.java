@@ -85,6 +85,7 @@ public final class OverlayRenderer {
 
                            if (mc.currentScreen == null) {
                               WorldNametagRenderer.render(vg);
+                              EntityEspRenderer.render2D(vg);
                            }
 
                            hudManager.render(vg, uiWidth, uiHeight);

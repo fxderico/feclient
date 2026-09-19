@@ -12,7 +12,7 @@ public class FastUseModule extends Module {
    public final ModeSetting items = this.addSetting(new ModeSetting("Items", "What to speed up", "All", "All", "Pearls", "XP Bottles"));
 
    public FastUseModule() {
-      super("FastUse", "Removes item use cooldowns", Category.MISC);
+      super("FastUse", "Removes item use cooldowns", Category.COMBAT);
    }
 
    @Override

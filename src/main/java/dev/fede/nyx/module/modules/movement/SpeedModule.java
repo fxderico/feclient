@@ -13,7 +13,12 @@ public class SpeedModule extends Module {
    private static final long longVal = 350L;
    private static final double doubleVal = 0.2;
    private static final double doubleVal2 = 0.42;
-   private final ModeSetting mode = new ModeSetting("Mode", "BunnyHop", "Vanilla", "Strafe", "LowHop", "BunnyHop");
+   // default was BunnyHop, which forces a real 0.42 vertical jump velocity every
+   // step (see run4 below — var3=true → var18=0.42 while on ground). Strafe runs
+   // the exact same horizontal boost through run4 but with var3=false, so the Y
+   // velocity is left untouched — flat ground speed, no forced hop, jumping only
+   // happens if you actually press space like normal.
+   private final ModeSetting mode = new ModeSetting("Mode", "Strafe", "Vanilla", "Strafe", "LowHop", "BunnyHop");
    private final NumberSetting speed = new NumberSetting("Speed", 0.35, 0.1, 1.0, 0.05);
    private final NumberSetting boost = (NumberSetting)new NumberSetting("Boost", 1.5, 1.0, 5.0, 0.1).visibleWhen(this::getBoolean);
    private final BooleanSetting onlyGround = new BooleanSetting("OnlyGround", false);

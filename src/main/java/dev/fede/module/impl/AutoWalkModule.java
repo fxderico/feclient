@@ -21,7 +21,7 @@ public class AutoWalkModule extends Module {
    public final BooleanSetting waitForChunks = this.addSetting(new BooleanSetting("No Unloaded Chunks", "Do not walk into unloaded chunks.", true));
 
    public AutoWalkModule() {
-      super("AutoWalk", "Automatically walks forward.", Category.MISC);
+      super("AutoWalk", "Automatically walks forward.", Category.MOVEMENT);
       this.direction.visibleWhen(() -> this.mode.check("Simple"));
       this.disableOnY.visibleWhen(() -> this.mode.check("Simple"));
       this.waitForChunks.visibleWhen(() -> this.mode.check("Simple"));

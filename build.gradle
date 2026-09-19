@@ -1,8 +1,18 @@
 plugins {
-    id 'fabric-loom' version '1.16.3'
+    // 1.16.3 couldn't resolve official mojang mappings for 26.1.2.
+    // 1.18.2 resolved fine as a plugin coordinate but wouldn't even load —
+    // its own variant metadata demands java 25 at the gradle-daemon level,
+    // which this machine's pinned org.gradle.java.home (21) can't satisfy.
+    // 1.17.21 already proved out earlier tonight (loom-back-compat picked
+    // it automatically, loaded clean) — using that directly instead of
+    // guessing further up the version line.
+    id 'fabric-loom' version '1.17.21'
 }
 
-version = '1.0.0'
+def mc = stonecutter.current.version
+def isYarn = (mc == '1.21.11') // only version on the list still using yarn mappings
+
+version = "${property('mod.version')}+${mc}"
 group = 'com.feclient'
 base { archivesName = 'feclient' }
 
@@ -10,10 +20,10 @@ repositories {
     mavenCentral()
     maven { url = 'https://maven.fabricmc.net/' }
     maven { url = 'https://repo.spongepowered.org/maven' }
-    // Keep only essential repos; remove custom ones that may not work
     maven { name = "CCBlueX Releases"; url = uri("https://maven.ccbluex.net/releases") }
     maven { name = "CCBlueX Snapshots"; url = uri("https://maven.ccbluex.net/snapshots") }
     maven { name = "Jitpack"; url = uri("https://jitpack.io") }
+    maven { name = "Modrinth"; url = uri("https://api.modrinth.com/maven") }
 }
 
 configurations.all {
@@ -21,35 +31,79 @@ configurations.all {
 }
 
 configurations {
-    // Keep shade for local imgui JARs only
     shade {
         canBeResolved = true
     }
 }
 
 dependencies {
-    // Minecraft base
-    minecraft "com.mojang:minecraft:1.21.11"
-    mappings "net.fabricmc:yarn:1.21.11+build.6:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.19.3"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11"
+    minecraft "com.mojang:minecraft:${mc}"
+    if (isYarn) {
+        mappings "net.fabricmc:yarn:${stonecutter.properties.raw('deps', 'yarn')}"
+    } else {
+        // loom demands the 'mappings' configuration have *something* in it
+        // even with noIntermediateMappings() set below — an empty layered
+        // spec is the real no-op declaration it wants instead of a real file.
+        mappings loom.layered() {}
+    }
+    // (26.1+): checked mojang's real
+    // version manifest directly — NONE of 26.1/26.1.1/26.1.2/26.2/26.3 have
+    // a client_mappings download published. loom.officialMojangMappings()
+    // tries to fetch that file unconditionally and fails when it doesn't
+    // exist — that's the actual "failed to find official mojang mappings"
+    // error, not a version-string typo. these versions ship an already-
+    // named client jar with nothing to map, which is what
+    // loom.noIntermediateMappings() (set below, in the loom{} block) is
+    // for — confirmed by inspecting loom's own extension API jar directly.
+    modImplementation "net.fabricmc:fabric-loader:${stonecutter.properties.raw('deps', 'fabric_loader')}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${stonecutter.properties.raw('deps', 'fabric_api')}"
 
-    // From 67Client - NanoVG (not in vanilla MC, must be shaded)
+    // Sodium — compile-only, optional. See SodiumMixinPlugin / SodiumXRayCullMixin.
+    // Only vendored for 1.21.11 right now (libs/ jar is that build specifically) —
+    // xray still works without it on other versions, just without the sodium-
+    // specific culling hook until a matching sodium jar gets vendored per version.
+    if (mc == '1.21.11') {
+        // real bug: stonecutter gives each version subproject its OWN
+        // directory (versions/<name>/) as projectDir — a bare relative
+        // files('libs/...') resolves against THAT, not feclient's real
+        // root where the vendored jars actually live. rootProject.file()
+        // pins it to the real location regardless of which version
+        // subproject is being configured.
+        modCompileOnly files(rootProject.file('libs/sodium-fabric-0.8.14+mc1.21.11.jar'))
+    }
+
+    // From 67Client - NanoVG (not in vanilla MC, must be shaded) — pure LWJGL,
+    // not MC-version-specific, safe on every target.
     implementation "org.lwjgl:lwjgl-nanovg:3.3.3"
     shade "org.lwjgl:lwjgl-nanovg:3.3.3"
     shade "org.lwjgl:lwjgl-nanovg:3.3.3:natives-windows"
 
-    // From CodeEngine – local JARs
-    implementation files('libs/fabric-gui-imgui-1.21.11-1.0.11+imgui.1.92.0.jar')
-    implementation files('libs/imgui-java-binding-1.92.0.jar', 'libs/imgui-java-lwjgl3-1.92.0.jar')
-    shade files('libs/imgui-java-binding-1.92.0.jar', 'libs/imgui-java-lwjgl3-1.92.0.jar', 'libs/imgui-java-natives-windows-1.92.0.jar')
-
-    // mixin AP removed — loom handles mixin at runtime
+    // From CodeEngine – local imgui JARs. KNOWN GAP: this specific jar
+    // (fabric-gui-imgui-1.21.11-...) is compiled against 1.21.11's fabric
+    // API specifically — there's no equivalent build vendored for 26.x yet.
+    // Only wiring it in for 1.21.11 for now; ImGuiFonts/AlbumArtCache (the
+    // two imgui-touching classes still in use post-cleanup) will need
+    // //? if guards to compile out on other versions until/unless a newer
+    // imgui binding jar gets sourced.
+    if (mc == '1.21.11') {
+        implementation files(rootProject.file('libs/fabric-gui-imgui-1.21.11-1.0.11+imgui.1.92.0.jar'))
+        implementation files(rootProject.file('libs/imgui-java-binding-1.92.0.jar'), rootProject.file('libs/imgui-java-lwjgl3-1.92.0.jar'))
+        shade files(rootProject.file('libs/imgui-java-binding-1.92.0.jar'), rootProject.file('libs/imgui-java-lwjgl3-1.92.0.jar'), rootProject.file('libs/imgui-java-natives-windows-1.92.0.jar'))
+    }
 }
 
 loom {
     mixin {
         defaultRefmapName = 'feclient-refmap.json'
+    }
+    if (!isYarn) {
+        // found a real working example using this exact combo (turnip-labs/
+        // bta-example-mod) — the missing piece vs what i had was
+        // gluedMinecraftJar(). without it loom's internal namespace
+        // resolution has nothing to key off for an unobfuscated jar with no
+        // intermediary step, which is what "srcNamespace is null" actually was.
+        gluedMinecraftJar()
+        noIntermediateMappings()
     }
 }
 
@@ -67,13 +121,12 @@ java {
 
 processResources {
     filesMatching('fabric.mod.json') {
-        expand(version: project.version)
+        expand(version: project.property('mod.version'))
     }
 }
 
 jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    // Only shade the local imgui JARs (from configurations.shade)
     from(configurations.shade.files.collect { zipTree(it) }) {
         exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
     }

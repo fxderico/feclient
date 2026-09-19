@@ -18,7 +18,6 @@
     "ChunkLightProviderAccessor",
     "LightStorageAccessor",
     "ChunkNibbleArrayAccessor",
-    "BlockMixin",
     "ZoomGameRendererMixin",
     "ClearWorldWeatherMixin",
     "ClearWorldFogMixin",
