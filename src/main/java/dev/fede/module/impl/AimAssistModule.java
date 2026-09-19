@@ -25,8 +25,8 @@ public class AimAssistModule extends Module {
    );
    public final BooleanSetting vertical = this.addSetting(new BooleanSetting("Vertical", "Also correct pitch (up/down), not just yaw", true));
    public final BooleanSetting players = this.addSetting(new BooleanSetting("Players", "Target other players", true));
-   public final BooleanSetting hostiles = this.addSetting(new BooleanSetting("Hostiles", "Target hostile mobs", false));
-   public final BooleanSetting passive = this.addSetting(new BooleanSetting("Passive", "Target passive mobs", false));
+   public final BooleanSetting hostiles = this.addSetting(new BooleanSetting("Hostiles", "Target hostile mobs", true));
+   public final BooleanSetting passive = this.addSetting(new BooleanSetting("Passive", "Target passive mobs", true));
    public final BooleanSetting invisibles = this.addSetting(new BooleanSetting("Invisibles", "Also target invisible entities", false));
    public final BooleanSetting wallCheck = this.addSetting(new BooleanSetting("Wall Check", "Only assist targets you can actually see", false));
    public final BooleanSetting alwaysActive = this.addSetting(
