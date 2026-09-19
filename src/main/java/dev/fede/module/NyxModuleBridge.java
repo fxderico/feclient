@@ -1,5 +1,7 @@
 package dev.fede.module;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
 import dev.fede.settings.BooleanSetting;
 import dev.fede.settings.ColorSetting;
 import dev.fede.settings.KeybindSetting;
@@ -34,6 +36,19 @@ import dev.fede.settings.StringSetting;
  * — rare enough in practice that it wasn't worth inventing a new Setting
  * type for tonight. Everything else (Boolean/Number/Mode/String/Color/Bind)
  * is mirrored.
+ *
+ * toJson()/fromJson() ALSO get overridden per mirrored setting, not just
+ * get()/set(). Every one of the base dev.fede.settings.* classes'
+ * toJson()/fromJson() implementations reads/writes the protected `value`
+ * field directly rather than going through get()/set() — reasonable for a
+ * plain setting where `value` IS the real state, but these mirrors never
+ * touch that field (get()/set() proxy straight to the real nyx setting
+ * instead), so it just sits frozen at whatever the constructor happened to
+ * pass in. Without overriding toJson/fromJson too: save would serialize
+ * that stale constructor-time snapshot forever, and load would write into
+ * a field nothing reads, silently doing nothing. That was the actual bug
+ * behind "I picked Packet on NoFall and it didn't save" — not specific to
+ * NoFall, every mirrored setting on every nyx-bridged module had it.
  */
 public final class NyxModuleBridge extends Module {
 
@@ -73,12 +88,20 @@ public final class NyxModuleBridge extends Module {
             addSetting(new BooleanSetting(src.getName(), "", src.getValue()) {
                 @Override public Boolean get() { return src.getValue(); }
                 @Override public void set(Boolean v) { src.setValue(v != null && v); }
+                @Override public JsonElement toJson() { return new JsonPrimitive(get()); }
+                @Override public void fromJson(JsonElement e) {
+                    if (e != null && e.isJsonPrimitive() && e.getAsJsonPrimitive().isBoolean()) set(e.getAsBoolean());
+                }
             }).visibleWhen(src::isVisible);
 
         } else if (nyxSetting instanceof dev.fede.nyx.setting.NumberSetting src) {
             addSetting(new SliderSetting(src.getName(), "", src.getValue(), src.getMin(), src.getMax(), src.step()) {
                 @Override public Double get() { return src.getValue(); }
                 @Override public void set(Double v) { src.setValue(v == null ? 0.0 : v); }
+                @Override public JsonElement toJson() { return new JsonPrimitive(get()); }
+                @Override public void fromJson(JsonElement e) {
+                    if (e != null && e.isJsonPrimitive() && e.getAsJsonPrimitive().isNumber()) set(e.getAsDouble());
+                }
             }).visibleWhen(src::isVisible);
 
         } else if (nyxSetting instanceof dev.fede.nyx.setting.ModeSetting src) {
@@ -88,30 +111,40 @@ public final class NyxModuleBridge extends Module {
             addSetting(new ModeSetting(src.getName(), "", def, modes.toArray(new String[0])) {
                 @Override public String get() { return src.getMode(); }
                 @Override public void set(String v) { src.setMode(v); }
+                @Override public JsonElement toJson() { return new JsonPrimitive(get()); }
+                @Override public void fromJson(JsonElement e) {
+                    if (e != null && e.isJsonPrimitive() && modes.contains(e.getAsString())) set(e.getAsString());
+                }
             }).visibleWhen(src::isVisible);
 
         } else if (nyxSetting instanceof dev.fede.nyx.setting.StringSetting src) {
             addSetting(new StringSetting(src.getName(), "", src.getValue(), Math.max(1, src.getMaxLen()), "") {
                 @Override public String get() { return src.getValue(); }
                 @Override public void set(String v) { src.setValue(v); }
+                @Override public JsonElement toJson() { return new JsonPrimitive(get()); }
+                @Override public void fromJson(JsonElement e) {
+                    if (e != null && e.isJsonPrimitive()) set(e.getAsString());
+                }
             }).visibleWhen(src::isVisible);
-            // note: main StringSetting's toJson()/fromJson() read/write the protected
-            // `value` field directly rather than going through get()/set(), so this
-            // proxy's live edits work fine in-session but won't round-trip through
-            // feclient's own config save/load — nyx modules already persist their own
-            // settings separately (their own config store), which is the setting's
-            // real source of truth anyway, so this is a non-issue in practice.
 
         } else if (nyxSetting instanceof dev.fede.nyx.setting.ColorSetting src) {
             addSetting(new ColorSetting(src.getName(), "", src.getValue()) {
                 @Override public Integer get() { return src.getValue(); }
                 @Override public void set(Integer v) { src.setValue(v == null ? 0 : v); }
+                @Override public JsonElement toJson() { return new JsonPrimitive(get()); }
+                @Override public void fromJson(JsonElement e) {
+                    if (e != null && e.isJsonPrimitive() && e.getAsJsonPrimitive().isNumber()) set(e.getAsInt());
+                }
             }).visibleWhen(src::isVisible);
 
         } else if (nyxSetting instanceof dev.fede.nyx.setting.BindSetting src) {
             addSetting(new KeybindSetting(src.getName(), "", src.getValue()) {
                 @Override public Integer get() { return src.getValue(); }
                 @Override public void set(Integer v) { src.setValue(v == null ? -1 : v); }
+                @Override public JsonElement toJson() { return new JsonPrimitive(get()); }
+                @Override public void fromJson(JsonElement e) {
+                    if (e != null && e.isJsonPrimitive() && e.getAsJsonPrimitive().isNumber()) set(e.getAsInt());
+                }
             }).visibleWhen(src::isVisible);
         }
         // dev.fede.nyx.setting.DoubleListSetting — intentionally skipped, see class javadoc.

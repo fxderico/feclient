@@ -13,7 +13,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class NoFallModule extends Module {
    public static volatile boolean bool = false;
-   private final ModeSetting mode = new ModeSetting("Mode", "OnGroundSpoof", "OnGroundSpoof", "Packet", "Rewind");
+   private final ModeSetting mode = new ModeSetting("Mode", "Packet", "OnGroundSpoof", "Packet", "Rewind");
    private final NumberSetting minFallDistance = new NumberSetting("MinFallDistance", 3.0, 0.5, 20.0, 0.5);
    private final BooleanSetting onlyWhenSneaking = new BooleanSetting("OnlyWhenSneaking", false);
    private final AntiVoidModuleHelper antiVoidModuleHelper = new AntiVoidModuleHelper();
