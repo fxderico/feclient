@@ -93,11 +93,18 @@ Drop it in your Fabric `mods/` folder like any other mod.
 - Duplicate module names between sources (e.g. both a native and a CodeEngine
   `AutoCrystal`) are deduplicated by name at registration — the native implementation
   wins when both exist, the CodeEngine one is silently skipped
-- `AimAssistModule` currently has no working aim logic — it loads
-  `dev.fede.secured.AimAssistLogic` through a licensing-gated loader
-  (`ProtectedContent`) left over from the original source's paid-tier system, and that
-  class was never included. The module is fully visible and configurable in the GUI but
-  does nothing when enabled. (Being worked on.)
+- `AimAssistModule` loads its logic through `ProtectedContent`, a licensing-gated
+  class loader left over from the original source's paid-tier system — the real
+  implementation (`dev.fede.secured.AimAssistLogic`) was never included, so the module
+  used to be fully visible and configurable in the GUI while doing nothing at all.
+  That class now exists: a raycast-first, angle-fallback target lock (respects
+  Players/Hostiles/Passive/Invisibles/Wall Check/FOV/Range) that STICKS to whichever
+  entity it acquires — it doesn't re-target just because the crosshair drifts off —
+  until the target dies, leaves range, or the module gets toggled off. Aims at the
+  torso by default (`Target` setting), eases in per `Speed`/`Smoothness` rather than
+  snapping, and the pixel math it hands back to the mouse hook is derived from the
+  game's own sensitivity-curve constants so the pull speed doesn't silently change
+  with the player's mouse sensitivity setting.
 
 ---
 
