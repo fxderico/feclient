@@ -1,10 +1,12 @@
 # feclient
 
-> ⚠️ **This is a merge / skid.** All credit goes to the original authors of the source clients.  
-> Sources: **67Client**, **CodeEngine (nyx)**, **WaterSRC**, **Zenith DLC 2.0**.  
-> This repo exists solely as a personal merge project and makes no claim of original authorship.
+> ⚠️ **This is a merge project.** All credit goes to the original authors of the source
+> clients it's built from — a native base client, CodeEngine, and WaterSRC. This repo
+> exists solely as a personal merge/maintenance project and makes no claim of original
+> authorship over that source material.
 
-Merged cheat client for **Minecraft 1.21.1 (Fabric)**.  
+A merged Fabric client for **Minecraft 1.21.11**. Three separate source clients unified
+under one `ModuleManager`, one ClickGUI, one config system.
 
 ---
 
@@ -13,87 +15,89 @@ Merged cheat client for **Minecraft 1.21.1 (Fabric)**.
 ```
 feclient/
 ├── src/main/java/dev/fede/
-│   ├── FeClient.java              ← main entrypoint
+│   ├── FeClient.java              ← entrypoint
 │   ├── module/
-│   │   ├── Module.java            ← base class (67Client)
+│   │   ├── Module.java            ← base class (native)
 │   │   ├── Category.java          ← COMBAT/MOVEMENT/PLAYER/RENDER/WORLD/DONUT/ADDONS/CLIENT
-│   │   ├── ModuleManager.java     ← registers ALL modules from all 3 clients
-│   │   ├── NyxModuleBridge.java   ← wraps CodeEngine modules into the GUI
-│   │   ├── WaterModuleBridge.java ← wraps WaterSRC modules into the GUI
-│   │   ├── impl/                  ← 67Client native modules (~50)
-│   │   └── Modules.java           ← placeholder/config modules
+│   │   ├── ModuleManager.java     ← registers every module from all three sources
+│   │   ├── NyxModuleBridge.java   ← wraps CodeEngine modules into the GUI, mirrors their
+│   │   │                            settings live (Boolean/Number/Mode/String/Color/Bind)
+│   │   ├── WaterModuleBridge.java ← wraps WaterSRC modules into the GUI, same idea
+│   │   ├── impl/                  ← native modules
+│   │   └── Modules.java           ← small inline modules (ClickGUI, HUD, Spotify, etc.)
 │   ├── nyx/                       ← CodeEngine source (repackaged dev.nyx → dev.fede.nyx)
-│   │   ├── module/modules/        ← ~120 CodeEngine modules
-│   │   ├── mixin/                 ← ~62 CodeEngine mixins
-│   │   ├── setting/               ← CodeEngine setting types
-│   │   ├── render/                ← CodeEngine render utils
-│   │   └── util/                  ← CodeEngine utilities
+│   │   ├── module/modules/        ← CodeEngine modules, by category package
+│   │   ├── mixin/                 ← CodeEngine mixins
+│   │   ├── setting/                ← CodeEngine setting types
+│   │   ├── render/                 ← CodeEngine render utils
+│   │   └── util/                   ← CodeEngine utilities
 │   ├── water/                     ← WaterSRC source (repackaged com.water → dev.fede.water)
-│   │   ├── module/modules/        ← ~60 WaterSRC modules
-│   │   ├── mixin/                 ← WaterSRC mixins
-│   │   └── utils/renderer/        ← Water's shader pipeline (blur/glow/arc)
-│   ├── gui/                       ← 67Client NanoVG ClickGUI
+│   │   ├── module/modules/        ← WaterSRC modules
+│   │   ├── mixin/                  ← WaterSRC mixins
+│   │   └── utils/renderer/         ← Water's shader pipeline (blur/glow/arc/liquid glass)
+│   ├── gui/                       ← NanoVG ClickGUI
 │   ├── hud/                       ← HUD components
 │   ├── config/                    ← config system
-│   └── render/                    ← rendering utils
+│   ├── render/                    ← rendering utils (ESP, XRay seed cave-diff, etc.)
+│   └── spotify/                   ← Spotify now-playing bridge (Windows SMTC via PowerShell)
 └── src/main/resources/
     ├── fabric.mod.json
-    ├── feclient.mixins.json       ← 67Client mixins
-    └── feclient.nyx.mixins.json   ← CodeEngine mixins
+    ├── feclient.mixins.json       ← native mixins
+    ├── feclient.nyx.mixins.json   ← CodeEngine mixins
+    └── feclient.sodium.mixins.json← Sodium-specific mixins
 ```
 
----
-
-## Module count
-
-| Source     | Modules |
-|-----------|---------|
-| 67Client  | ~55     |
-| CodeEngine| ~120    |
-| WaterSRC  | ~45     |
-| **Total** | **~220**|
-
----
-
-## Categories
-
-| Category | Contents |
-|----------|----------|
-| COMBAT   | AutoCrystal, AutoTotem, KillAura, Reach, Velocity, AimAssist, Triggerbot, Backtrack, AntiKB, Criticals, Hitbox, MaceBomber, MaceSwap, AnchorMacro, DoubleAnchor, AutoArmor, ChestStealer, ShieldBreaker, ElytraSwap, HoverTotem, SpearSwap, AutoDoubleHand, SingleAnchor, AutoLog, MaceAura |
-| MOVEMENT | Sprint, Speed, Fly, NoFall, NoSlow, Step, Spider, AirJump, IceSpeed, ElytraFly, Jesus, Strafe, HighJump, LongJump, InventoryMove, AntiVoid, ChunkSpoof, EagleAura, Freecam, FreeLook, AutoWalk |
-| PLAYER   | FastUse, FastPlace, AutoClicker, AutoTPA, CoordSnapper, SwingSpeed, ChatMacro, AutoEat, AutoFish, AutoTool, AntiAFK, AutoDrop, AutoRespawn, MiddleClick, NoJumpDelay, PortalGodMode, SwingAnimation, AutoMine, HomeSetter, TabDetector, TunnelBaseFinder, SkinChanger |
-| RENDER   | PlayerESP, StorageESP, BlockESP, Freecam, Fullbright, Zoom, NameTags, HealthTags, Tracers, Chams, XRay, Outlines, CornerBoxESP, OutlineESP, Radar, ItemESP, VoidESP, ArrowESP, BedESP, CauldronESP, PortalESP, PearlESP, HoleESP, StashFinder, SpawnerESP, MovementTrails, ProjectileArc, ItemPhysics, ViewModel, MotionBlur, HeatMapChunkRadar, HoveredContainerPreview, SpectatorDetector, ExtraESP, NoRender, SpawnerNotifier, ClearWorld, NoHurtCam, JumpCircles, HitParticles, CustomCrosshair, CustomFov, CustomGlint, MobESP, BlockEntityESP, RegionMap |
-| WORLD    | Nuker, Scaffold, AutoBridge, AutoTunnel, AutoMLG, AutoSmelt, AutoStore, AutoTree, TimerSpeed, InfoOrb, RtpBaseFinder, ChunkKeeper, AutoRender |
-| DONUT    | ChunkFinder, SpawnerProtect, FakeRoles, FakeStats, GambleRigger, AntiTrap, AutoSell, AutoSpawnerSell, ItemDropper, PrimeChunkFinder, SeedChunkFinder, BlockEntityDebug, LightFinder, PlayerChunks, NetheriteFinder, RegionMap, StaffDetector, BoneDropper, TuffChunkV2, ActivityDebug, SuspiciousChunkFinder, Nickname, StaffList, FakePay, ArmorTrimHider |
-| ADDONS   | CustomAccessories, SkinProtect, NameProtect, WeatherNotifier, BlockGlow, BlockOutline, GlintCustomiser, BreakParticles, DragonWings, KillEffects, PlayerParticles, SpotifyHUD |
-| CLIENT   | ClickGUI, HUD, Spotify, ConfigShare, DiscordRPC, CustomTitle, KeystrokeHUD, TargetHUD, TabGUI, ChatFilter, ThemeSelector, ChromaXP, ClickSounds, WaterPlus, Friends |
+Module names and current categories are always accurate straight from
+`ModuleManager.java` and each module's own `super(...)` call — that's the source of
+truth, not a table in this file that will drift out of date.
 
 ---
 
 ## Building
 
-**Requirements:** JDK 21, Gradle 8+
+**Requirements:** JDK 21, Gradle (via the included wrapper)
+
+This project used to target multiple Minecraft versions via
+[Stonecutter](https://stonecutter.kikugie.dev/). It's pinned to **1.21.11 only** for now
+— the other version nodes (`26.1.x`/`26.2`/`26.3`) are commented out in
+`settings.gradle` because their Loom config is mid-migration and doesn't currently
+evaluate. Re-enabling them later is a two-line uncomment away, not a rewrite.
 
 ```bash
-cd "C:\Users\fedes\Desktop\feclient"
-gradlew build
+cd feclient
+./gradlew build
 ```
 
-Output: `build/libs/feclient-1.0.0.jar`
+Output: `versions/1.21.11/build/libs/feclient-1.0.0+1.21.11.jar`
 
-Install into Fabric like any other mod.
+Drop it in your Fabric `mods/` folder like any other mod.
 
 ---
 
 ## Notes
 
-- **GUI**: 67Client's NanoVG ClickGUI (RSHIFT to open by default)
-- **CodeEngine modules** are bridged via `NyxModuleBridge` — they appear in the ClickGUI and respond to keybinds exactly like native modules
-- **WaterSRC modules** are bridged via `WaterModuleBridge` — same
-- WaterSRC's **shader pipeline** (blur, glow, arc, liquid glass) is available under `dev.fede.water.utils.renderer.*`
-- CodeEngine's **ImGui** system is bundled as a nested jar — it's available but the primary GUI is 67Client's ClickGUI
-- The `nyx/auth/` package is kept but its license checks are no-ops in this build
-- Duplicate module names (e.g. both clients had an AutoCrystal) — 67Client's is primary, CodeEngine's is bridged with the same name; both will appear in the list
+- **GUI**: NanoVG ClickGUI (RSHIFT to open by default)
+- **CodeEngine modules** are bridged via `NyxModuleBridge` — they appear in the ClickGUI
+  with live settings (sliders, dropdowns, toggles all read/write straight through to the
+  real CodeEngine setting field) and respond to keybinds exactly like native modules
+- **WaterSRC modules** are bridged via `WaterModuleBridge` — same idea
+- WaterSRC's **shader pipeline** (blur, glow, arc, liquid glass) lives under
+  `dev.fede.water.utils.renderer.*`
+- CodeEngine's **ImGui** system is bundled (used by a handful of render-side modules —
+  RegionMap, ESP, ItemESP, Nametags, Radar, KeystrokeHUD, notification toasts — for
+  direct draw-list rendering), separate from the primary ClickGUI
+- The `nyx/auth/` licensing package (`AuthGate`) is kept for compatibility but every
+  check in it is a no-op — it always reports "valid," never phones home, doesn't gate
+  anything. Its siblings (AntiDebug, AntiTamper, AuthService, AuthState, Integrity) have
+  been removed outright.
+- Duplicate module names between sources (e.g. both a native and a CodeEngine
+  `AutoCrystal`) are deduplicated by name at registration — the native implementation
+  wins when both exist, the CodeEngine one is silently skipped
+- `AimAssistModule` currently has no working aim logic — it loads
+  `dev.fede.secured.AimAssistLogic` through a licensing-gated loader
+  (`ProtectedContent`) left over from the original source's paid-tier system, and that
+  class was never included. The module is fully visible and configurable in the GUI but
+  does nothing when enabled. (Being worked on.)
 
 ---
 
