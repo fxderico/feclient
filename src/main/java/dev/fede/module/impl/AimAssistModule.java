@@ -13,6 +13,9 @@ import org.slf4j.LoggerFactory;
 public class AimAssistModule extends Module {
    private static final Logger LOG = LoggerFactory.getLogger("Client/AimAssist");
    public final SliderSetting range = this.addSetting(new SliderSetting("Range", "Assist any target within this distance", 4.0, 1.0, 8.0, 0.5, "m"));
+   public final BooleanSetting infiniteRange = this.addSetting(
+      new BooleanSetting("Infinite Range", "Ignore Range entirely — target anyone loaded, no matter how far", false)
+   );
    public final SliderSetting speed = this.addSetting(new SliderSetting("Speed", "How fast the aim is pulled (higher = snappier)", 4.0, 1.0, 10.0, 1.0));
    public final SliderSetting smoothness = this.addSetting(
       new SliderSetting("Smoothness", "How eased / human the pull is (higher = smoother)", 6.0, 1.0, 10.0, 1.0)

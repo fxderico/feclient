@@ -38,6 +38,11 @@ import net.minecraft.world.RaycastContext;
  */
 public final class AimAssistLogic implements AimAssistCompute {
 
+    // entities past this were never loaded/synced to begin with, so there's
+    // no meaningful "further" than this for a raycast or search radius —
+    // "infinite" in practice means "don't cut off before the game itself would".
+    private static final double RAY_LENGTH_INFINITE = 512.0;
+
     private Entity locked;
 
     @Override
@@ -53,11 +58,12 @@ public final class AimAssistLogic implements AimAssistCompute {
             return null;
         }
 
-        double range = module.range.get();
-        double rangeSq = range * range;
+        boolean infinite = module.infiniteRange.get();
+        double range = infinite ? RAY_LENGTH_INFINITE : module.range.get();
+        double rangeSq = infinite ? Double.MAX_VALUE : range * range;
 
         if (!isValidLock(this.locked, player, rangeSq)) {
-            this.locked = acquire(module, mc, player, world, range, rangeSq);
+            this.locked = acquire(module, mc, player, world, range, rangeSq, infinite);
         }
         if (this.locked == null) return null;
 
@@ -99,17 +105,25 @@ public final class AimAssistLogic implements AimAssistCompute {
             && player.squaredDistanceTo(target) <= rangeSq;
     }
 
-    private Entity acquire(AimAssistModule module, MinecraftClient mc, ClientPlayerEntity player, ClientWorld world, double range, double rangeSq) {
+    private Entity acquire(AimAssistModule module, MinecraftClient mc, ClientPlayerEntity player, ClientWorld world, double range, double rangeSq, boolean infinite) {
         Vec3d eye = player.getEyePos();
         Vec3d look = player.getRotationVector();
         double fovCos = Math.cos(Math.toRadians(Math.min(179.9, module.fov.get()) / 2.0));
         boolean wallCheck = module.wallCheck.get();
 
-        Box searchBox = player.getBoundingBox().expand(range);
-        java.util.List<Entity> candidates = world.getOtherEntities(player, searchBox, e ->
-            e != player && e.isAlive() && !e.isRemoved() && isEligible(module, e)
-                && player.squaredDistanceTo(e) <= rangeSq
-        );
+        java.util.List<Entity> candidates = new java.util.ArrayList<>();
+        // Box.expand() with a huge radius risks precision/overflow weirdness at
+        // the extremes, and there's no reason to build one at all when every
+        // loaded entity is in bounds anyway — just walk everything the client
+        // actually has loaded instead of asking for a region that contains it.
+        Iterable<Entity> pool = infinite
+            ? world.getEntities()
+            : world.getOtherEntities(player, player.getBoundingBox().expand(range), e -> true);
+        for (Entity e : pool) {
+            if (e == player || !e.isAlive() || e.isRemoved() || !isEligible(module, e)) continue;
+            if (player.squaredDistanceTo(e) > rangeSq) continue;
+            candidates.add(e);
+        }
 
         Entity bestByRay = null;
         double bestRayDist = Double.MAX_VALUE;
