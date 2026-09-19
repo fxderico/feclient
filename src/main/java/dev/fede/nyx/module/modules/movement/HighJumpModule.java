@@ -9,12 +9,17 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.util.math.Vec3d;
 
 public class HighJumpModule extends Module {
-   private final NumberSetting jumpVelocity = new NumberSetting("JumpVelocity", 1.0, 0.5, 5.0, 0.1);
+   private final NumberSetting jumpVelocity = new NumberSetting("JumpVelocity", 5.0, 0.5, 5.0, 0.1);
    private final BooleanSetting onlyOnGround = new BooleanSetting("OnlyOnGround", true);
    private boolean bool;
 
+   // named "Speed Jump" (not "HighJump") specifically so it sorts right
+   // after "Speed" in the panel's alphabetical list — CategoryPanel sorts
+   // by display name, there's no manual ordering, so adjacency has to come
+   // from the name itself. "Speed Jump" < "Spider"/"Sprint"/"Step"/"Strafe"
+   // alphabetically, so it lands directly under Speed and nothing splits them.
    public HighJumpModule() {
-      super("HighJump", "Amplifies the initial jump impulse", Category.MOVEMENT);
+      super("Speed Jump", "Amplifies the initial jump impulse", Category.MOVEMENT);
       this.run6(new Setting[]{this.jumpVelocity, this.onlyOnGround});
    }
 

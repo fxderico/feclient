@@ -19,7 +19,9 @@ public class SpeedModule extends Module {
    // velocity is left untouched — flat ground speed, no forced hop, jumping only
    // happens if you actually press space like normal.
    private final ModeSetting mode = new ModeSetting("Mode", "Strafe", "Vanilla", "Strafe", "LowHop", "BunnyHop");
-   private final NumberSetting speed = new NumberSetting("Speed", 0.35, 0.1, 1.0, 0.05);
+   // range extended 1.0 -> 5.0 and default bumped to match — 0.1-1.0 was the
+   // original cap (already 3-4x vanilla sprint at 1.0); on request.
+   private final NumberSetting speed = new NumberSetting("Speed", 5.0, 0.1, 5.0, 0.05);
    private final NumberSetting boost = (NumberSetting)new NumberSetting("Boost", 1.5, 1.0, 5.0, 0.1).visibleWhen(this::getBoolean);
    private final BooleanSetting onlyGround = new BooleanSetting("OnlyGround", false);
    private final AntiVoidModuleHelper antiVoidModuleHelper = new AntiVoidModuleHelper();
