@@ -5,12 +5,6 @@
     "ast_hash": "9e705cab1a5163c946f373d5d21010df",
     "semantic_hash": ""
   },
-  "fede_injector.sh": {
-    "mtime": 1783519393.0596983,
-    "seen": 1789908223.7018113,
-    "ast_hash": "f6a10b895e51faf34bb451fa9ad0cb44",
-    "semantic_hash": ""
-  },
   "gradlew": {
     "mtime": 1788285202.0,
     "seen": 1789908223.7018135,
@@ -3402,21 +3396,21 @@
     "semantic_hash": ""
   },
   "src/main/resources/feclient.mixins.json": {
-    "mtime": 1789506101.6135993,
-    "seen": 1789908223.7024128,
-    "ast_hash": "3853368ceb463f722f8a0c5e9bef21e3",
+    "mtime": 1789921825.2984128,
+    "seen": 1789921984.1138477,
+    "ast_hash": "191a7693b0d67249a7c26c3ceefeb468",
     "semantic_hash": ""
   },
   "src/main/resources/feclient.nyx.mixins.json": {
-    "mtime": 1789415774.1247892,
-    "seen": 1789908223.7024138,
-    "ast_hash": "c3811be138607291de8483e4e250abde",
+    "mtime": 1789921830.1882567,
+    "seen": 1789921984.1138513,
+    "ast_hash": "15097db56ebd866901fad8347227172a",
     "semantic_hash": ""
   },
   "src/main/resources/feclient.sodium.mixins.json": {
-    "mtime": 1789418115.4208992,
-    "seen": 1789908223.7024148,
-    "ast_hash": "ac61fe82d8def7d554727f925a52a08b",
+    "mtime": 1789921834.2428317,
+    "seen": 1789921984.1138532,
+    "ast_hash": "1301155248082f83570ce0a3cc9050d8",
     "semantic_hash": ""
   },
   "stonecutter.gradle": {
@@ -3429,30 +3423,6 @@
     "mtime": 1789830214.0697374,
     "seen": 1789908223.702417,
     "ast_hash": "39fcb37eb095bf8ba90ccbb1ea5aa65d",
-    "semantic_hash": ""
-  },
-  "fede_core.txt": {
-    "mtime": 1783520206.2867656,
-    "seen": 1789908223.7024179,
-    "ast_hash": "defb1ac276021a2c551f3c982c9c138a",
-    "semantic_hash": ""
-  },
-  "fede_style.txt": {
-    "mtime": 1783519475.7243505,
-    "seen": 1789908223.702419,
-    "ast_hash": "b81616bc8f11627ec32cd0646a082dbf",
-    "semantic_hash": ""
-  },
-  "logs/fede_20260920_143140.txt": {
-    "mtime": 1789907500.4955525,
-    "seen": 1789908223.70242,
-    "ast_hash": "f6be2b21f07d399807ac7df463181ba4",
-    "semantic_hash": ""
-  },
-  "logs/fede_20260920_143429.txt": {
-    "mtime": 1789907669.917042,
-    "seen": 1789908223.702421,
-    "ast_hash": "877ee070ac4da54d634b03c72e2ec4fb",
     "semantic_hash": ""
   },
   "src/main/resources/assets/feclient/fonts/Monocraft-OFL.txt": {

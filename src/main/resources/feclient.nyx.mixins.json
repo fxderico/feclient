@@ -59,10 +59,9 @@
     "ContainerSnapshotMixin",
     "SwingDurationMixin",
     "MixinClientTickGate",
-    "OutlineThicknessMixin",
+    "OutlineThicknessMixin"
   ],
   "injectors": {
     "defaultRequire": 0
-  },
-  "refmap": "feclient.nyx.mixins.refmap.json"
+  }
 }
