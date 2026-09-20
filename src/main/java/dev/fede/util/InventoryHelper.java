@@ -14,6 +14,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
 public final class InventoryHelper {
+   // PlayerScreenHandler layout has been stable since offhand was added in
+   // 1.9: 0 craft output, 1-4 crafting grid, 5-8 armor, 9-35 main inv,
+   // 36-44 hotbar, 45 offhand. hardcoded because it's a protocol constant,
+   // not something that varies by version or config.
+   private static final int OFFHAND_SCREEN_SLOT = 45;
+
    private InventoryHelper() {
    }
 
@@ -55,6 +61,22 @@ public final class InventoryHelper {
 
    public static void swap(int slot) {
       selectHotbarSlot(slot);
+   }
+
+   /**
+    * Swaps whatever's at invIndex (hotbar 0-8 or main inv 9-35) directly
+    * into the offhand slot in a single container click. No hotbar staging,
+    * no SWAP_ITEM_WITH_OFFHAND (F key) packet, no reselecting the hotbar
+    * slot first -- the item never has to visibly pass through the hotbar
+    * or the held-item slot at all, it goes straight from wherever it was
+    * to offhand in one server-side swap. Works the same whether invIndex
+    * is the currently-held hotbar slot or a slot buried in the main inventory.
+    */
+   public static void swapToOffhand(int invIndex) {
+      MinecraftClient mc = mc();
+      if (mc.player != null && mc.interactionManager != null && invIndex >= 0 && invIndex <= 35) {
+         mc.interactionManager.clickSlot(mc.player.currentScreenHandler.syncId, toScreenSlot(invIndex), OFFHAND_SCREEN_SLOT, SlotActionType.SWAP, mc.player);
+      }
    }
 
    public static Hand handHolding(Item item) {

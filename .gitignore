@@ -26,3 +26,6 @@ run/
 # graphify local AST/embedding cache -- regenerated per-machine, not the
 # actual graph output (graph.json/graph.html/GRAPH_REPORT.md are checked in)
 graphify-out/cache/
+# graphify's own dated backup snapshots of prior graph versions -- git
+# history already covers that, no need to double up
+graphify-out/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/

@@ -702,9 +702,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/impl/AutoTotemModule.java": {
-    "mtime": 1788814202.562818,
-    "seen": 1789908223.7019372,
-    "ast_hash": "69c647af773d7210d6049a143b0b193e",
+    "mtime": 1789909826.712407,
+    "seen": 1789910027.8701725,
+    "ast_hash": "ed7fdf90d8fe9f533381879b58461d9f",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/impl/AutoTpaModule.java": {
@@ -2892,9 +2892,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/util/InventoryHelper.java": {
-    "mtime": 1788814203.6557531,
-    "seen": 1789908223.7023244,
-    "ast_hash": "09429a85cc1cd45e7db4c040b5f46d13",
+    "mtime": 1789909646.0225728,
+    "seen": 1789910027.871207,
+    "ast_hash": "2d665581df0a0d20ee378a3063a1bbd1",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/util/TpsTracker.java": {
@@ -3801,6 +3801,12 @@
     "mtime": 1786276616.0,
     "seen": 1789908223.7024825,
     "ast_hash": "e2fd44c5def3310175b375157e60cd69",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/themes.svg": {
+    "mtime": 1789909753.1564183,
+    "seen": 1789910027.871451,
+    "ast_hash": "377566b3f8471aabf7c83aaeb0f26258",
     "semantic_hash": ""
   }
 }
