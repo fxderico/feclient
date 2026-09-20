@@ -38,8 +38,26 @@ public class FeClient implements ClientModInitializer {
 
     public static final String MOD_ID      = "feclient";
     public static final String NAME        = "feClient";
-    public static final String VERSION     = "1.0.0";
+    // was hardcoded "1.0.0" -> every UI surface that shows it (watermark, HUD,
+    // menu) and the init log stayed frozen at 1.0.0 no matter the real build.
+    // Read it from the loaded mod's own metadata (which fabric.mod.json fills
+    // from mod.version at build) so it always matches the actual jar. Strip the
+    // "+<mc>" build suffix so it shows a clean "1.0.9" rather than "1.0.9+1.21.11".
+    public static final String VERSION     = resolveVersion();
     public static final Logger LOGGER      = LoggerFactory.getLogger(NAME);
+
+    private static String resolveVersion() {
+        try {
+            String v = net.fabricmc.loader.api.FabricLoader.getInstance()
+                .getModContainer(MOD_ID)
+                .map(c -> c.getMetadata().getVersion().getFriendlyString())
+                .orElse("dev");
+            int plus = v.indexOf('+');
+            return plus > 0 ? v.substring(0, plus) : v;
+        } catch (Throwable t) {
+            return "dev";
+        }
+    }
 
     private static ModuleManager   modules;
     private static ThemeManager    themes;

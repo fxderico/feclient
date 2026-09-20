@@ -1,46 +1,46 @@
 # Graph Report - feclient  (2026-09-20)
 
 ## Corpus Check
-- 571 files · ~344,157 words
+- 571 files · ~344,262 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 6424 nodes · 18854 edges · 276 communities (170 shown, 106 thin omitted)
+- 6425 nodes · 18855 edges · 263 communities (159 shown, 104 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 1203 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `40ecc277`
+- Built from commit: `29812f83`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Module
+- NyxModuleBridge
 - Module
 - FeClient.java
-- org.joml.Matrix4f
+- .applyScissor
 - ColorSetting
-- AntiVoidModuleHelper
-- RtpBaseFinder
+- net.minecraft.entity.LivingEntity
+- .getValueInt
 - NVGRenderer
 - net.minecraft.util.math.BlockPos
 - NukerModule
-- ModeSetting
+- ClickGuiScreen
 - AutoTunnel.java
-- HudComponent
+- .render
 - com.google.gson.JsonObject
-- ModuleManager
-- Setting
-- org.spongepowered.asm.mixin.injection.Inject
+- .clearSusState
+- ThemeManager
+- org.spongepowered.asm.mixin.injection.callback.CallbackInfo
 - AutoTunnel
-- StringSetting
+- ModeSetting
 - net.minecraft.util.math.Vec3d
-- imgui.ImDrawList
-- net.minecraft.client.gui.DrawContext
-- HitboxesModule
-- IconPickerScreen
+- net.minecraft.item.Item
+- CodeEngineScreen
+- net.minecraft.util.math.Box
+- .renderNvg
 - GambleRiggerModule
-- .getValueInt
+- .run3
 - ConfigPanel
 - AutoWalkModule
 - NametagsModule
@@ -48,61 +48,61 @@
 - Inner1
 - ChunkActivityScanner
 - InputUtil$class_306Utils
-- BooleanSetting
+- Module
 - net.minecraft.client.input.Input
-- com.mojang.blaze3d.pipeline.RenderPipeline
+- org.joml.Matrix4f
 - .runTest
-- SplittableRandomUtils
+- ChunkSpoof
 - StaffEntry
 - Kind
-- Override
+- .getInt
 - FreecamModule
 - .getValue
 - AutoTunnelHelper
 - EntityNameTagMixin.java
-- net.minecraft.util.Identifier
+- net.minecraft.client.render.RenderLayer
 - FreecamModule
 - ThrowableUtils
-- SeedCaveXrayRenderer
-- .render
+- BacktrackBuffer
+- Manager
 - WaterPlus
 - SpawnerProtectModule
 - HUDModule
 - AutoSell
-- org.spongepowered.asm.mixin.Mixin
-- StringSetting
-- Inner3
+- net.minecraft.client.render.Camera
+- Setting
+- AutoInventoryTotemModule
 - .run
-- org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable
-- ItemDropperModule
+- org.spongepowered.asm.mixin.Mixin
+- net.minecraft.util.Identifier
 - net.minecraft.client.MinecraftClient
 - ClearWorldModule
 - GlintTextureReplacer
 - StashFinder
 - net.minecraft.world.World
 - RegionMap
-- net.minecraft.world.chunk.WorldChunk
+- BaseFindingTracker
 - MapUtils
 - net.minecraft.block.Block
 - NVGImages
-- net.minecraft.client.render.VertexConsumer
+- HitParticleRenderer
 - c$bUtils
-- .run15
+- ListUtils
 - BlockListSetting
 - Tag
 - Module
 - Setting
 - AwtFontRenderer
-- net.minecraft.client.util.math.MatrixStack.Entry
-- SpotifyService
+- net.minecraft.client.render.VertexConsumer
+- .render
 - FakeStatsModule
 - TargetHUDModule
 - PortalESP
-- TimerSpeedModule
-- net.minecraft.entity.LivingEntity
+- InventoryHelper
+- KillAura
 - AutoTreeModule
 - SpawnerESPModule
-- RegionMapModule
+- .drawGrid
 - PathUtils
 - SeedChunkFinder
 - HumanMotionSim
@@ -110,27 +110,27 @@
 - KeystrokeHUDModule
 - CauldronESPModule
 - .classify
-- SkinProtectModule
+- AutoCrystalModule
 - ColorWidget
 - GamblePanel
 - VelocityModule
 - InfoOrb
 - BlockCell
-- Action
+- CustomCrosshairModule
 - Chest$KindUtils
-- StorageESPModule
+- ClientPlayNetworkHandlerMixinUtil
 - ChatFilterHelper
-- org.slf4j.Logger
+- AimAssistModule
 - RaidPlannerModule
-- net.minecraft.client.gui.screen.ingame.HandledScreen
-- net.minecraft.item.Item
+- DoubleAnchorModule
+- impl/AutoCrystalModule.java
 - EntryCell
-- NotificationManager
+- Override
 - ItemESPModule
-- net.minecraft.util.math.Box
+- BlockGlowModule
 - Freelook
 - ArmorTrimHiderModule
-- java.lang.reflect.Field
+- XRayModule
 - InventoryMoveModule
 - HoleESPModule
 - Category
@@ -141,122 +141,118 @@
 - KawasePipeline
 - net.minecraft.entity.Entity
 - .run2
-- Animation
+- ModuleEntry
 - .optionalOf2
-- .runTest
-- IncrementalScan
+- Easing
+- StorageEspRenderer
 - JumpCircleRenderer
 - DoubleListSetting
 - MinerMovementHelper
 - ServerLightCache
-- ElytraFlyModule
+- AutoWalkModule
 - net.minecraft.text.Text
-- ChunkFinderModule
+- NotificationManager
 - BlockEntityEspModule
-- net.minecraft.client.world.ClientWorld
-- CriticalsModule
+- KillEffectsModule
+- net.minecraft.client.network.ClientPlayerEntity
 - ContainerSnapshotMixinEntry
 - WaterPlus.java
 - java.awt.Color
-- XRayModule
+- AutoClickerModule
 - ViewModelModule
 - AutoFish
 - AutoEatModule
 - .run8
-- IconListSetting
-- AutoTotemModule
-- StringBuilderUtils
+- AntiTrapModule
+- ModuleManager
+- PlayerTabOverlayMixin.java
 - NoSlowModule
 - ThemeSelectorModule
 - SusChunkScanner
-- BedESPModule
+- ElytraSwapModule
 - Chest
-- net.minecraft.entity.player.PlayerEntity
-- ClickSounds
+- ReachModule
+- HOVER
 - CustomTitleModule
 - LightFinderModule
-- net.minecraft.client.network.ClientPlayNetworkHandler
+- MaceSwapModule
 - Slot
 - Signal
 - StorageType
-- RPCModule
+- SignalType
 - FreeLookModule
 - SodiumMixinPlugin
 - NameProtectModule
-- StringWidget
+- StringSetting
 - AutoLogModule
-- ViewCoordsCommand
+- Friends
 - SpectatorDetectorModule
 - TracersModule
 - CategoryPanel
-- PlayerChunksModule
-- AutoRender
-- AntiVoidModule
+- .run4
+- PhaseModule
+- WaterModuleBridge
 - AutoToolModule
 - Inner3
 - org.spongepowered.asm.mixin.gen.Accessor
 - AntiAFKModule
-- net.minecraft.client.option.KeyBinding
+- KeyBindingAccessor
 - AutoBridgeModule
 - PathUtils_2_3_4
-- AlbumArtCache
+- net.minecraft.client.texture.NativeImageBackedTexture
 - Amounts
 - ESPGlowRenderer
-- ChestStealerModule
-- AimAssistModule
-- .getValueLong
+- ChunkFinderModule
+- NetheriteFinderModule
+- BacktrackModule
 - SwimSpeedModule
 - State
-- StorageEspRenderer
+- NoClipModule
 - XRay
-- d$aUtils
+- .run3
 - BlockScanCache
 - ShieldBreaker
-- AntiDebugUtil
+- .onTick
 - MultiItemSetting
 - AutoSpawnerSellModule
-- net.minecraft.client.font.TextRenderer
+- HealthTagsModule
 - EagleAuraModule
-- FlyModule
-- SusChunkRenderer
+- ArcPipeline
+- Inner2
 - AutoTotem
-- .runTest
-- net.minecraft.block.BlockState
-- AutoStoreModule
+- net.minecraft.client.font.TextRenderer
+- net.minecraft.world.chunk.WorldChunk
+- BlockListWidget
 - Sprint
 - MovementTrailsModule
-- AutoTpaModule
-- BacktrackEntityUpdateMixin.java
+- CriticalsModule
 - SpawnerProtectModule
 - AirJumpModule
 - HighJumpModule
-- ThemesPanel
+- ChunkNibbleArrayAccessor.java
 - State
 - ChunkKeeperModule
 - Phase
-- BlockOutlineRenderer.java
+- .render
 - ChunkLightProviderAccessor.java
-- .tick
+- .run3
 - ShieldBreakerModule
-- .run4
+- Chams
 - State
-- LongJumpModule
 - ExploitState
 - AutoClickerModule
 - HomeSetter
 - IceSpeedModule
 - FakeRolesUtil
 - StepModule
-- AutoDropModule
-- Tier
+- Inner1
 - AutoMine
 - Phase
 - RotationHumanizer
 - Phase
-- CodeEngineScreen
-- .FeClient$armorTrim
+- Inner2
+- .modules
 - feclient
-- .isVisible
 - SpotifyApi
 - NameProtectUtil
 - gradlew
@@ -272,21 +268,11 @@
 - YAxisPhysicsMixin
 - InternalUtil
 - HoverTotem
-- FastPlaceModule
-- Arc2DRenderer
-- ESPGlowPipeline
-- LiquidGlassPipeline
-- GuiRenderer
+- net.minecraft.client.gui.DrawContext
 - nyx/module/Category.java
 - .run2
 - .run2
-- Outline2DRenderer
-- Rectangle2DRenderer
-- Texture2DRenderer
-- .run4
-- Chest.java
 - InternalData2
-- Blur2DRenderer
 
 ## God Nodes (most connected - your core abstractions)
 1. `Module` - 296 edges
@@ -315,199 +301,203 @@
 ## Import Cycles
 - None detected.
 
-## Communities (276 total, 106 thin omitted)
+## Communities (263 total, 104 thin omitted)
 
-### Community 0 - "Module"
-Cohesion: 0.03
-Nodes (28): Category, ADDONS, CLIENT, COMBAT, DONUT, MISC, MOVEMENT, PLAYER (+20 more)
+### Community 0 - "NyxModuleBridge"
+Cohesion: 0.23
+Nodes (3): Override, Setting, NyxModuleBridge
 
 ### Community 1 - "Module"
 Cohesion: 0.04
-Nodes (33): net.minecraft.client.gui.screen.ingame.InventoryScreen, net.minecraft.registry.RegistryKey, Category, ADDONS, CLIENT, COMBAT, CONFIG, DONUTSMP (+25 more)
+Nodes (34): net.minecraft.registry.RegistryKey, Category, ADDONS, CLIENT, COMBAT, CONFIG, DONUTSMP, MOVEMENT (+26 more)
 
 ### Community 2 - "FeClient.java"
-Cohesion: 0.04
-Nodes (34): com.llamalad7.mixinextras.injector.ModifyExpressionValue, java.nio.ByteBuffer, net.fabricmc.api.ClientModInitializer, net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext, net.fabricmc.fabric.api.client.gametest.v1.context.TestServerContext, net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest, net.minecraft.client.gui.hud.InGameHud, net.minecraft.client.gui.screen.Screen (+26 more)
-
-### Community 3 - "org.joml.Matrix4f"
-Cohesion: 0.08
-Nodes (5): com.mojang.blaze3d.textures.GpuTextureView, org.joml.Matrix4f, Matrix4f, WorldProjection, Matrix4f
+Cohesion: 0.05
+Nodes (25): net.fabricmc.api.ClientModInitializer, net.fabricmc.fabric.api.client.gametest.v1.context.ClientGameTestContext, net.fabricmc.fabric.api.client.gametest.v1.context.TestServerContext, net.fabricmc.fabric.api.client.gametest.v1.FabricClientGameTest, net.minecraft.client.gui.hud.ChatHud, net.minecraft.client.gui.screen.Screen, net.minecraft.client.input.KeyInput, net.minecraft.item.equipment.trim.ArmorTrim (+17 more)
 
 ### Community 4 - "ColorSetting"
+Cohesion: 0.05
+Nodes (14): net.minecraft.entity.player.PlayerEntity, net.minecraft.particle.ParticleEffect, ReachBlockRangeMixin, ReachEntityRangeMixin, BlockOutlineModule, Override, BreakParticlesModule, Override (+6 more)
+
+### Community 5 - "net.minecraft.entity.LivingEntity"
 Cohesion: 0.06
-Nodes (7): BlockOutlineModule, Override, GlintCustomiserModule, NetheriteFinderModule, OutlineESPModule, OutlinesModule, ColorSetting
+Nodes (13): net.minecraft.entity.LivingEntity, AuthGate, LivingEntityAccessor, MovementSpeedMixin, MaceAuraModule, Override, TriggerBot, ThreadLocalRandom (+5 more)
 
-### Community 5 - "AntiVoidModuleHelper"
+### Community 6 - ".getValueInt"
 Cohesion: 0.12
-Nodes (5): AuthGate, MaceAuraModule, AntiAFKModuleUtil, AntiVoidModuleHelper, AutoCrystalModuleUtil
-
-### Community 6 - "RtpBaseFinder"
-Cohesion: 0.12
-Nodes (6): Inner1, BlockPos, Override, Vec3d, RtpBaseFinder, AutoTunnelUtil2
+Nodes (5): Inner1, BlockPos, Override, Vec3d, RtpBaseFinder
 
 ### Community 7 - "NVGRenderer"
 Cohesion: 0.07
-Nodes (9): Override, Slot, Override, Override, KeystrokesHud, Override, SpotifyHud, CustomCrosshairModule (+1 more)
+Nodes (10): Override, Slot, Override, Override, Override, Override, Override, Override (+2 more)
 
 ### Community 8 - "net.minecraft.util.math.BlockPos"
 Cohesion: 0.09
 Nodes (9): Deprecated, net.minecraft.util.math.BlockPos, net.minecraft.util.math.Direction, Cached, AutoTunnelUtil, Inner1, m$aUtils, Inner1 (+1 more)
 
-### Community 10 - "ModeSetting"
+### Community 10 - "ClickGuiScreen"
 Cohesion: 0.06
-Nodes (10): Override, JesusModule, ThreadLocalRandom, SpeedModule, Override, SprintModule, SwingAnimationModule, HoveredContainerPreviewModule (+2 more)
+Nodes (3): ClickGuiScreen, Panel, NvgDrawable
 
 ### Community 11 - "AutoTunnel.java"
-Cohesion: 0.08
-Nodes (13): net.minecraft.entity.player.PlayerInventory, net.minecraft.util.hit.HitResult, net.minecraft.world.GameMode, ClientPlayerInteractionManagerAccessor, MinecraftClientInvoker, getNotificationTypeArray(), INFO, UNKNOWN (+5 more)
+Cohesion: 0.06
+Nodes (17): imgui.ImDrawList, imgui.ImFont, net.minecraft.util.hit.HitResult, net.minecraft.world.GameMode, ImGuiFonts, ClientPlayerInteractionManagerAccessor, MinecraftClientInvoker, RadarModule (+9 more)
 
-### Community 12 - "HudComponent"
-Cohesion: 0.05
-Nodes (8): net.minecraft.client.input.MouseInput, HudComponent, HudDragController, HudManager, Placement, GlStateSnapshot, OverlayRenderer, CpsTracker
+### Community 12 - ".render"
+Cohesion: 0.08
+Nodes (3): Placement, GlStateSnapshot, OverlayRenderer
 
 ### Community 13 - "com.google.gson.JsonObject"
-Cohesion: 0.06
+Cohesion: 0.05
 Nodes (15): com.google.gson.JsonObject, ConfigManager, JsonObject, Section, ConfigStore, ImportResult, JsonObject, Slot (+7 more)
 
-### Community 14 - "ModuleManager"
+### Community 15 - "ThemeManager"
 Cohesion: 0.05
-Nodes (21): AutoClickerModule, AutoCrystalModule, AutoTotemModule, AutoWalkModule, FastUseModule, FreecamModule, FullbrightModule, CustomFovModule (+13 more)
+Nodes (21): java.util.function.BooleanSupplier, net.minecraft.client.input.MouseInput, net.minecraft.client.texture.GlTexture, org.lwjgl.nanovg.NVGColor, org.lwjgl.system.MemoryStack, ArmorHud, ArrayListHud, InfoHud (+13 more)
 
-### Community 15 - "Setting"
+### Community 16 - "org.spongepowered.asm.mixin.injection.callback.CallbackInfo"
 Cohesion: 0.04
-Nodes (13): java.util.function.BooleanSupplier, BlockListWidget, Override, Override, ModeWidget, SettingWidget, ArmorHud, Override (+5 more)
+Nodes (35): net.minecraft.client.network.ClientPlayNetworkHandler, net.minecraft.client.world.ClientChunkManager, net.minecraft.network.packet.s2c.play.BlockBreakingProgressS2CPacket, net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket, net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket, net.minecraft.network.packet.s2c.play.ChunkDataS2CPacket, net.minecraft.network.packet.s2c.play.ChunkDeltaUpdateS2CPacket, net.minecraft.network.packet.s2c.play.EntityPositionS2CPacket (+27 more)
 
-### Community 16 - "org.spongepowered.asm.mixin.injection.Inject"
-Cohesion: 0.05
-Nodes (25): net.minecraft.client.Keyboard, net.minecraft.client.render.item.HeldItemRenderer, net.minecraft.network.packet.s2c.play.BlockBreakingProgressS2CPacket, net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket, net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket, net.minecraft.network.packet.s2c.play.ChunkDeltaUpdateS2CPacket, net.minecraft.network.packet.s2c.play.WorldTimeUpdateS2CPacket, org.spongepowered.asm.mixin.injection.callback.CallbackInfo (+17 more)
-
-### Community 18 - "StringSetting"
-Cohesion: 0.05
-Nodes (13): com.google.gson.Gson, net.minecraft.text.StyleSpriteSource.Font, JsonObject, Manager, ModuleManager, ClickGUIModule, Override, TriggerBot (+5 more)
+### Community 18 - "ModeSetting"
+Cohesion: 0.06
+Nodes (12): com.google.gson.Gson, net.minecraft.text.StyleSpriteSource.Font, ClickGUIModule, Override, Override, JesusModule, Override, SprintModule (+4 more)
 
 ### Community 19 - "net.minecraft.util.math.Vec3d"
+Cohesion: 0.08
+Nodes (17): net.minecraft.client.render.state.OutlineRenderState, net.minecraft.client.render.state.WorldRenderState, net.minecraft.client.render.VertexConsumerProvider.Immediate, net.minecraft.client.util.math.MatrixStack, net.minecraft.util.math.Vec3d, org.joml.Vector3fc, LevelRendererMixin, BlockPos (+9 more)
+
+### Community 20 - "net.minecraft.item.Item"
+Cohesion: 0.13
+Nodes (8): net.minecraft.item.Item, BooleanSetting, AutoMLGModule, BlockPos, Override, Entry, BooleanSetting, ColorSetting
+
+### Community 21 - "CodeEngineScreen"
+Cohesion: 0.09
+Nodes (5): net.minecraft.client.gui.Click, net.minecraft.client.input.CharInput, CodeEngineScreenUtil, CodeEngineScreen, Inner1
+
+### Community 22 - "net.minecraft.util.math.Box"
 Cohesion: 0.11
-Nodes (14): net.minecraft.client.render.state.WorldRenderState, net.minecraft.client.render.VertexConsumerProvider.Immediate, net.minecraft.client.util.math.MatrixStack, net.minecraft.util.math.Vec3d, org.joml.Vector3fc, LevelRendererMixin, BlockPos, Inner11 (+6 more)
+Nodes (8): net.minecraft.entity.projectile.ProjectileUtil, net.minecraft.util.math.Box, org.spongepowered.asm.mixin.injection.ModifyVariable, HitboxTargetPredicateMixin, HitboxesModule, Override, Override, CornerBoxESPModuleUtil
 
-### Community 20 - "imgui.ImDrawList"
-Cohesion: 0.20
-Nodes (5): imgui.ImDrawList, imgui.ImFont, ImGuiFonts, RadarModule, Matrix4fUtils
-
-### Community 21 - "net.minecraft.client.gui.DrawContext"
-Cohesion: 0.17
-Nodes (3): net.minecraft.client.gui.DrawContext, CodeEngineScreenUtil, Override
-
-### Community 22 - "HitboxesModule"
-Cohesion: 0.05
-Nodes (22): java.util.function.IntPredicate, net.minecraft.client.gui.hud.ChatHud, net.minecraft.client.network.ClientCommonNetworkHandler, net.minecraft.entity.projectile.ProjectileUtil, net.minecraft.network.packet.Packet, org.spongepowered.asm.mixin.injection.ModifyVariable, ChatComponentMixin, BacktrackBuffer (+14 more)
-
-### Community 23 - "IconPickerScreen"
+### Community 23 - ".renderNvg"
 Cohesion: 0.10
-Nodes (3): IconPickerScreen, Cell, PickerGrid
+Nodes (5): IconPickerScreen, Override, Layout, Cell, PickerGrid
+
+### Community 26 - "ConfigPanel"
+Cohesion: 0.08
+Nodes (13): Action, ACTIVATE, DELETE, EXPORT, IMPORT, RENAME, SAVE, ConfigPanel (+5 more)
 
 ### Community 28 - "NametagsModule"
 Cohesion: 0.17
 Nodes (6): java.util.concurrent.ConcurrentLinkedQueue, Inner1, Inner2, Override, Vec3d, NametagsModule
+
+### Community 29 - "RenderUtil"
+Cohesion: 0.10
+Nodes (3): LiquidGlassPipeline, Matrix4f, RenderUtil
 
 ### Community 30 - "Inner1"
 Cohesion: 0.08
 Nodes (11): HeatMapChunkRadarModule, Inner1, Override, Inner1, Inner1, Inner2, BlockPos, PathUtils_2_3 (+3 more)
 
 ### Community 31 - "ChunkActivityScanner"
-Cohesion: 0.08
-Nodes (4): Override, ChunkActivityScanner, Inner1, BlockPos
+Cohesion: 0.10
+Nodes (3): Override, ChunkActivityScanner, BlockPos
 
-### Community 33 - "BooleanSetting"
+### Community 32 - "InputUtil$class_306Utils"
+Cohesion: 0.10
+Nodes (3): Override, AutoTunnelUtil2, InputUtil$class_306Utils
+
+### Community 33 - "Module"
 Cohesion: 0.03
-Nodes (32): java.util.function.DoubleFunction, AutoRespawnModule, Override, AutoSprintModule, Override, BlockEspModule, CoordSnapperModule, Override (+24 more)
+Nodes (69): AutoClickerModule, AutoCrystalModule, AutoTotemModule, AutoWalkModule, FastUseModule, FreecamModule, FullbrightModule, net.minecraft.screen.slot.SlotActionType (+61 more)
 
 ### Community 34 - "net.minecraft.client.input.Input"
 Cohesion: 0.16
 Nodes (9): net.minecraft.client.input.Input, net.minecraft.client.input.KeyboardInput, net.minecraft.util.math.Vec2f, net.minecraft.util.PlayerInput, ClientInputAccessor, KeyboardInputFreecamMixin, AutoWalkInputMixin, FreecamInputFreezeMixin (+1 more)
 
-### Community 35 - "com.mojang.blaze3d.pipeline.RenderPipeline"
-Cohesion: 0.20
-Nodes (9): com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.systems.RenderPass, Sampler1, ArcOutlinePipeline, ArcPipeline, OutlinePipeline, RectPipeline (+1 more)
+### Community 35 - "org.joml.Matrix4f"
+Cohesion: 0.10
+Nodes (13): com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.systems.RenderPass, org.joml.Matrix4f, Inner10, Inner13, Inner5, Inner6 (+5 more)
 
-### Community 36 - ".runTest"
-Cohesion: 0.06
-Nodes (6): EspPickerGameTest, FakeRolesGameTest, GambleRiggerGameTest, SixSevenClientGameTest, Override, MotionBlurRenderer
-
-### Community 37 - "SplittableRandomUtils"
-Cohesion: 0.17
-Nodes (4): java.util.SplittableRandom, Inner1, SplittableRandom, SplittableRandomUtils
+### Community 37 - "ChunkSpoof"
+Cohesion: 0.13
+Nodes (11): net.minecraft.client.network.ClientCommonNetworkHandler, ChunkSpoofPacketMixin, ChunkSpoof, getChunkSpoofStateArray(), Override, Vec3d, State, HOLDING (+3 more)
 
 ### Community 38 - "StaffEntry"
-Cohesion: 0.13
-Nodes (6): StaffListGameTest, Override, RowAnim, StaffListHud, StaffEntry, StaffTracker
+Cohesion: 0.10
+Nodes (7): StaffListGameTest, Override, RowAnim, StaffListHud, Override, StaffEntry, StaffTracker
 
 ### Community 39 - "Kind"
 Cohesion: 0.06
-Nodes (33): Kind, BARREL, BEACON, BLAST_FURNACE, BREWING_STAND, BRUSHABLE_BLOCK, CAULDRON, CHEST (+25 more)
+Nodes (34): Kind, BARREL, BEACON, BLAST_FURNACE, BREWING_STAND, BRUSHABLE_BLOCK, CAULDRON, CHEST (+26 more)
+
+### Community 40 - ".getInt"
+Cohesion: 0.22
+Nodes (3): net.minecraft.entity.decoration.EndCrystalEntity, AutoCrystalModule, Override
 
 ### Community 41 - "FreecamModule"
-Cohesion: 0.05
-Nodes (10): java.util.Map.Entry, SmartCullAccessor, ChunkFinderModule, Override, FreecamModule, Override, Vec3d, FreelookModule (+2 more)
+Cohesion: 0.15
+Nodes (6): net.minecraft.client.option.Perspective, SmartCullAccessor, FreecamModule, Override, FreelookModule, Override
 
 ### Community 42 - ".getValue"
-Cohesion: 0.08
-Nodes (8): AutoCrystalModule, Override, Vec3d, Override, Override, Override, Override, Override
+Cohesion: 0.12
+Nodes (4): Override, Override, Override, Override
+
+### Community 43 - "AutoTunnelHelper"
+Cohesion: 0.09
+Nodes (6): java.util.SplittableRandom, AutoTunnelHelper, SplittableRandom, Inner1, SplittableRandom, SplittableRandomUtils
 
 ### Community 44 - "EntityNameTagMixin.java"
-Cohesion: 0.07
-Nodes (24): net.minecraft.client.font.TextRenderer.TextLayerType, net.minecraft.client.render.command.LabelCommandRenderer, net.minecraft.client.render.command.OrderedRenderCommandQueue, net.minecraft.client.render.entity.EntityRenderer, net.minecraft.client.render.entity.ItemEntityRenderer, net.minecraft.client.render.entity.LightningEntityRenderer, net.minecraft.client.render.entity.PlayerEntityRenderer, net.minecraft.client.render.entity.state.EntityRenderState (+16 more)
+Cohesion: 0.08
+Nodes (20): net.minecraft.client.render.command.OrderedRenderCommandQueue, net.minecraft.client.render.entity.EntityRenderer, net.minecraft.client.render.entity.ItemEntityRenderer, net.minecraft.client.render.entity.LightningEntityRenderer, net.minecraft.client.render.entity.PlayerEntityRenderer, net.minecraft.client.render.entity.state.EntityRenderState, net.minecraft.client.render.entity.state.ItemEntityRenderState, net.minecraft.client.render.entity.state.LightningEntityRenderState (+12 more)
 
-### Community 45 - "net.minecraft.util.Identifier"
-Cohesion: 0.10
-Nodes (14): net.minecraft.client.render.entity.LivingEntityRenderer, net.minecraft.client.render.entity.state.LivingEntityRenderState, net.minecraft.client.render.RenderLayer, net.minecraft.util.Identifier, HUDModuleData, ChamsLivingEntityRendererMixin, FastUseModule, Override (+6 more)
+### Community 45 - "net.minecraft.client.render.RenderLayer"
+Cohesion: 0.25
+Nodes (6): net.minecraft.client.render.entity.LivingEntityRenderer, net.minecraft.client.render.entity.state.LivingEntityRenderState, net.minecraft.client.render.RenderLayer, ChamsLivingEntityRendererMixin, Inner1, Sampler0
 
 ### Community 46 - "FreecamModule"
 Cohesion: 0.08
 Nodes (4): FreecamModule, ChunkPos, Override, Vec3d
 
 ### Community 47 - "ThrowableUtils"
-Cohesion: 0.19
-Nodes (4): ScreenRect, Inner1, Inner2, ThrowableUtils
+Cohesion: 0.10
+Nodes (10): net.minecraft.client.gui.render.state.SimpleGuiElementRenderState, net.minecraft.client.gui.ScreenRect, net.minecraft.client.texture.TextureSetup, org.joml.Matrix3x2fc, ScreenRect, Inner1, Inner2, Inner3 (+2 more)
 
-### Community 48 - "SeedCaveXrayRenderer"
-Cohesion: 0.22
-Nodes (3): net.minecraft.world.gen.chunk.ChunkGenerator, net.minecraft.world.gen.noise.NoiseConfig, SeedCaveXrayRenderer
-
-### Community 51 - "SpawnerProtectModule"
-Cohesion: 0.11
-Nodes (4): net.minecraft.entity.ItemEntity, net.minecraft.screen.slot.SlotActionType, Override, SpawnerProtectModule
+### Community 48 - "BacktrackBuffer"
+Cohesion: 0.15
+Nodes (5): java.util.function.IntPredicate, net.minecraft.network.packet.Packet, BacktrackBuffer, Deferred, UiSoundManager
 
 ### Community 52 - "HUDModule"
 Cohesion: 0.07
 Nodes (3): HUDModule, Inner1, Override
 
-### Community 54 - "org.spongepowered.asm.mixin.Mixin"
-Cohesion: 0.07
-Nodes (29): com.llamalad7.mixinextras.injector.ModifyReturnValue, com.mojang.blaze3d.buffers.GpuBufferSlice, net.minecraft.client.gui.hud.PlayerListHud, net.minecraft.client.network.PlayerListEntry, net.minecraft.client.render.Camera, net.minecraft.client.render.GameRenderer, net.minecraft.client.render.RenderTickCounter, net.minecraft.client.render.WorldRenderer (+21 more)
+### Community 54 - "net.minecraft.client.render.Camera"
+Cohesion: 0.10
+Nodes (16): com.mojang.blaze3d.buffers.GpuBufferSlice, net.minecraft.client.network.PendingUpdateManager, net.minecraft.client.render.Camera, net.minecraft.client.render.WorldRenderer, net.minecraft.client.util.memory.ObjectAllocator, org.joml.Vector4f, org.spongepowered.asm.mixin.gen.Invoker, org.spongepowered.asm.mixin.Shadow (+8 more)
 
-### Community 55 - "StringSetting"
-Cohesion: 0.05
-Nodes (16): com.google.gson.JsonElement, com.google.gson.JsonPrimitive, ChatMacroModule, Override, StringSetting, Override, ViewModule, Override (+8 more)
-
-### Community 56 - "Inner3"
-Cohesion: 0.18
-Nodes (6): net.minecraft.client.gui.render.state.SimpleGuiElementRenderState, net.minecraft.client.gui.ScreenRect, net.minecraft.client.texture.TextureSetup, org.joml.Matrix3x2fc, Inner3, Inner4
+### Community 55 - "Setting"
+Cohesion: 0.03
+Nodes (18): com.google.gson.JsonElement, com.google.gson.JsonPrimitive, java.util.function.DoubleFunction, AutoCrystalGameTest, BlockPos, Box, Override, KeybindWidget (+10 more)
 
 ### Community 57 - ".run"
-Cohesion: 0.10
-Nodes (6): Override, Override, Override, AutoMLGModule, BlockPos, Override
+Cohesion: 0.07
+Nodes (8): Override, AntiVoidModule, Override, Vec3d, Override, Override, Override, Override
 
-### Community 58 - "org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable"
-Cohesion: 0.10
-Nodes (10): net.minecraft.client.render.LightmapTextureManager, net.minecraft.entity.player.SkinTextures, net.minecraft.world.dimension.DimensionType, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable, FullbrightCurveMixin, LightTextureMixin, XRayBlockCullMixin, AutoWalkFocusMixin (+2 more)
+### Community 58 - "org.spongepowered.asm.mixin.Mixin"
+Cohesion: 0.07
+Nodes (26): net.minecraft.client.gui.hud.bar.ExperienceBar, net.minecraft.client.network.ClientPlayerInteractionManager, net.minecraft.client.option.KeyBinding, net.minecraft.client.render.item.HeldItemRenderer, net.minecraft.world.dimension.DimensionType, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable, org.spongepowered.asm.mixin.injection.Inject, org.spongepowered.asm.mixin.Mixin (+18 more)
+
+### Community 59 - "net.minecraft.util.Identifier"
+Cohesion: 0.07
+Nodes (15): net.minecraft.entity.player.PlayerInventory, net.minecraft.screen.ScreenHandler, net.minecraft.screen.slot.Slot, net.minecraft.util.Identifier, HUDModuleData, ChestStealerModule, ItemDropperModule, Override (+7 more)
 
 ### Community 60 - "net.minecraft.client.MinecraftClient"
-Cohesion: 0.06
-Nodes (14): net.minecraft.client.MinecraftClient, MinecraftAccessor, AutoClickerModule, Override, AutoInventoryTotemModule, Override, AutoTotemModule, Override (+6 more)
+Cohesion: 0.16
+Nodes (4): net.minecraft.client.MinecraftClient, AutoTotemModule, Override, Override
 
 ### Community 61 - "ClearWorldModule"
-Cohesion: 0.14
-Nodes (9): net.minecraft.client.particle.Particle, net.minecraft.client.particle.ParticleManager, net.minecraft.client.render.fog.FogRenderer, org.spongepowered.asm.mixin.injection.invoke.arg.Args, org.spongepowered.asm.mixin.injection.ModifyArgs, ClearWorldFogMixin, ClearWorldParticleMixin, ClearWorldModule (+1 more)
+Cohesion: 0.17
+Nodes (6): net.minecraft.client.particle.Particle, net.minecraft.client.particle.ParticleManager, ClearWorldParticleMixin, ClearWorldWeatherMixin, ClearWorldModule, Override
 
 ### Community 62 - "GlintTextureReplacer"
 Cohesion: 0.15
@@ -518,83 +508,83 @@ Cohesion: 0.10
 Nodes (11): Band, AMBIGUOUS, FAKE, REAL, getStashFinderBandArray(), Inner1, Inner2, BlockPos (+3 more)
 
 ### Community 64 - "net.minecraft.world.World"
-Cohesion: 0.09
-Nodes (13): net.minecraft.client.network.PendingUpdateManager, net.minecraft.client.render.WeatherRendering, net.minecraft.sound.SoundCategory, net.minecraft.sound.SoundEvent, net.minecraft.world.biome.Biome.Precipitation, net.minecraft.world.World, org.spongepowered.asm.mixin.gen.Invoker, ClientWorldAccessor (+5 more)
+Cohesion: 0.15
+Nodes (9): net.minecraft.client.render.WeatherRendering, net.minecraft.sound.SoundCategory, net.minecraft.sound.SoundEvent, net.minecraft.world.biome.Biome.Precipitation, net.minecraft.world.World, UiSoundEvents, WeatherRenderingMixin, WorldMixin (+1 more)
 
 ### Community 65 - "RegionMap"
-Cohesion: 0.16
-Nodes (10): getRegionMapServerClusterArray(), Override, RegionMap, ServerCluster, ASIA, EU_CENTRAL, EU_WEST, NA_EAST (+2 more)
+Cohesion: 0.17
+Nodes (9): getRegionMapServerClusterArray(), RegionMap, ServerCluster, ASIA, EU_CENTRAL, EU_WEST, NA_EAST, NA_WEST (+1 more)
 
-### Community 66 - "net.minecraft.world.chunk.WorldChunk"
+### Community 66 - "BaseFindingTracker"
 Cohesion: 0.10
-Nodes (10): net.minecraft.world.chunk.WorldChunk, BaseFindingTracker, getBaseFindingTrackerKindArray(), Inner1, BlockPos, Kind, ARTIFICIAL_STONE, DEEP_PLANKS (+2 more)
+Nodes (9): BaseFindingTracker, getBaseFindingTrackerKindArray(), Inner1, BlockPos, Kind, ARTIFICIAL_STONE, DEEP_PLANKS, HOLLOW_ROOM (+1 more)
 
 ### Community 68 - "net.minecraft.block.Block"
-Cohesion: 0.11
-Nodes (4): net.minecraft.block.Block, BlockPos, Hit, BlocksSetting
+Cohesion: 0.15
+Nodes (3): net.minecraft.block.Block, BlockPos, BlocksSetting
 
 ### Community 69 - "NVGImages"
-Cohesion: 0.13
-Nodes (5): net.minecraft.entity.effect.StatusEffectInstance, Override, PotionsHud, NVGIcons, NVGImages
+Cohesion: 0.17
+Nodes (4): net.minecraft.entity.effect.StatusEffectInstance, Override, PotionsHud, NVGImages
 
-### Community 70 - "net.minecraft.client.render.VertexConsumer"
-Cohesion: 0.22
-Nodes (4): net.minecraft.client.render.VertexConsumer, HitParticle, HitParticleRenderer, Vector3f
+### Community 70 - "HitParticleRenderer"
+Cohesion: 0.18
+Nodes (5): org.joml.Vector3f, HitParticle, Shock, HitParticleRenderer, Vector3f
 
 ### Community 71 - "c$bUtils"
-Cohesion: 0.10
-Nodes (9): net.fabricmc.fabric.api.client.rendering.v1.world.WorldRenderContext, net.minecraft.client.gl.SimpleFramebuffer, net.minecraft.client.util.BufferAllocator, SimpleFramebuffer, c$bUtils, Inner1, Inner2, Inner2 (+1 more)
+Cohesion: 0.13
+Nodes (6): net.fabricmc.fabric.api.client.rendering.v1.world.WorldRenderContext, net.minecraft.client.gl.SimpleFramebuffer, net.minecraft.client.util.BufferAllocator, SimpleFramebuffer, c$bUtils, Inner2
 
-### Community 72 - ".run15"
-Cohesion: 0.08
-Nodes (4): Vec3d, Inner12, Inner7, Inner8
+### Community 72 - "ListUtils"
+Cohesion: 0.07
+Nodes (10): Override, Inner1, Inner11, Inner2, Inner3, Inner4, Inner7, Inner8 (+2 more)
 
 ### Community 73 - "BlockListSetting"
+Cohesion: 0.13
+Nodes (5): BlockListSetting, BooleanSetting, ColorSetting, Override, Target
+
+### Community 74 - "Tag"
 Cohesion: 0.10
-Nodes (7): java.util.function.IntSupplier, BlockGridModel, BlockListSetting, BooleanSetting, ColorSetting, Override, Target
+Nodes (3): Tag, WorldNametagRenderer, WorldProjection
 
 ### Community 75 - "Module"
 Cohesion: 0.08
 Nodes (3): ItemStack, Module, ModuleManager
 
 ### Community 76 - "Setting"
-Cohesion: 0.06
-Nodes (6): Friends, Hitbox, NameProtect, SwingSpeed, Setting, ToggleableIntegerSetting
+Cohesion: 0.07
+Nodes (5): Hitbox, NameProtect, SwingSpeed, Setting, ToggleableIntegerSetting
 
 ### Community 77 - "AwtFontRenderer"
 Cohesion: 0.11
-Nodes (15): java.awt.Font, net.minecraft.client.texture.NativeImageBackedTexture, AwtFontRenderer, Entry, FontChoice, BASKETBALL, BELASH, BLISS_BLOOM (+7 more)
+Nodes (14): java.awt.Font, AwtFontRenderer, Entry, FontChoice, BASKETBALL, BELASH, BLISS_BLOOM, DEKATRON (+6 more)
 
-### Community 78 - "net.minecraft.client.util.math.MatrixStack.Entry"
-Cohesion: 0.14
-Nodes (7): net.minecraft.client.util.math.MatrixStack.Entry, org.joml.Vector3f, CustomAccessoriesModule, Override, TrailNode, AccessoryRenderer, Vector3f
+### Community 78 - "net.minecraft.client.render.VertexConsumer"
+Cohesion: 0.20
+Nodes (5): net.minecraft.client.render.VertexConsumer, net.minecraft.client.util.math.MatrixStack.Entry, TrailNode, AccessoryRenderer, Vector3f
+
+### Community 79 - ".render"
+Cohesion: 0.09
+Nodes (4): Override, SpotifyHud, SpotifyService, SpotifyState
 
 ### Community 80 - "FakeStatsModule"
 Cohesion: 0.14
-Nodes (3): FakePayModule, FakeStatsModule, Override
+Nodes (3): FakeEconomyGameTest, FakeStatsModule, Override
 
 ### Community 82 - "PortalESP"
 Cohesion: 0.13
 Nodes (7): getPortalESPKindArray(), Override, Kind, END, GATEWAY, NETHER, PortalESP
-
-### Community 83 - "TimerSpeedModule"
-Cohesion: 0.30
-Nodes (4): it.unimi.dsi.fastutil.floats.FloatUnaryOperator, net.minecraft.client.render.RenderTickCounter.Dynamic, Override, TimerSpeedModule
-
-### Community 84 - "net.minecraft.entity.LivingEntity"
-Cohesion: 0.15
-Nodes (3): net.minecraft.entity.LivingEntity, Override, KillAura
 
 ### Community 85 - "AutoTreeModule"
 Cohesion: 0.16
 Nodes (4): AutoTreeModule, BlockPos, Override, Vec3d
 
 ### Community 86 - "SpawnerESPModule"
-Cohesion: 0.14
-Nodes (5): net.minecraft.block.entity.BlockEntity, Inner1, Inner2, Override, SpawnerESPModule
+Cohesion: 0.17
+Nodes (3): Inner1, Override, SpawnerESPModule
 
-### Community 87 - "RegionMapModule"
-Cohesion: 0.13
+### Community 87 - ".drawGrid"
+Cohesion: 0.15
 Nodes (4): RegionMapGameTest, Override, RegionMapHud, RegionMapModule
 
 ### Community 88 - "PathUtils"
@@ -606,16 +596,20 @@ Cohesion: 0.12
 Nodes (11): getHumanMotionSimStepResultArray(), HumanMotionSim, Vec3d, StepResult, ADVANCING, ARRIVED, BLOCKED, EDGE_STOP (+3 more)
 
 ### Community 91 - "GlintTextureTinter"
-Cohesion: 0.25
-Nodes (5): com.mojang.blaze3d.textures.GpuTexture, net.minecraft.client.texture.NativeImage, GlintTextureTinter, NativeImage, Source
+Cohesion: 0.15
+Nodes (6): com.mojang.blaze3d.textures.GpuTexture, net.minecraft.client.texture.NativeImage, CustomGlintGameTest, GlintTextureTinter, NativeImage, Source
 
 ### Community 94 - ".classify"
-Cohesion: 0.16
+Cohesion: 0.14
 Nodes (3): DetectConfig, Rank, StaffDetector
 
-### Community 95 - "SkinProtectModule"
-Cohesion: 0.31
-Nodes (3): java.net.http.HttpClient, Override, SkinProtectModule
+### Community 95 - "AutoCrystalModule"
+Cohesion: 0.27
+Nodes (3): AutoCrystalModule, Override, Vec3d
+
+### Community 96 - "ColorWidget"
+Cohesion: 0.14
+Nodes (4): Override, ThemesPanel, ColorWidget, Override
 
 ### Community 98 - "VelocityModule"
 Cohesion: 0.17
@@ -626,67 +620,47 @@ Cohesion: 0.12
 Nodes (13): getInfoOrbOreKindArray(), InfoOrb, Override, OreKind, ANCIENT_DEBRIS, COAL, COPPER, DIAMOND (+5 more)
 
 ### Community 100 - "BlockCell"
-Cohesion: 0.22
-Nodes (3): BlockCell, ItemStack, Override
-
-### Community 101 - "Action"
-Cohesion: 0.12
-Nodes (10): Action, ACTIVATE, DELETE, EXPORT, IMPORT, RENAME, SAVE, Confirm (+2 more)
-
-### Community 103 - "StorageESPModule"
-Cohesion: 0.12
-Nodes (3): Override, StorageESPModule, ClientPlayNetworkHandlerMixinUtil
+Cohesion: 0.14
+Nodes (5): java.util.function.IntSupplier, BlockCell, BlockGridModel, ItemStack, Override
 
 ### Community 104 - "ChatFilterHelper"
 Cohesion: 0.10
 Nodes (9): java.util.regex.Pattern, Action, GREY, HIDE, PREFIX, ChatFilter, getChatFilterActionArray(), Override (+1 more)
 
-### Community 105 - "org.slf4j.Logger"
-Cohesion: 0.14
-Nodes (6): ClassLoader, org.slf4j.Logger, LicenseGuard, ProtectedContent, ProtectedFeature, WaterClient
+### Community 105 - "AimAssistModule"
+Cohesion: 0.09
+Nodes (9): ClassLoader, org.slf4j.Logger, LicenseGuard, ProtectedContent, ProtectedFeature, AimAssistCompute, AimAssistModule, Override (+1 more)
 
 ### Community 106 - "RaidPlannerModule"
-Cohesion: 0.11
-Nodes (5): Inner1, Override, Inner1, Override, RaidPlannerModule
+Cohesion: 0.21
+Nodes (3): Inner1, Override, RaidPlannerModule
 
-### Community 107 - "net.minecraft.client.gui.screen.ingame.HandledScreen"
+### Community 108 - "impl/AutoCrystalModule.java"
 Cohesion: 0.19
-Nodes (4): net.minecraft.client.gui.screen.ingame.HandledScreen, net.minecraft.screen.slot.Slot, AbstractContainerScreenAccessor, HandledScreenAccessor
-
-### Community 108 - "net.minecraft.item.Item"
-Cohesion: 0.05
-Nodes (17): net.minecraft.entity.decoration.EndCrystalEntity, net.minecraft.item.Item, net.minecraft.util.Hand, net.minecraft.util.hit.BlockHitResult, AnchorMacroModule, Override, AutoCrystalModule, Override (+9 more)
+Nodes (5): net.minecraft.util.Hand, net.minecraft.util.hit.BlockHitResult, AnchorMacroModule, Override, BlockHelper
 
 ### Community 109 - "EntryCell"
-Cohesion: 0.19
-Nodes (4): EntryCell, Entry, ItemStack, Override
-
-### Community 110 - "NotificationManager"
-Cohesion: 0.10
-Nodes (14): ArrayListHud, Override, Override, SusChunkFinderModule, RadarHud, HudModule, Override, NotificationManager (+6 more)
+Cohesion: 0.16
+Nodes (5): EntryCell, IconListGridModel, Entry, ItemStack, Override
 
 ### Community 111 - "ItemESPModule"
-Cohesion: 0.18
-Nodes (4): Inner1, Inner2, ItemESPModule, Override
-
-### Community 112 - "net.minecraft.util.math.Box"
 Cohesion: 0.20
-Nodes (5): net.minecraft.util.math.Box, Inner1, Inner3, Inner4, EntityEspRenderer
+Nodes (5): net.minecraft.entity.ItemEntity, Inner1, Inner2, ItemESPModule, Override
 
 ### Community 114 - "ArmorTrimHiderModule"
 Cohesion: 0.24
-Nodes (9): ArmorTrim, net.minecraft.item.equipment.trim.ArmorTrim, net.minecraft.item.equipment.trim.ArmorTrimMaterial, net.minecraft.item.equipment.trim.ArmorTrimPattern, net.minecraft.registry.DynamicRegistryManager, net.minecraft.registry.entry.RegistryEntry, org.jetbrains.annotations.Nullable, ArmorTrimHiderModule (+1 more)
+Nodes (7): ArmorTrim, net.minecraft.item.equipment.trim.ArmorTrimMaterial, net.minecraft.item.equipment.trim.ArmorTrimPattern, net.minecraft.registry.entry.RegistryEntry, org.jetbrains.annotations.Nullable, ArmorTrimHiderModule, Override
 
-### Community 115 - "java.lang.reflect.Field"
-Cohesion: 0.20
-Nodes (7): java.lang.reflect.Field, java.lang.reflect.Method, net.caffeinemc.mods.sodium.client.render.model.AbstractBlockRenderContext, net.minecraft.client.option.SimpleOption, SodiumXRayCullMixin, FullBright, Override
+### Community 115 - "XRayModule"
+Cohesion: 0.05
+Nodes (19): it.unimi.dsi.fastutil.floats.FloatUnaryOperator, java.lang.reflect.Constructor, java.lang.reflect.Field, java.lang.reflect.Method, net.caffeinemc.mods.sodium.client.render.model.AbstractBlockRenderContext, net.minecraft.client.option.SimpleOption, net.minecraft.client.render.RenderTickCounter.Dynamic, SodiumXRayCullMixin (+11 more)
 
 ### Community 116 - "InventoryMoveModule"
-Cohesion: 0.15
-Nodes (6): net.minecraft.client.Mouse, MouseHandlerFreecamMixin, InventoryMoveKeyBindingMixin, InventoryMoveMouseMixin, InventoryMoveModule, Override
+Cohesion: 0.20
+Nodes (5): net.minecraft.client.Mouse, MouseHandlerFreecamMixin, InventoryMoveMouseMixin, InventoryMoveModule, Override
 
 ### Community 117 - "HoleESPModule"
-Cohesion: 0.06
+Cohesion: 0.07
 Nodes (14): net.minecraft.util.math.BlockPos.Mutable, Override, HoleESPModule, Inner1, Inner2, Mutable, Override, BlockPos (+6 more)
 
 ### Community 118 - "Category"
@@ -702,36 +676,40 @@ Cohesion: 0.19
 Nodes (4): net.minecraft.entity.attribute.EntityAttributeModifier, net.minecraft.entity.EquipmentSlot, AutoArmor, Override
 
 ### Community 121 - ".getFloat"
-Cohesion: 0.08
-Nodes (6): HitParticlesModule, Override, Shock, Override, MaceBomberModule, MotionBlurModule
+Cohesion: 0.06
+Nodes (8): AntiAfkModule, Override, Override, HitParticlesModule, Override, MotionBlurModule, Override, RainbowTheme
 
 ### Community 122 - "net.minecraft.item.ItemStack"
-Cohesion: 0.21
-Nodes (4): net.minecraft.item.ItemStack, net.minecraft.screen.ScreenHandler, AutoSmeltModule, Override
+Cohesion: 0.22
+Nodes (3): net.minecraft.item.ItemStack, AutoSmeltModule, Override
+
+### Community 123 - "KawasePipeline"
+Cohesion: 0.19
+Nodes (3): com.mojang.blaze3d.textures.GpuTextureView, java.nio.ByteBuffer, KawasePipeline
 
 ### Community 124 - "net.minecraft.entity.Entity"
-Cohesion: 0.07
-Nodes (13): net.minecraft.client.network.ClientPlayerEntity, net.minecraft.entity.Entity, ChamsLivingEntityRendererMixinHelper, CameraLookRedirectMixin, ChamsRenderStateExtMixin, Override, GlowIsGlowingMixin, GlowTeamColorMixin (+5 more)
+Cohesion: 0.06
+Nodes (14): com.llamalad7.mixinextras.injector.ModifyReturnValue, net.minecraft.entity.Entity, EntityHitboxMixin, ChamsLivingEntityRendererMixinHelper, ChamsRenderStateExtMixin, Override, GlowIsGlowingMixin, GlowTeamColorMixin (+6 more)
 
 ### Community 125 - ".run2"
 Cohesion: 0.20
 Nodes (3): Override, Override, ScaffoldModule
 
-### Community 126 - "Animation"
-Cohesion: 0.04
-Nodes (15): ClickGuiState, JsonObject, PanelState, ModuleEntry, Panel, ColorSetting, Override, SliderWidget (+7 more)
+### Community 126 - "ModuleEntry"
+Cohesion: 0.08
+Nodes (7): ClickGuiState, JsonObject, PanelState, ModuleEntry, ColorSetting, Override, SliderWidget
 
 ### Community 127 - ".optionalOf2"
 Cohesion: 0.31
 Nodes (3): java.util.function.LongPredicate, Inner1, OptionalUtils
 
-### Community 128 - ".runTest"
-Cohesion: 0.17
-Nodes (5): AutoCrystalGameTest, BlockPos, Box, Override, KeybindWidget
-
-### Community 129 - "IncrementalScan"
+### Community 128 - "Easing"
 Cohesion: 0.21
-Nodes (3): Override, ChunkScanner, IncrementalScan
+Nodes (6): Easing, EASE_IN_OUT_QUAD, EASE_OUT_CUBIC, LINEAR, Override, $values()
+
+### Community 129 - "StorageEspRenderer"
+Cohesion: 0.07
+Nodes (10): net.minecraft.world.gen.chunk.ChunkGenerator, net.minecraft.world.gen.noise.NoiseConfig, Override, Override, BlockEspRenderer, Hit, ChunkScanner, IncrementalScan (+2 more)
 
 ### Community 132 - "MinerMovementHelper"
 Cohesion: 0.08
@@ -745,65 +723,49 @@ Nodes (4): java.util.function.LongConsumer, net.minecraft.network.packet.s2c.pla
 Cohesion: 0.22
 Nodes (3): net.minecraft.text.Style, net.minecraft.text.Text, FakeRolesModule
 
-### Community 136 - "ChunkFinderModule"
-Cohesion: 0.18
-Nodes (4): net.minecraft.util.math.ChunkPos, ChunkFinderModule, ChunkPos, Override
+### Community 136 - "NotificationManager"
+Cohesion: 0.06
+Nodes (17): PortedModulesGameTest, SixSevenClientGameTest, Override, ChunkFinderModule, ChunkPos, Override, CoordSnapperModule, Override (+9 more)
 
 ### Community 137 - "BlockEntityEspModule"
-Cohesion: 0.21
+Cohesion: 0.22
 Nodes (3): net.minecraft.block.entity.BlockEntityType, BlockEntityEspModule, Override
 
-### Community 138 - "net.minecraft.client.world.ClientWorld"
-Cohesion: 0.07
-Nodes (12): net.minecraft.client.world.ClientWorld, net.minecraft.particle.ParticleEffect, BlockGlowModule, Override, BreakParticlesModule, Override, HitParticlesModule, Override (+4 more)
+### Community 139 - "net.minecraft.client.network.ClientPlayerEntity"
+Cohesion: 0.05
+Nodes (13): net.minecraft.client.network.ClientPlayerEntity, CriticalsModule, Override, ElytraFlyModule, Override, FlyModule, Override, ThreadLocalRandom (+5 more)
 
 ### Community 140 - "ContainerSnapshotMixinEntry"
 Cohesion: 0.17
-Nodes (5): NbtCompound, net.minecraft.nbt.NbtCompound, ContainerSnapshotMixin, ContainerSnapshotMixinEntry, ItemStack
-
-### Community 141 - "WaterPlus.java"
-Cohesion: 0.15
-Nodes (3): SpotifyAuth, WaterFontRenderer, UiSoundManager
+Nodes (6): NbtCompound, net.minecraft.nbt.NbtCompound, net.minecraft.registry.DynamicRegistryManager, ContainerSnapshotMixin, ContainerSnapshotMixinEntry, ItemStack
 
 ### Community 142 - "java.awt.Color"
 Cohesion: 0.13
 Nodes (4): java.awt.Color, PersistentBatch, RenderUtils, WorldBatch
 
 ### Community 145 - "AutoFish"
-Cohesion: 0.20
+Cohesion: 0.18
 Nodes (7): net.minecraft.entity.projectile.FishingBobberEntity, AutoFish, getAutoFishPhaseArray(), Override, Phase, IDLE, PENDING_RECAST
 
-### Community 148 - "IconListSetting"
-Cohesion: 0.20
-Nodes (4): IconListGridModel, IconListWidget, Override, IconListSetting
+### Community 149 - "ModuleManager"
+Cohesion: 0.07
+Nodes (5): InventoryScreen, net.minecraft.client.gui.screen.ingame.InventoryScreen, ModuleManager, AutoTotemModule, Override
 
-### Community 149 - "AutoTotemModule"
-Cohesion: 0.20
-Nodes (3): InventoryScreen, AutoTotemModule, Override
-
-### Community 151 - "NoSlowModule"
-Cohesion: 0.20
-Nodes (3): MovementSpeedMixin, Override, NoSlowModule
+### Community 150 - "PlayerTabOverlayMixin.java"
+Cohesion: 0.16
+Nodes (6): net.minecraft.client.gui.hud.PlayerListHud, net.minecraft.client.network.PlayerListEntry, PlayerTabOverlayMixin, NicknamePlayerListMixin, Override, StringBuilderUtils
 
 ### Community 153 - "SusChunkScanner"
-Cohesion: 0.06
-Nodes (16): ChunkScore, Flag, FlagAggregate, Geode, Mutable, SusChunkFinderModule, SignalType, AMETHYST (+8 more)
-
-### Community 154 - "BedESPModule"
-Cohesion: 0.24
-Nodes (3): BedESPModule, BlockPos, Override
-
-### Community 156 - "net.minecraft.entity.player.PlayerEntity"
-Cohesion: 0.12
-Nodes (9): net.minecraft.client.network.ClientPlayerInteractionManager, net.minecraft.entity.player.PlayerEntity, EntityFreecamMixin, MultiPlayerGameModeAttackMixin, ClientPlayerInteractionManagerAttackMixin, ReachBlockRangeMixin, ReachEntityRangeMixin, Override (+1 more)
-
-### Community 157 - "ClickSounds"
-Cohesion: 0.16
-Nodes (10): ClickSounds, Inner1, getClickSoundsTypeArray(), HOVER, DRAG_END, DRAG_START, HOVER, PANEL_OPEN (+2 more)
-
-### Community 160 - "net.minecraft.client.network.ClientPlayNetworkHandler"
 Cohesion: 0.07
-Nodes (19): net.fabricmc.fabric.api.networking.v1.PacketSender, net.minecraft.client.network.ClientPlayNetworkHandler, net.minecraft.client.world.ClientChunkManager, net.minecraft.network.packet.s2c.play.ChunkDataS2CPacket, net.minecraft.network.packet.s2c.play.EntityStatusS2CPacket, net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket, net.minecraft.network.packet.s2c.play.ExplosionS2CPacket, net.minecraft.network.packet.s2c.play.GameMessageS2CPacket (+11 more)
+Nodes (10): ChunkFade, ZoneFade, ChunkScore, Flag, FlagAggregate, Geode, Mutable, SusChunkFinderModule (+2 more)
+
+### Community 155 - "Chest"
+Cohesion: 0.14
+Nodes (3): Override, Chest, Box
+
+### Community 157 - "HOVER"
+Cohesion: 0.16
+Nodes (9): Inner1, getClickSoundsTypeArray(), HOVER, DRAG_END, DRAG_START, HOVER, PANEL_OPEN, TOGGLE_OFF (+1 more)
 
 ### Community 161 - "Slot"
 Cohesion: 0.16
@@ -815,67 +777,51 @@ Nodes (13): getChunkActivityScannerSignalArray(), Signal, AMETHYST, BAMBOO, BEE_
 
 ### Community 163 - "StorageType"
 Cohesion: 0.14
-Nodes (10): StorageType, BARREL, CHEST, ENDER, FURNACE, HOPPER, SHULKER, SPAWNER (+2 more)
+Nodes (11): StorageType, BARREL, CHEST, ENDER, FURNACE, HOPPER, SHULKER, SPAWNER (+3 more)
 
-### Community 164 - "RPCModule"
-Cohesion: 0.31
-Nodes (3): java.lang.reflect.Constructor, Override, RPCModule
+### Community 164 - "SignalType"
+Cohesion: 0.25
+Nodes (8): SignalType, AMETHYST, BAMBOO, BERRIES, DRIPSTONE, KELP, VINES, $values()
 
 ### Community 165 - "FreeLookModule"
-Cohesion: 0.23
-Nodes (3): net.minecraft.client.option.Perspective, FreeLookModule, Override
+Cohesion: 0.12
+Nodes (8): net.minecraft.client.render.fog.FogRenderer, org.spongepowered.asm.mixin.injection.invoke.arg.Args, org.spongepowered.asm.mixin.injection.ModifyArgs, CameraFreeLookMixin, EntityFreeLookMixin, FreeLookModule, Override, ClearWorldFogMixin
 
 ### Community 166 - "SodiumMixinPlugin"
 Cohesion: 0.29
 Nodes (5): org.objectweb.asm.tree.ClassNode, org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin, org.spongepowered.asm.mixin.extensibility.IMixinInfo, Override, SodiumMixinPlugin
 
-### Community 168 - "StringWidget"
-Cohesion: 0.27
-Nodes (3): StringInputGameTest, Override, StringWidget
-
-### Community 170 - "ViewCoordsCommand"
-Cohesion: 0.33
-Nodes (3): CommandContext, net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource, ViewCoordsCommand
+### Community 168 - "StringSetting"
+Cohesion: 0.06
+Nodes (16): CommandContext, java.net.http.HttpClient, net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource, net.minecraft.client.network.AbstractClientPlayerEntity, net.minecraft.entity.player.SkinTextures, ViewCoordsCommand, StringInputGameTest, Override (+8 more)
 
 ### Community 171 - "SpectatorDetectorModule"
 Cohesion: 0.22
 Nodes (3): Inner1, Override, SpectatorDetectorModule
 
 ### Community 172 - "TracersModule"
-Cohesion: 0.13
-Nodes (3): Override, Override, TracersModule
+Cohesion: 0.10
+Nodes (5): DragonWingsModule, Override, Vec3d, Override, TracersModule
 
-### Community 174 - "PlayerChunksModule"
-Cohesion: 0.24
-Nodes (3): Inner1, Override, PlayerChunksModule
-
-### Community 176 - "AntiVoidModule"
-Cohesion: 0.24
-Nodes (3): AntiVoidModule, Override, Vec3d
+### Community 173 - "CategoryPanel"
+Cohesion: 0.22
+Nodes (3): CategoryPanel, Override, NVGIcons
 
 ### Community 177 - "AutoToolModule"
 Cohesion: 0.29
 Nodes (3): net.minecraft.enchantment.Enchantment, AutoToolModule, Override
 
 ### Community 179 - "org.spongepowered.asm.mixin.gen.Accessor"
-Cohesion: 0.14
-Nodes (7): net.minecraft.world.chunk.ChunkNibbleArray, org.spongepowered.asm.mixin.gen.Accessor, ChunkNibbleArrayAccessor, LivingEntityAccessor, MinecraftClientAccessor, Override, MinecraftClientAccessor
-
-### Community 181 - "net.minecraft.client.option.KeyBinding"
-Cohesion: 0.27
-Nodes (4): net.minecraft.client.option.KeyBinding, net.minecraft.client.util.InputUtil.Key, KeyMappingAccessor, KeyBindingAccessor
+Cohesion: 0.11
+Nodes (7): net.minecraft.client.gui.screen.ingame.HandledScreen, org.spongepowered.asm.mixin.gen.Accessor, AbstractContainerScreenAccessor, MinecraftClientAccessor, Override, HandledScreenAccessor, MinecraftClientAccessor
 
 ### Community 183 - "PathUtils_2_3_4"
 Cohesion: 0.29
 Nodes (3): Inner1, Inner2, PathUtils_2_3_4
 
-### Community 184 - "AlbumArtCache"
-Cohesion: 0.23
-Nodes (4): net.minecraft.client.texture.GlTexture, AlbumArtCache, NativeImage, NativeImageBackedTexture
-
-### Community 188 - "AimAssistModule"
+### Community 184 - "net.minecraft.client.texture.NativeImageBackedTexture"
 Cohesion: 0.29
-Nodes (3): AimAssistCompute, AimAssistModule, Override
+Nodes (4): net.minecraft.client.texture.NativeImageBackedTexture, AlbumArtCache, NativeImage, NativeImageBackedTexture
 
 ### Community 190 - "SwimSpeedModule"
 Cohesion: 0.38
@@ -885,41 +831,29 @@ Nodes (3): Override, ThreadLocalRandom, SwimSpeedModule
 Cohesion: 0.18
 Nodes (11): getAutoSellStateArray(), State, CONFIRMING, DEPOSITING, DONE, IDLE, LOOT_CLOSE, LOOT_EXTRACT (+3 more)
 
+### Community 194 - ".run3"
+Cohesion: 0.11
+Nodes (3): Inner1, d$aUtils, Inner1
+
 ### Community 195 - "BlockScanCache"
 Cohesion: 0.25
 Nodes (3): Override, BlockScanCache, BlockPos
 
-### Community 200 - "net.minecraft.client.font.TextRenderer"
-Cohesion: 0.11
-Nodes (9): net.minecraft.client.font.TextRenderer, net.minecraft.client.gui.hud.bar.ExperienceBar, net.minecraft.text.OrderedText, org.spongepowered.asm.mixin.injection.Redirect, ChromaXPMixin, ScoreboardNicknameMixin, Override, HealthTagsModule (+1 more)
-
-### Community 202 - "FlyModule"
-Cohesion: 0.31
-Nodes (3): FlyModule, Override, ThreadLocalRandom
-
-### Community 203 - "SusChunkRenderer"
+### Community 200 - "HealthTagsModule"
 Cohesion: 0.24
-Nodes (4): ChunkFade, SusChunkFinderModule, SusChunkRenderer, ZoneFade
+Nodes (3): HealthTagsModule, Override, Matrix4f
 
-### Community 205 - ".runTest"
-Cohesion: 0.18
-Nodes (4): net.minecraft.scoreboard.ScoreboardObjective, net.minecraft.text.StringVisitable, FakeEconomyGameTest, GuiSidebarMixin
-
-### Community 206 - "net.minecraft.block.BlockState"
+### Community 205 - "net.minecraft.client.font.TextRenderer"
 Cohesion: 0.13
-Nodes (6): net.minecraft.block.BlockState, net.minecraft.world.chunk.ChunkSection, AntiTrapModule, Override, Override, PrimeChunkFinderModule
+Nodes (14): net.minecraft.client.font.TextRenderer, net.minecraft.client.font.TextRenderer.TextLayerType, net.minecraft.client.gui.hud.InGameHud, net.minecraft.client.render.command.LabelCommandRenderer, net.minecraft.client.render.VertexConsumerProvider, net.minecraft.scoreboard.ScoreboardObjective, net.minecraft.text.OrderedText, net.minecraft.text.StringVisitable (+6 more)
+
+### Community 206 - "net.minecraft.world.chunk.WorldChunk"
+Cohesion: 0.05
+Nodes (13): java.util.Map.Entry, net.fabricmc.fabric.api.networking.v1.PacketSender, net.minecraft.block.BlockState, net.minecraft.client.world.ClientWorld, net.minecraft.world.chunk.ChunkSection, net.minecraft.world.chunk.WorldChunk, Override, PrimeChunkFinderModule (+5 more)
 
 ### Community 209 - "MovementTrailsModule"
 Cohesion: 0.29
 Nodes (3): Override, Vec3d, MovementTrailsModule
-
-### Community 210 - "AutoTpaModule"
-Cohesion: 0.23
-Nodes (3): PortedModulesGameTest, AutoTpaModule, Override
-
-### Community 211 - "BacktrackEntityUpdateMixin.java"
-Cohesion: 0.38
-Nodes (4): net.minecraft.network.packet.s2c.play.EntityPositionS2CPacket, net.minecraft.network.packet.s2c.play.EntityPositionSyncS2CPacket, net.minecraft.network.packet.s2c.play.EntityS2CPacket, BacktrackEntityUpdateMixin
 
 ### Community 216 - "State"
 Cohesion: 0.20
@@ -928,10 +862,6 @@ Nodes (10): State, BUYING_ECHEST, DEPOSITING_ITEMS, FINAL_EXIT, GOING_TO_CHEST, 
 ### Community 218 - "Phase"
 Cohesion: 0.25
 Nodes (8): getRtpBaseFinderPhaseArray(), Phase, APPROACHING, DESCENDING, FOUND, IDLE, PENDING_WARMUP, TUNNELING
-
-### Community 219 - "BlockOutlineRenderer.java"
-Cohesion: 0.24
-Nodes (4): net.minecraft.client.render.state.OutlineRenderState, BlockOutlineRenderer, BlockOutlineModule, Override
 
 ### Community 220 - "ChunkLightProviderAccessor.java"
 Cohesion: 0.33
@@ -949,9 +879,13 @@ Nodes (7): ExploitState, AIM_SEED, COOLDOWN, DIG_START, HOLD, IDLE, getAutoTunne
 Cohesion: 0.07
 Nodes (9): OptionInstanceAccessor, Override, TabGUIModule, AutoClickerModule, Override, FullbrightModule, Override, Override (+1 more)
 
-### Community 233 - "Tier"
-Cohesion: 0.33
-Nodes (6): getChunkActivityScannerTierArray(), Tier, NONE, ORANGE, RED, YELLOW
+### Community 229 - "IceSpeedModule"
+Cohesion: 0.27
+Nodes (3): IceSpeedFrictionMixin, IceSpeedModule, Override
+
+### Community 233 - "Inner1"
+Cohesion: 0.20
+Nodes (7): getChunkActivityScannerTierArray(), Inner1, Tier, NONE, ORANGE, RED, YELLOW
 
 ### Community 235 - "Phase"
 Cohesion: 0.33
@@ -961,9 +895,9 @@ Nodes (6): Phase, EXTRACTED, EXTRACTING, IDLE, RESTORING, $values()
 Cohesion: 0.33
 Nodes (6): getAutoArmorPhaseArray(), Phase, IDLE, PLACE, RETURN, TAKE
 
-### Community 238 - "CodeEngineScreen"
-Cohesion: 0.11
-Nodes (4): net.minecraft.client.gui.Click, CodeEngineScreen, Inner1, Inner2
+### Community 239 - ".modules"
+Cohesion: 0.06
+Nodes (16): com.llamalad7.mixinextras.injector.ModifyExpressionValue, net.minecraft.client.Keyboard, net.minecraft.client.render.entity.equipment.EquipmentRenderer, net.minecraft.client.render.GameRenderer, net.minecraft.client.render.LightmapTextureManager, net.minecraft.client.render.RenderTickCounter, EquipmentLayerRendererMixin, GameRendererMixin (+8 more)
 
 ### Community 240 - "feclient"
 Cohesion: 0.40
@@ -981,25 +915,29 @@ Nodes (4): getAutoTunnelStateArray(), State, BREAKING, IDLE
 Cohesion: 0.50
 Nodes (4): getRtpBaseFinderSweepLegArray(), SweepLeg, LATERAL, LONG
 
+### Community 262 - "net.minecraft.client.gui.DrawContext"
+Cohesion: 0.06
+Nodes (10): net.minecraft.client.gui.DrawContext, Override, Override, Override, Arc2DRenderer, Blur2DRenderer, GuiRenderer, Outline2DRenderer (+2 more)
+
 ## Knowledge Gaps
 - **222 isolated node(s):** `ACTIVATE`, `SAVE`, `RENAME`, `EXPORT`, `IMPORT` (+217 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **106 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **104 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Module` connect `Module` to `ColorSetting`, `AntiVoidModuleHelper`, `RtpBaseFinder`, `NukerModule`, `ModeSetting`, `AutoTunnel.java`, `AutoTunnel`, `StringSetting`, `imgui.ImDrawList`, `net.minecraft.client.gui.DrawContext`, `HitboxesModule`, `AutoWalkModule`, `NametagsModule`, `Inner1`, `FreecamModule`, `.getValue`, `EntityNameTagMixin.java`, `net.minecraft.util.Identifier`, `HUDModule`, `AutoSell`, `.run`, `ItemDropperModule`, `net.minecraft.client.MinecraftClient`, `ClearWorldModule`, `StashFinder`, `RegionMap`, `TargetHUDModule`, `PortalESP`, `TimerSpeedModule`, `net.minecraft.entity.LivingEntity`, `AutoTreeModule`, `SpawnerESPModule`, `PathUtils`, `SeedChunkFinder`, `KeystrokeHUDModule`, `CauldronESPModule`, `VelocityModule`, `InfoOrb`, `StorageESPModule`, `ChatFilterHelper`, `RaidPlannerModule`, `ItemESPModule`, `InventoryMoveModule`, `HoleESPModule`, `AutoArmor`, `net.minecraft.item.ItemStack`, `.run2`, `ElytraFlyModule`, `net.minecraft.client.world.ClientWorld`, `CriticalsModule`, `ViewModelModule`, `AutoFish`, `AutoEatModule`, `.run8`, `AutoTotemModule`, `NoSlowModule`, `ThemeSelectorModule`, `BedESPModule`, `net.minecraft.entity.player.PlayerEntity`, `ClickSounds`, `CustomTitleModule`, `LightFinderModule`, `RPCModule`, `AutoLogModule`, `SpectatorDetectorModule`, `TracersModule`, `PlayerChunksModule`, `AntiVoidModule`, `AutoToolModule`, `AntiAFKModule`, `AutoBridgeModule`, `ChestStealerModule`, `.getValueLong`, `SwimSpeedModule`, `XRay`, `AutoSpawnerSellModule`, `net.minecraft.client.font.TextRenderer`, `EagleAuraModule`, `FlyModule`, `net.minecraft.block.BlockState`, `AutoStoreModule`, `MovementTrailsModule`, `SpawnerProtectModule`, `AirJumpModule`, `HighJumpModule`, `ChunkKeeperModule`, `LongJumpModule`, `AutoClickerModule`, `IceSpeedModule`, `StepModule`, `AutoDropModule`, `CodeEngineScreen`, `FastPlaceModule`?**
-  _High betweenness centrality (0.114) - this node is a cross-community bridge._
-- **Why does `Module` connect `Module` to `net.minecraft.world.World`, `HoverTotem`, `ShieldBreaker`, `HomeSetter`, `AutoMine`, `net.minecraft.client.gui.screen.ingame.HandledScreen`, `Setting`, `WaterPlus.java`, `AutoTotem`, `AutoRender`, `Sprint`, `Freelook`, `WaterPlus`, `java.lang.reflect.Field`, `ModeSetting`, `HitboxesModule`, `Category`, `net.minecraft.client.MinecraftClient`?**
-  _High betweenness centrality (0.064) - this node is a cross-community bridge._
-- **Why does `NVGRenderer` connect `NVGRenderer` to `.runTest`, `BooleanSetting`, `FeClient.java`, `.runTest`, `NVGImages`, `StaffEntry`, `StringWidget`, `Tag`, `HudComponent`, `CategoryPanel`, `NotificationManager`, `Setting`, `net.minecraft.util.math.Box`, `net.minecraft.util.math.Vec3d`, `IconListSetting`, `RegionMapModule`, `ThemesPanel`, `Animation`?**
-  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+- **Why does `Module` connect `Module` to `ColorSetting`, `net.minecraft.entity.LivingEntity`, `.getValueInt`, `NukerModule`, `AutoTunnel.java`, `AutoTunnel`, `ModeSetting`, `net.minecraft.item.Item`, `CodeEngineScreen`, `net.minecraft.util.math.Box`, `AutoWalkModule`, `NametagsModule`, `Inner1`, `ChunkSpoof`, `FreecamModule`, `EntityNameTagMixin.java`, `Manager`, `HUDModule`, `AutoSell`, `.run`, `net.minecraft.util.Identifier`, `net.minecraft.client.MinecraftClient`, `ClearWorldModule`, `StashFinder`, `RegionMap`, `TargetHUDModule`, `PortalESP`, `KillAura`, `AutoTreeModule`, `SpawnerESPModule`, `PathUtils`, `SeedChunkFinder`, `KeystrokeHUDModule`, `CauldronESPModule`, `AutoCrystalModule`, `VelocityModule`, `InfoOrb`, `ChatFilterHelper`, `RaidPlannerModule`, `ItemESPModule`, `BlockGlowModule`, `XRayModule`, `InventoryMoveModule`, `HoleESPModule`, `AutoArmor`, `net.minecraft.item.ItemStack`, `net.minecraft.entity.Entity`, `.run2`, `KillEffectsModule`, `net.minecraft.client.network.ClientPlayerEntity`, `ViewModelModule`, `AutoFish`, `AutoEatModule`, `.run8`, `AntiTrapModule`, `ModuleManager`, `NoSlowModule`, `ThemeSelectorModule`, `ReachModule`, `CustomTitleModule`, `LightFinderModule`, `AutoLogModule`, `SpectatorDetectorModule`, `TracersModule`, `AutoToolModule`, `AntiAFKModule`, `AutoBridgeModule`, `ChunkFinderModule`, `NetheriteFinderModule`, `BacktrackModule`, `SwimSpeedModule`, `XRay`, `AutoSpawnerSellModule`, `HealthTagsModule`, `EagleAuraModule`, `net.minecraft.world.chunk.WorldChunk`, `MovementTrailsModule`, `SpawnerProtectModule`, `AirJumpModule`, `HighJumpModule`, `ChunkKeeperModule`, `Chams`, `AutoClickerModule`, `IceSpeedModule`, `StepModule`, `net.minecraft.client.gui.DrawContext`?**
+  _High betweenness centrality (0.106) - this node is a cross-community bridge._
+- **Why does `Module` connect `Module` to `HoverTotem`, `WaterPlus.java`, `Friends`, `BacktrackBuffer`, `WaterPlus`, `org.spongepowered.asm.mixin.gen.Accessor`, `org.spongepowered.asm.mixin.Mixin`, `net.minecraft.client.MinecraftClient`, `net.minecraft.world.World`, `ShieldBreaker`, `Setting`, `AutoTotem`, `Sprint`, `HomeSetter`, `AutoMine`, `Freelook`, `XRayModule`, `Category`, `ModeSetting`?**
+  _High betweenness centrality (0.058) - this node is a cross-community bridge._
+- **Why does `NVGRenderer` connect `NVGRenderer` to `FeClient.java`, `ClickGuiScreen`, `.render`, `ThemeManager`, `net.minecraft.util.math.Vec3d`, `.renderNvg`, `ConfigPanel`, `Module`, `StaffEntry`, `StringSetting`, `CategoryPanel`, `Setting`, `NVGImages`, `Tag`, `BlockListWidget`, `.render`, `.drawGrid`, `ColorWidget`, `CustomCrosshairModule`, `Override`, `KawasePipeline`, `ModuleEntry`?**
+  _High betweenness centrality (0.053) - this node is a cross-community bridge._
 - **What connects `ACTIVATE`, `SAVE`, `RENAME` to the rest of the system?**
   _222 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Module` be split into smaller, more focused modules?**
-  _Cohesion score 0.03153368370759675 - nodes in this community are weakly interconnected._
-- **Should `Module` be split into smaller, more focused modules?**
-  _Cohesion score 0.04324765401876785 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04294932114531523 - nodes in this community are weakly interconnected._
 - **Should `FeClient.java` be split into smaller, more focused modules?**
-  _Cohesion score 0.037888198757763975 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05107902499611861 - nodes in this community are weakly interconnected._
+- **Should `ColorSetting` be split into smaller, more focused modules?**
+  _Cohesion score 0.04903846153846154 - nodes in this community are weakly interconnected._
