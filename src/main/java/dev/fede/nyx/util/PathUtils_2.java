@@ -77,7 +77,7 @@ public final class PathUtils_2 {
    }
 
    private static Path dir() throws IOException {
-      Path var0 = FabricLoader.getInstance().getConfigDir().resolve("codeengine");
+      Path var0 = FabricLoader.getInstance().getConfigDir();
       Files.createDirectories(var0);
       return var0;
    }
@@ -86,7 +86,7 @@ public final class PathUtils_2 {
       try {
          return dir().resolve("heatmap-null.json");
       } catch (IOException var2) {
-         return FabricLoader.getInstance().getConfigDir().resolve("codeengine").resolve("heatmap-null.json");
+         return FabricLoader.getInstance().getConfigDir().resolve("heatmap-null.json");
       }
    }
 

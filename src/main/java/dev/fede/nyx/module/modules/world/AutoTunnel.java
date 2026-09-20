@@ -1144,7 +1144,7 @@ public class AutoTunnel extends Module {
       int var8 = (int)class310.player.getY();
       String var9 = d$aUtils.getString();
       String var10 = class310.world.getRegistryKey().getValue().toString();
-      d$aUtils.run3(var2, var9, var10, var6, var8, var7, var1.score(), var1.source(), "codeengine/basefinder_finds.json", "AutoTunnel");
+      d$aUtils.run3(var2, var9, var10, var6, var8, var7, var1.score(), var1.source(), "basefinder_finds.json", "AutoTunnel");
       NotificationUtils.run("AutoTunnel", "Base at " + var6 + "," + var7 + " (score " + var1.score() + " via " + var1.source() + ")", INFO.UNKNOWN_2, 10000L);
       if (this.baseScanAlertSound.getValue()) {
          d$aUtils.run2();

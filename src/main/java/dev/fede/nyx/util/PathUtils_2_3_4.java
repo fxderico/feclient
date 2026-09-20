@@ -26,7 +26,7 @@ public final class PathUtils_2_3_4 {
    public static final int CURRENT_SCHEMA_VERSION = 6;
 
    private static Path dir() {
-      return FabricLoader.getInstance().getConfigDir().resolve("codeengine");
+      return FabricLoader.getInstance().getConfigDir();
    }
 
    private static String sanitizeDim(String dim) {

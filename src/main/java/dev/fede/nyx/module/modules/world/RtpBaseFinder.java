@@ -80,7 +80,7 @@ public final class RtpBaseFinder extends Module {
    private final BooleanSetting pauseOnFind = new BooleanSetting("PauseOnFind", true);
    private final BooleanSetting disconnectOnFind = new BooleanSetting("DisconnectOnFind", false);
    private final BooleanSetting alertSound = new BooleanSetting("AlertSound", true);
-   private final StringSetting savePath = new StringSetting("SavePath", "codeengine/basefinder_finds.json", 256);
+   private final StringSetting savePath = new StringSetting("SavePath", "basefinder_finds.json", 256);
    private final BooleanSetting debug = new BooleanSetting("Debug", false);
    private RtpBaseFinder.Phase rtpBaseFinderPhase = RtpBaseFinder.Phase.IDLE;
    private int intVal = 0;

@@ -115,7 +115,7 @@ public final class ChatFilterHelper {
    }
 
    private static Path getPath() throws IOException {
-      Path var0 = FabricLoader.getInstance().getConfigDir().resolve("codeengine");
+      Path var0 = FabricLoader.getInstance().getConfigDir();
       Files.createDirectories(var0);
       return var0;
    }
@@ -124,7 +124,7 @@ public final class ChatFilterHelper {
       try {
          return getPath().resolve(var0);
       } catch (IOException var2) {
-         return FabricLoader.getInstance().getConfigDir().resolve("codeengine").resolve(var0);
+         return FabricLoader.getInstance().getConfigDir().resolve(var0);
       }
    }
 

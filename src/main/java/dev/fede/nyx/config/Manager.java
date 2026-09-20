@@ -223,7 +223,7 @@ public final class Manager {
    }
 
    private static Path dir() throws IOException {
-      Path var0 = FabricLoader.getInstance().getConfigDir().resolve("codeengine");
+      Path var0 = FabricLoader.getInstance().getConfigDir();
       Files.createDirectories(var0);
       return var0;
    }
@@ -232,7 +232,7 @@ public final class Manager {
       try {
          return dir().resolve("client.json");
       } catch (IOException var1) {
-         return FabricLoader.getInstance().getConfigDir().resolve("codeengine").resolve("client.json");
+         return FabricLoader.getInstance().getConfigDir().resolve("client.json");
       }
    }
 

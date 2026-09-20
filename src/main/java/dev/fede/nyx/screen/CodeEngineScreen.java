@@ -1041,7 +1041,7 @@ final static class Inner2 {
    }
 
    static Path getPath() {
-      Path var0 = FabricLoader.getInstance().getConfigDir().resolve("codeengine");
+      Path var0 = FabricLoader.getInstance().getConfigDir();
 
       try {
          Files.createDirectories(var0);

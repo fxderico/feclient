@@ -308,7 +308,7 @@ public final class PathUtils {
    }
 
    private static Path dir() throws IOException {
-      Path var0 = FabricLoader.getInstance().getConfigDir().resolve("codeengine").resolve("configs");
+      Path var0 = FabricLoader.getInstance().getConfigDir().resolve("configs");
       Files.createDirectories(var0);
       return var0;
    }
@@ -317,7 +317,7 @@ public final class PathUtils {
       try {
          return dir().resolve("null.json");
       } catch (IOException var2) {
-         return FabricLoader.getInstance().getConfigDir().resolve("codeengine").resolve("configs").resolve("null.json");
+         return FabricLoader.getInstance().getConfigDir().resolve("configs").resolve("null.json");
       }
    }
 

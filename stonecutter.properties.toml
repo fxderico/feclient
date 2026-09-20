@@ -1,6 +1,6 @@
 # Per-version dependency coordinates. See https://stonecutter.kikugie.dev/wiki/config/properties
 mod.id = "feclient"
-mod.version = "1.0.6"
+mod.version = "1.0.7"
 deps.fabric_loader = "0.19.5"
 # loom-back-compat needs to know which loom (remap) version to use per
 # mapping scheme it picks — this is its own version, not fabric-loom's.

@@ -92,18 +92,18 @@ public final class d$aUtils {
       Path var11 = FabricLoader.getInstance().getConfigDir();
       String var12 = var9 == null ? "" : var9.trim();
       if (var12.isEmpty()) {
-         var12 = "codeengine/basefinder_finds.json";
+         var12 = "basefinder_finds.json";
       }
 
       Path var13;
       try {
          Path var14 = Path.of(var12);
          if (var14.isAbsolute()) {
-            var13 = var11.resolve("codeengine").resolve(var14.getFileName().toString());
+            var13 = var11.resolve(var14.getFileName().toString());
          } else {
             var13 = var11.resolve(var14).normalize();
             if (!var13.startsWith(var11)) {
-               var13 = var11.resolve("codeengine/basefinder_finds.json");
+               var13 = var11.resolve("basefinder_finds.json");
             }
          }
 
@@ -144,18 +144,18 @@ public final class d$aUtils {
       Path var10 = FabricLoader.getInstance().getConfigDir();
       String var11 = var9 == null ? "" : var9.trim();
       if (var11.isEmpty()) {
-         var11 = "codeengine/basefinder_finds.json";
+         var11 = "basefinder_finds.json";
       }
 
       Path var12;
       try {
          Path var13 = Path.of(var11);
          if (var13.isAbsolute()) {
-            var12 = var10.resolve("codeengine").resolve(var13.getFileName().toString());
+            var12 = var10.resolve(var13.getFileName().toString());
          } else {
             var12 = var10.resolve(var13).normalize();
             if (!var12.startsWith(var10)) {
-               var12 = var10.resolve("codeengine/basefinder_finds.json");
+               var12 = var10.resolve("basefinder_finds.json");
             }
          }
 
