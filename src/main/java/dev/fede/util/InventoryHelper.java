@@ -14,11 +14,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
 public final class InventoryHelper {
-   // PlayerScreenHandler layout has been stable since offhand was added in
-   // 1.9: 0 craft output, 1-4 crafting grid, 5-8 armor, 9-35 main inv,
-   // 36-44 hotbar, 45 offhand. hardcoded because it's a protocol constant,
-   // not something that varies by version or config.
-   private static final int OFFHAND_SCREEN_SLOT = 45;
+   // For a SlotActionType.SWAP click, the `button` argument is NOT the
+   // target slot's screen index -- it's the hotbar destination 0-8, or the
+   // magic value 40 for the offhand (see ScreenHandler.onSlotClick: SWAP is
+   // only accepted when button is 0..8 or == 40). Slot 45 is the offhand's
+   // *screen index*, which is what tripped the earlier version: passing 45
+   // as the SWAP button was rejected, so the totem never moved to offhand.
+   private static final int OFFHAND_SWAP_BUTTON = 40;
 
    private InventoryHelper() {
    }
@@ -75,7 +77,7 @@ public final class InventoryHelper {
    public static void swapToOffhand(int invIndex) {
       MinecraftClient mc = mc();
       if (mc.player != null && mc.interactionManager != null && invIndex >= 0 && invIndex <= 35) {
-         mc.interactionManager.clickSlot(mc.player.currentScreenHandler.syncId, toScreenSlot(invIndex), OFFHAND_SCREEN_SLOT, SlotActionType.SWAP, mc.player);
+         mc.interactionManager.clickSlot(mc.player.currentScreenHandler.syncId, toScreenSlot(invIndex), OFFHAND_SWAP_BUTTON, SlotActionType.SWAP, mc.player);
       }
    }
 
