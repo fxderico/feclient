@@ -30,6 +30,7 @@ public final class XRayModule extends Module {
     public static volatile boolean SHOW_LIQUIDS  = false;
     public static volatile boolean SHOW_PORTALS  = false;
     public static volatile boolean SHOW_UTILITY  = false;
+    public static volatile boolean SHOW_SNOW     = false; // snow layer / snow block / powder snow
 
     // ── user-visible settings ─────────────────────────────────────────────────
     public final BooleanSetting showStorage  = addSetting(new BooleanSetting("Storage",  "Chests, barrels, hoppers, etc.", true));
@@ -37,6 +38,8 @@ public final class XRayModule extends Module {
     public final BooleanSetting showLiquids  = addSetting(new BooleanSetting("Liquids",  "Water and lava",                 false));
     public final BooleanSetting showPortals  = addSetting(new BooleanSetting("Portals",  "Nether / End portals",           false));
     public final BooleanSetting showUtility  = addSetting(new BooleanSetting("Utility",  "Crafting tables, furnaces, etc.", false));
+    // off by default — snow otherwise pokes through the xray view; flip on only if you want it shown
+    public final BooleanSetting showSnow     = addSetting(new BooleanSetting("Snow",     "Snow layers, snow blocks, powder snow", false));
     public final BooleanSetting fullBright   = addSetting(new BooleanSetting("FullBright","Brighten underground ores",      true));
     // hidden neighbors still count for ambient-occlusion darkening (AO reads
     // real block occlusion data, unrelated to whether that neighbor is being
@@ -82,6 +85,13 @@ public final class XRayModule extends Module {
     private int lastSyncedLoadDistance = Integer.MIN_VALUE;
     private ChunkPos lastSyncedCenter;
 
+    // Snapshot of the category/AO/fullbright settings as last applied, so
+    // onTick can detect a GUI change and re-apply it live (no re-toggle / no
+    // restart). loadDistance + all seed settings are already read live every
+    // tick elsewhere, so they're deliberately not tracked here.
+    private boolean snapStorage, snapSpawners, snapLiquids, snapPortals, snapUtility, snapSnow, snapDisableAO, snapFullBright;
+    private boolean liveSnapshotValid = false;
+
     public XRayModule() {
         super("XRay", "See ores through walls", Category.RENDER);
     }
@@ -93,6 +103,7 @@ public final class XRayModule extends Module {
         SHOW_LIQUIDS  = showLiquids.get();
         SHOW_PORTALS  = showPortals.get();
         SHOW_UTILITY  = showUtility.get();
+        SHOW_SNOW     = showSnow.get();
     }
 
     @Override
@@ -104,6 +115,7 @@ public final class XRayModule extends Module {
         applyViewDistanceOption(true);
         this.lastSyncedLoadDistance = Integer.MIN_VALUE;
         this.lastSyncedCenter = null;
+        this.liveSnapshotValid = false; // next tick captures the baseline we just applied
         reloadChunks();
     }
 
@@ -114,6 +126,7 @@ public final class XRayModule extends Module {
         applyAO(false);
         applyViewDistanceOption(false);
         restoreVanillaChunkLoading();
+        this.liveSnapshotValid = false;
         reloadChunks();
         SeedCaveXrayRenderer.clear();
     }
@@ -163,8 +176,57 @@ public final class XRayModule extends Module {
 
     @Override
     public void onTick() {
+        applyLiveSettingChanges();
         syncChunkLoading();
         SeedCaveXrayRenderer.scan(this);
+    }
+
+    /**
+     * Re-applies the category / AO / fullbright / snow toggles the moment they
+     * change in the GUI, so XRay updates live instead of needing a re-toggle or
+     * restart. Cheap: a handful of boolean reads per tick, and only triggers a
+     * chunk reload when something actually changed. loadDistance and every seed
+     * setting are already read live each tick (syncChunkLoading /
+     * SeedCaveXrayRenderer.scan), so they're intentionally not tracked here.
+     */
+    private void applyLiveSettingChanges() {
+        boolean cs = showStorage.get(), csp = showSpawners.get(), cl = showLiquids.get(),
+                cp = showPortals.get(), cu = showUtility.get(), csn = showSnow.get(),
+                cao = disableAO.get(), cfb = fullBright.get();
+
+        if (!liveSnapshotValid) {
+            snapStorage = cs; snapSpawners = csp; snapLiquids = cl; snapPortals = cp;
+            snapUtility = cu; snapSnow = csn; snapDisableAO = cao; snapFullBright = cfb;
+            liveSnapshotValid = true;
+            return;
+        }
+
+        boolean categoriesChanged = cs != snapStorage || csp != snapSpawners || cl != snapLiquids
+                || cp != snapPortals || cu != snapUtility || csn != snapSnow;
+        boolean aoChanged = cao != snapDisableAO;
+        boolean fbChanged = cfb != snapFullBright;
+        if (!categoriesChanged && !aoChanged && !fbChanged) return;
+
+        if (categoriesChanged) syncFlags();
+        if (aoChanged) syncAoLive();
+        if (fbChanged && cfb) applyFullbright(true); // matches existing "don't force-off fullbright" behavior
+        reloadChunks();
+
+        snapStorage = cs; snapSpawners = csp; snapLiquids = cl; snapPortals = cp;
+        snapUtility = cu; snapSnow = csn; snapDisableAO = cao; snapFullBright = cfb;
+    }
+
+    /** Apply the Disable-AO setting in either direction, live. */
+    private void syncAoLive() {
+        MinecraftClient mc = MinecraftClient.getInstance();
+        if (mc.options == null) return;
+        if (disableAO.get()) {
+            if (this.savedAo == null) this.savedAo = mc.options.getAo().getValue();
+            mc.options.getAo().setValue(false);
+        } else if (this.savedAo != null) {
+            mc.options.getAo().setValue(this.savedAo);
+            this.savedAo = null;
+        }
     }
 
     private void applyAO(boolean on) {
@@ -329,7 +391,13 @@ public final class XRayModule extends Module {
 
         if (SHOW_UTILITY && isUtilityBlock(block)) return true;
 
+        if (SHOW_SNOW && isSnowBlock(block)) return true;
+
         return false;
+    }
+
+    private static boolean isSnowBlock(Block b) {
+        return b == Blocks.SNOW || b == Blocks.SNOW_BLOCK || b == Blocks.POWDER_SNOW;
     }
 
     private static boolean isStorageBlock(Block b) {
