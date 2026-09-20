@@ -334,6 +334,8 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.world.InfoOrb(),               Category.WORLD);
         nyx(new dev.fede.nyx.module.modules.world.RtpBaseFinder(),         Category.WORLD);
         nyx(new dev.fede.nyx.module.modules.world.ChunkKeeperModule(),     Category.WORLD);
+        register(new dev.fede.module.impl.PhaseModule());                 // native — single-blink wall clip
+        register(new dev.fede.module.impl.NoClipModule());                // native — Entity.noClip toggle
 
         // DONUT
         nyx(new dev.fede.nyx.module.modules.donutsmp.AntiTrapModule(),       Category.DONUT);

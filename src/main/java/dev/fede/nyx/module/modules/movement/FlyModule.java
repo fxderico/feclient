@@ -20,15 +20,26 @@ public class FlyModule extends Module {
    private final NumberSetting vertical = new NumberSetting("Vertical", 1.0, 0.1, 10.0, 0.1);
    private final BooleanSetting antiKick = new BooleanSetting("AntiKick", true);
    private final BooleanSetting restoreOnDisable = new BooleanSetting("RestoreOnDisable", true);
+   // Motion/Packet modes set velocity to the exact same value every single
+   // tick whenever input doesn't change — a dead-flat, mechanically perfect
+   // signal that's an easy pattern to flag on. Humanize breaks that up:
+   // small randomized noise on both axes plus a short ease-in/out on speed
+   // changes instead of an instant snap to full value. Doesn't know or
+   // target any specific anticheat — it's a generic "less robotic" signal,
+   // nothing more, no guarantee it clears any particular detection.
+   private final BooleanSetting humanize = new BooleanSetting("Humanize", false);
+   private final NumberSetting jitter = new NumberSetting("Jitter", 0.02, 0.0, 0.1, 0.005);
    private boolean bool;
    private boolean bool2;
    private float floatVal2;
    private boolean bool3;
    private int intVal2;
+   private double currentSpeedFactor;
+   private final java.util.concurrent.ThreadLocalRandom rng = java.util.concurrent.ThreadLocalRandom.current();
 
    public FlyModule() {
       super("Fly", "Creative-style flight", Category.MOVEMENT);
-      this.run6(new Setting[]{this.mode, this.speed, this.vertical, this.antiKick, this.restoreOnDisable});
+      this.run6(new Setting[]{this.mode, this.speed, this.vertical, this.antiKick, this.restoreOnDisable, this.humanize, this.jitter});
    }
 
    @Override
@@ -124,15 +135,31 @@ public class FlyModule extends Module {
       float var8 = var1.sidewaysSpeed;
       double var9 = 0.0;
       double var11 = 0.0;
+      double targetSpeed = this.speed.getValue();
       if (var7 != 0.0F || var8 != 0.0F) {
          double var13 = Math.toRadians(var1.getYaw());
          double var15 = -Math.sin(var13) * var7 + Math.cos(var13) * var8;
          double var17 = Math.cos(var13) * var7 + Math.sin(var13) * var8;
          double var19 = Math.sqrt(var15 * var15 + var17 * var17);
          if (var19 > 0.0) {
-            double var21 = this.speed.getValue();
-            var9 = var15 / var19 * var21;
-            var11 = var17 / var19 * var21;
+            // ease toward the target instead of snapping to it every tick —
+            // a straight line in a velocity-over-time graph is exactly what
+            // an instant-snap value produces; this rounds that corner off.
+            this.currentSpeedFactor += (targetSpeed - this.currentSpeedFactor) * 0.35;
+            double used = this.humanize.getValue() ? this.currentSpeedFactor : targetSpeed;
+            var9 = var15 / var19 * used;
+            var11 = var17 / var19 * used;
+         }
+      } else {
+         this.currentSpeedFactor = 0.0;
+      }
+
+      if (this.humanize.getValue()) {
+         double j = this.jitter.getValue();
+         if (j > 0.0) {
+            var9 += (this.rng.nextDouble() - 0.5) * j;
+            var11 += (this.rng.nextDouble() - 0.5) * j;
+            var3 += (this.rng.nextDouble() - 0.5) * (j * 0.5);
          }
       }
 

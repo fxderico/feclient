@@ -24,13 +24,21 @@ public class SpeedModule extends Module {
    private final NumberSetting speed = new NumberSetting("Speed", 5.0, 0.1, 5.0, 0.05);
    private final NumberSetting boost = (NumberSetting)new NumberSetting("Boost", 1.5, 1.0, 5.0, 0.1).visibleWhen(this::getBoolean);
    private final BooleanSetting onlyGround = new BooleanSetting("OnlyGround", false);
+   // same idea as Fly's Humanize: a perfectly flat velocity value every
+   // tick is a dead giveaway pattern. eases toward the target speed instead
+   // of snapping, plus small randomized noise. generic "less robotic"
+   // smoothing, not built against any specific anticheat.
+   private final BooleanSetting humanize = new BooleanSetting("Humanize", false);
+   private final NumberSetting jitter = new NumberSetting("Jitter", 0.02, 0.0, 0.1, 0.005);
+   private double currentSpeedFactor;
+   private final java.util.concurrent.ThreadLocalRandom rng = java.util.concurrent.ThreadLocalRandom.current();
    private final AntiVoidModuleHelper antiVoidModuleHelper = new AntiVoidModuleHelper();
    private static volatile boolean bool;
    private static volatile float floatVal = 1.0F;
 
    public SpeedModule() {
       super("Speed", "Client-side speed enhancement", Category.MOVEMENT);
-      this.run6(new Setting[]{this.mode, this.speed, this.boost, this.onlyGround});
+      this.run6(new Setting[]{this.mode, this.speed, this.boost, this.onlyGround, this.humanize, this.jitter});
    }
 
    public static boolean isEnabled_s() {
@@ -86,9 +94,22 @@ public class SpeedModule extends Module {
       double var10 = Math.sqrt(var6 * var6 + var8 * var8);
       if (!(var10 < 1.0E-6)) {
          double var12 = this.speed.getValue();
+         if (this.humanize.getValue()) {
+            this.currentSpeedFactor += (var12 - this.currentSpeedFactor) * 0.35;
+            var12 = this.currentSpeedFactor;
+         } else {
+            this.currentSpeedFactor = var12;
+         }
          double var14 = var6 / var10 * var12;
          double var16 = var8 / var10 * var12;
          double var18 = var3 && var1 ? 0.42 : var2.y;
+         if (this.humanize.getValue()) {
+            double j = this.jitter.getValue();
+            if (j > 0.0) {
+               var14 += (this.rng.nextDouble() - 0.5) * j;
+               var16 += (this.rng.nextDouble() - 0.5) * j;
+            }
+         }
          class310.player.setVelocity(var14, var18, var16);
       }
    }
