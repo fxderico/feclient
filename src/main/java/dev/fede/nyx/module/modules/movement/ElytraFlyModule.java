@@ -100,6 +100,17 @@ public class ElytraFlyModule extends Module {
    }
 
    private void run6(ClientPlayerEntity var1) {
+      // this was the only one of the four submodes (Assist/Boost/Cruise all
+      // gate on isGliding()) that forced velocity unconditionally. requireHoldingElytra
+      // only checks the chestplate slot has an elytra item equipped, not that
+      // it's actually deployed -- so grounded with an elytra worn, this used
+      // to override velocity to a non-gravity value every tick regardless,
+      // fighting ground collision and standing out as forced non-gravity
+      // velocity on a non-airborne entity.
+      if (!var1.isGliding()) {
+         return;
+      }
+
       double var4 = this.verticalSpeed.getValue();
       double var2;
       if (class310.options.jumpKey.isPressed()) {

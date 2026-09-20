@@ -35,6 +35,8 @@ public class FlyModule extends Module {
    private boolean bool3;
    private int intVal2;
    private double currentSpeedFactor;
+   private double lastDirX;
+   private double lastDirZ;
    private final java.util.concurrent.ThreadLocalRandom rng = java.util.concurrent.ThreadLocalRandom.current();
 
    public FlyModule() {
@@ -142,14 +144,31 @@ public class FlyModule extends Module {
          double var17 = Math.cos(var13) * var7 + Math.sin(var13) * var8;
          double var19 = Math.sqrt(var15 * var15 + var17 * var17);
          if (var19 > 0.0) {
-            // ease toward the target instead of snapping to it every tick —
-            // a straight line in a velocity-over-time graph is exactly what
-            // an instant-snap value produces; this rounds that corner off.
-            this.currentSpeedFactor += (targetSpeed - this.currentSpeedFactor) * 0.35;
-            double used = this.humanize.getValue() ? this.currentSpeedFactor : targetSpeed;
-            var9 = var15 / var19 * used;
-            var11 = var17 / var19 * used;
+            this.lastDirX = var15 / var19;
+            this.lastDirZ = var17 / var19;
+            if (this.humanize.getValue()) {
+               // ease toward the target instead of snapping to it every tick —
+               // a straight line in a velocity-over-time graph is exactly what
+               // an instant-snap value produces; this rounds that corner off.
+               this.currentSpeedFactor += (targetSpeed - this.currentSpeedFactor) * 0.35;
+               var9 = this.lastDirX * this.currentSpeedFactor;
+               var11 = this.lastDirZ * this.currentSpeedFactor;
+            } else {
+               this.currentSpeedFactor = targetSpeed;
+               var9 = this.lastDirX * targetSpeed;
+               var11 = this.lastDirZ * targetSpeed;
+            }
          }
+      } else if (this.humanize.getValue() && this.currentSpeedFactor > 1.0E-4) {
+         // keys released: was a hard snap of the *velocity* to 0.0 while
+         // currentSpeedFactor kept easing in the background unused — the
+         // factor decayed but nothing read it, so the actual output still
+         // cliffed to zero the instant input stopped. now the decayed
+         // factor is applied along the last held direction so releasing
+         // keys coasts down instead of stopping dead on the next tick.
+         this.currentSpeedFactor += (0.0 - this.currentSpeedFactor) * 0.35;
+         var9 = this.lastDirX * this.currentSpeedFactor;
+         var11 = this.lastDirZ * this.currentSpeedFactor;
       } else {
          this.currentSpeedFactor = 0.0;
       }
