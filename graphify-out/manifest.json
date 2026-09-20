@@ -1,8 +1,8 @@
 {
   "build.gradle": {
-    "mtime": 1789759100.3673518,
-    "seen": 1789908223.7018056,
-    "ast_hash": "9e705cab1a5163c946f373d5d21010df",
+    "mtime": 1789924789.709631,
+    "seen": 1789924869.8134127,
+    "ast_hash": "b2dc9063622b4d4e0907bb40cbdf827e",
     "semantic_hash": ""
   },
   "gradlew": {
@@ -198,9 +198,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/gui/panel/ThemesPanel.java": {
-    "mtime": 1788814202.4359825,
-    "seen": 1789908223.7018497,
-    "ast_hash": "5881e4957a87e8d13a413422fa9079e0",
+    "mtime": 1789924583.7496936,
+    "seen": 1789924869.8134713,
+    "ast_hash": "d351418cf0ed6738ce6d05c903fa9e04",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/gui/picker/BlockGridModel.java": {
@@ -612,15 +612,15 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/ModuleManager.java": {
-    "mtime": 1789907226.2167284,
-    "seen": 1789908223.7019234,
-    "ast_hash": "68b332abce95744c95c3b3271aad835e",
+    "mtime": 1789923386.7648017,
+    "seen": 1789924869.8135674,
+    "ast_hash": "312605fb55060b3f94a60600d3b930aa",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/Modules.java": {
-    "mtime": 1789416128.49453,
-    "seen": 1789908223.701924,
-    "ast_hash": "cb941fd7826a2194afeacf2bf4dd3500",
+    "mtime": 1789924478.390366,
+    "seen": 1789924869.8135686,
+    "ast_hash": "f16d765c42ac74cede015e593d0a1674",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/NyxModuleBridge.java": {
@@ -1452,9 +1452,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/ModuleManager.java": {
-    "mtime": 1789828479.1521773,
-    "seen": 1789908223.7020636,
-    "ast_hash": "0926194c0e5a21934d669b5514ac0b83",
+    "mtime": 1789923401.6426883,
+    "seen": 1789924869.8137581,
+    "ast_hash": "7b02898cc33d64ab4600835239b60f8c",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/addons/BlockGlowModule.java": {
@@ -1995,12 +1995,6 @@
     "mtime": 1788814203.1062949,
     "seen": 1789908223.7021537,
     "ast_hash": "d29eb676391f1a55a24b5b7599a94002",
-    "semantic_hash": ""
-  },
-  "src/main/java/dev/fede/nyx/module/modules/render/ESP.java": {
-    "mtime": 1788814203.1105027,
-    "seen": 1789908223.7021544,
-    "ast_hash": "498e9c19d05ea3562b909c6969876ff3",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/render/FullbrightModule.java": {
@@ -3777,6 +3771,12 @@
     "mtime": 1789909753.1564183,
     "seen": 1789910027.871451,
     "ast_hash": "377566b3f8471aabf7c83aaeb0f26258",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/SwimSpeedModule.java": {
+    "mtime": 1789923276.4962387,
+    "seen": 1789924869.813861,
+    "ast_hash": "a1865d1db0c12baa4b3dbea1ef8b5f8d",
     "semantic_hash": ""
   }
 }

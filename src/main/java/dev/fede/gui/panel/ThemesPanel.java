@@ -21,6 +21,11 @@ import java.util.List;
 import java.util.Locale;
 
 public class ThemesPanel extends Panel {
+   // ThemesPanel was authored at 210px wide but the base Panel scissors and
+   // draws every panel at Panel.WIDTH (175px), so the right ~35px of every row,
+   // slider and the custom-theme delete cross got clipped — that's the "themes
+   // tab is cut off". All the X-axis geometry below is rescaled to 175: row
+   // width 198->163, widget width 182->147, right-edge refs 210->175.
    private static final float ROW_H = 26.0F;
    private static final float ADD_ROW_H = 28.0F;
    private static final float SECTION_H = 24.0F;
@@ -92,14 +97,14 @@ public class ThemesPanel extends Panel {
          boolean hovered = my >= rowY
             && my <= rowY + 26.0F
             && mx >= this.clickGuiStatePanelState.floatVal + 6.0F
-            && mx <= this.clickGuiStatePanelState.floatVal + 210.0F - 6.0F;
+            && mx <= this.clickGuiStatePanelState.floatVal + 175.0F - 6.0F;
          if (hovered) {
             newHoveredRow = rowIndex;
          }
 
          rowIndex++;
          if (selected || hovered) {
-            vg.rect(this.clickGuiStatePanelState.floatVal + 6.0F, rowY, 198.0F, 26.0F, 7.0F, Colors.withAlpha(this.theme().accent(), selected ? 0.16F : 0.08F));
+            vg.rect(this.clickGuiStatePanelState.floatVal + 6.0F, rowY, 163.0F, 26.0F, 7.0F, Colors.withAlpha(this.theme().accent(), selected ? 0.16F : 0.08F));
          }
 
          float sy = rowY + 13.0F;
@@ -110,7 +115,7 @@ public class ThemesPanel extends Panel {
 
          vg.text(theme.getName(), this.clickGuiStatePanelState.floatVal + 36.0F, sy, 13.5F, selected ? this.theme().textPrimary() : this.theme().textMuted());
          if (theme.isCustom()) {
-            vg.cross(this.clickGuiStatePanelState.floatVal + 210.0F - 28.0F, sy - 6.0F, 12.0F, 1.6F, this.theme().textDisabled());
+            vg.cross(this.clickGuiStatePanelState.floatVal + 175.0F - 28.0F, sy - 6.0F, 12.0F, 1.6F, this.theme().textDisabled());
          }
 
          vg.restore();
@@ -118,7 +123,7 @@ public class ThemesPanel extends Panel {
       }
 
       if (active.isCustom()) {
-         this.accentWidget.setBounds(this.clickGuiStatePanelState.floatVal + 14.0F, rowY + 3.0F, 182.0F);
+         this.accentWidget.setBounds(this.clickGuiStatePanelState.floatVal + 14.0F, rowY + 3.0F, 147.0F);
          this.accentWidget.render(vg, mx, my);
          rowY += this.accentWidget.height(vg) + 6.0F;
       }
@@ -129,12 +134,12 @@ public class ThemesPanel extends Panel {
       boolean hoveredx = my >= rowY
          && my <= rowY + 28.0F - 4.0F
          && mx >= this.clickGuiStatePanelState.floatVal + 6.0F
-         && mx <= this.clickGuiStatePanelState.floatVal + 210.0F - 6.0F;
-      vg.rect(this.clickGuiStatePanelState.floatVal + 6.0F, rowY, 198.0F, 24.0F, 7.0F, Colors.withAlpha(this.theme().accent(), hoveredx ? 0.22F : 0.12F));
+         && mx <= this.clickGuiStatePanelState.floatVal + 175.0F - 6.0F;
+      vg.rect(this.clickGuiStatePanelState.floatVal + 6.0F, rowY, 163.0F, 24.0F, 7.0F, Colors.withAlpha(this.theme().accent(), hoveredx ? 0.22F : 0.12F));
       String label = "+  Add Custom";
       vg.text(
          label,
-         this.clickGuiStatePanelState.floatVal + (210.0F - vg.textWidth(label, 13.0F)) / 2.0F,
+         this.clickGuiStatePanelState.floatVal + (175.0F - vg.textWidth(label, 13.0F)) / 2.0F,
          rowY + 12.0F,
          13.0F,
          hoveredx ? this.theme().accentBright() : this.theme().textPrimary()
@@ -153,7 +158,7 @@ public class ThemesPanel extends Panel {
          }
 
          SettingWidget widget = this.soundWidgets.get(i);
-         widget.setBounds(this.clickGuiStatePanelState.floatVal + 14.0F, rowY, 182.0F);
+         widget.setBounds(this.clickGuiStatePanelState.floatVal + 14.0F, rowY, 147.0F);
          float wFade = this.edgeFade(rowY, rowY + widget.height(vg), viewTop, viewBottom);
          vg.save();
          vg.alpha(wFade);
@@ -181,7 +186,7 @@ public class ThemesPanel extends Panel {
       vg.rect(
          lineX,
          cy - 0.5F,
-         Math.max(0.0F, this.clickGuiStatePanelState.floatVal + 210.0F - 14.0F - lineX),
+         Math.max(0.0F, this.clickGuiStatePanelState.floatVal + 175.0F - 14.0F - lineX),
          1.0F,
          0.5F,
          Colors.withAlpha(this.theme().accent(), 0.3F)
@@ -212,8 +217,8 @@ public class ThemesPanel extends Panel {
                   if (my >= rowY
                      && my <= rowY + 26.0F
                      && mx >= this.clickGuiStatePanelState.floatVal + 6.0F
-                     && mx <= this.clickGuiStatePanelState.floatVal + 210.0F - 6.0F) {
-                     if (theme.isCustom() && mx >= this.clickGuiStatePanelState.floatVal + 210.0F - 34.0F) {
+                     && mx <= this.clickGuiStatePanelState.floatVal + 175.0F - 6.0F) {
+                     if (theme.isCustom() && mx >= this.clickGuiStatePanelState.floatVal + 175.0F - 34.0F) {
                         this.themes.removeCustom(theme);
                      } else {
                         this.themes.select(theme);
@@ -235,7 +240,7 @@ public class ThemesPanel extends Panel {
                if (my >= rowY
                   && my <= rowY + 28.0F - 4.0F
                   && mx >= this.clickGuiStatePanelState.floatVal + 6.0F
-                  && mx <= this.clickGuiStatePanelState.floatVal + 210.0F - 6.0F) {
+                  && mx <= this.clickGuiStatePanelState.floatVal + 175.0F - 6.0F) {
                   Theme custom = this.themes.addCustom(this.themes.current().accent());
                   this.themes.select(custom);
                   this.accentProxy.set(custom.accent());

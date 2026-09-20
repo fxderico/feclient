@@ -288,7 +288,9 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.player.SwingAnimationModule(), Category.PLAYER);
 
         // RENDER
-        nyx(new dev.fede.nyx.module.modules.render.ESP(),                  Category.RENDER);
+        // ESP (nyx all-in-one entity ESP) removed — redundant with the
+        // dedicated PlayerEsp / MobEsp / FriendlyMobEsp modules, and it
+        // defaulted Players+Mobs ON which made boxes appear unprompted.
         nyx(new dev.fede.nyx.module.modules.render.NoHurtCamModule(),      Category.RENDER);
         nyx(new dev.fede.nyx.module.modules.render.StorageESPModule(),     Category.RENDER);
         nyx(new dev.fede.nyx.module.modules.render.StashFinder(),          Category.RENDER);

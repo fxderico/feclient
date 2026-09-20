@@ -23,8 +23,12 @@ public final class Modules {
       public final ModeSetting animation = this.addSetting(new ModeSetting("Animation", "Outline animation style", "Pulse", "Pulse", "Gradient Flow", "Static"));
 
       public BlockOutlineModule() {
-         super("CustomBlockOutline", "Glowing animated outline on the targeted block", Category.ADDONS);
-         this.setEnabled(true);
+         // was Category.ADDONS + setEnabled(true) in the constructor — it
+         // force-enabled itself on every launch and lived under ADDONS, so a
+         // green/theme-colored box drew around whatever block you looked at
+         // with no obvious toggle where you'd expect one. now default-off and
+         // filed under RENDER with the other visual modules.
+         super("CustomBlockOutline", "Glowing animated outline on the targeted block", Category.RENDER);
       }
    }
 

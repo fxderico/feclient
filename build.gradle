@@ -120,6 +120,14 @@ java {
 }
 
 processResources {
+    // Declare the version as a task input so Gradle re-runs processResources
+    // (and re-expands ${version} in fabric.mod.json) whenever mod.version
+    // changes. Without this, Gradle marked the task UP-TO-DATE on every bump
+    // because it doesn't track the stonecutter property as an input — so the
+    // jar filename tracked the new version while the embedded fabric.mod.json
+    // version stayed frozen at whatever it last expanded (1.0.4), which is why
+    // crash reports and the mod list showed a stale version.
+    inputs.property('modVersion', project.property('mod.version'))
     filesMatching('fabric.mod.json') {
         expand(version: project.property('mod.version'))
     }
