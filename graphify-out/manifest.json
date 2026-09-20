@@ -1,0 +1,3806 @@
+{
+  "build.gradle": {
+    "mtime": 1789759100.3673518,
+    "seen": 1789908223.7018056,
+    "ast_hash": "9e705cab1a5163c946f373d5d21010df",
+    "semantic_hash": ""
+  },
+  "fede_injector.sh": {
+    "mtime": 1783519393.0596983,
+    "seen": 1789908223.7018113,
+    "ast_hash": "f6a10b895e51faf34bb451fa9ad0cb44",
+    "semantic_hash": ""
+  },
+  "gradlew": {
+    "mtime": 1788285202.0,
+    "seen": 1789908223.7018135,
+    "ast_hash": "45bf2667b1fbec0e07e42808dc662b6b",
+    "semantic_hash": ""
+  },
+  "release.ps1": {
+    "mtime": 1788898434.6623113,
+    "seen": 1789908223.7018151,
+    "ast_hash": "bfa7458830740697139709d447b3f1ed",
+    "semantic_hash": ""
+  },
+  "settings.gradle": {
+    "mtime": 1789770069.8356283,
+    "seen": 1789908223.7018163,
+    "ast_hash": "e8489c4f8d41c1cbf7b560a8e4533cfc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/FeClient.java": {
+    "mtime": 1789828682.2224991,
+    "seen": 1789908223.7018173,
+    "ast_hash": "a3b522e50ec11bb4e2329c3d9c259df9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/command/ViewCoordsCommand.java": {
+    "mtime": 1789585568.6749332,
+    "seen": 1789908223.701819,
+    "ast_hash": "1a6076a382b9b222e50d5701cd609778",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/config/ConfigManager.java": {
+    "mtime": 1788814202.3189979,
+    "seen": 1789908223.70182,
+    "ast_hash": "cff46e633821dbff34a87bbda9e2d5b9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/config/ConfigStore.java": {
+    "mtime": 1788814202.3242376,
+    "seen": 1789908223.7018209,
+    "ast_hash": "dd187605ee1aba2526526f0f2877b4ac",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/AccessoryCapeDepthGameTest.java": {
+    "mtime": 1788895742.1266334,
+    "seen": 1789908223.701822,
+    "ast_hash": "cc1985d063c9a29c644dc2aef84c018c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/AccessoryFirstPersonGameTest.java": {
+    "mtime": 1788895737.547743,
+    "seen": 1789908223.701823,
+    "ast_hash": "9af82cbe71ce70eaaefcc9220e03e767",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/ArmorTrimHiderGameTest.java": {
+    "mtime": 1788814202.3310373,
+    "seen": 1789908223.7018244,
+    "ast_hash": "011bdbe7eb71269ff56a8bdb61a845d3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/AutoCrystalGameTest.java": {
+    "mtime": 1788814202.3336003,
+    "seen": 1789908223.7018254,
+    "ast_hash": "a9eca8751114ff0abd897f51b5d5bd85",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/ConfigSystemGameTest.java": {
+    "mtime": 1788814202.3382034,
+    "seen": 1789908223.7018263,
+    "ast_hash": "cc22c21f7cbb963c9186257f4a6e7ee2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/CustomGlintGameTest.java": {
+    "mtime": 1788814202.340261,
+    "seen": 1789908223.7018273,
+    "ast_hash": "374dd1846f58c336592084209187e265",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/EspPickerGameTest.java": {
+    "mtime": 1788814202.3448887,
+    "seen": 1789908223.7018282,
+    "ast_hash": "9921257e2e7981edcb2ebb97ca2ae8ed",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/FakeEconomyGameTest.java": {
+    "mtime": 1788814202.3474076,
+    "seen": 1789908223.7018294,
+    "ast_hash": "40e1478a9102f213f2af9330a6c0baa9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/FakeRolesGameTest.java": {
+    "mtime": 1788814202.3489547,
+    "seen": 1789908223.7018304,
+    "ast_hash": "6af34a6b6e69735e74029b6813669b35",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/GambleRiggerGameTest.java": {
+    "mtime": 1788814202.353511,
+    "seen": 1789908223.7018313,
+    "ast_hash": "b2127c24dfe36c7c2a1610b09a440d75",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/PortedModulesGameTest.java": {
+    "mtime": 1788814202.3576295,
+    "seen": 1789908223.7018325,
+    "ast_hash": "1229d23968cf0d5b25143c3ecf03f38c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/RegionMapGameTest.java": {
+    "mtime": 1788814202.3586361,
+    "seen": 1789908223.7018337,
+    "ast_hash": "c1986f57084c3fff390c310a37d85205",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/SixSevenClientGameTest.java": {
+    "mtime": 1788895789.4350815,
+    "seen": 1789908223.7018344,
+    "ast_hash": "205796512d15a9f1b03c8cf049f71b74",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/SpawnerProtectGameTest.java": {
+    "mtime": 1788814202.3775933,
+    "seen": 1789908223.7018363,
+    "ast_hash": "bd5f76f38b079accd950b498bc0286b9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/StaffListGameTest.java": {
+    "mtime": 1788814202.3801692,
+    "seen": 1789908223.7018373,
+    "ast_hash": "37ab2ea87170e485fa1139650433c0df",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gametest/StringInputGameTest.java": {
+    "mtime": 1788814202.3823268,
+    "seen": 1789908223.7018385,
+    "ast_hash": "04ccff68921b6b53a13b8007bf8f67b0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/ClickGuiScreen.java": {
+    "mtime": 1789828578.836311,
+    "seen": 1789908223.7018397,
+    "ast_hash": "525a0a89bb4298430c8a4fa2650d77af",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/ClickGuiState.java": {
+    "mtime": 1788820496.5459864,
+    "seen": 1789908223.7018409,
+    "ast_hash": "0bc38b1009415ae546700146a3171479",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/GamblePanel.java": {
+    "mtime": 1788814202.4067676,
+    "seen": 1789908223.7018418,
+    "ast_hash": "7636495df29ef728aaf9fefb6e94df8d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/GambleRiggerOverlay.java": {
+    "mtime": 1788814202.4083126,
+    "seen": 1789908223.701843,
+    "ast_hash": "663e7871be41798e4a746840a9ff5c50",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/IconPickerScreen.java": {
+    "mtime": 1788814202.4156275,
+    "seen": 1789908223.7018442,
+    "ast_hash": "1aa64db47e65a1805d171e560e29677b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/config/ConfigPanel.java": {
+    "mtime": 1788814202.42392,
+    "seen": 1789908223.701845,
+    "ast_hash": "bffcc8c4992de1f73e6a85fb27c05002",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/panel/CategoryPanel.java": {
+    "mtime": 1789416083.4246068,
+    "seen": 1789908223.7018466,
+    "ast_hash": "7863c1ba3ab07db66ba2988aa3d475c0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/panel/ModuleEntry.java": {
+    "mtime": 1788820538.7356572,
+    "seen": 1789908223.7018473,
+    "ast_hash": "1f4ce485281b5d28cb1f913294b6863b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/panel/Panel.java": {
+    "mtime": 1788820234.005779,
+    "seen": 1789908223.7018483,
+    "ast_hash": "dc1341ca4efebc65f3a136e30f039a3c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/panel/ThemesPanel.java": {
+    "mtime": 1788814202.4359825,
+    "seen": 1789908223.7018497,
+    "ast_hash": "5881e4957a87e8d13a413422fa9079e0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/picker/BlockGridModel.java": {
+    "mtime": 1788814202.4385574,
+    "seen": 1789908223.7018507,
+    "ast_hash": "6d95d54ead72b6b1fe07c8f54c2cf64e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/picker/IconListGridModel.java": {
+    "mtime": 1788814202.4395885,
+    "seen": 1789908223.7018516,
+    "ast_hash": "4c3f532ff3ba48898c3b0eaf0767660b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/picker/PickerGrid.java": {
+    "mtime": 1788814202.440706,
+    "seen": 1789908223.7018526,
+    "ast_hash": "03a146976ef15cf34ed49588398fe59c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/BlockListWidget.java": {
+    "mtime": 1788814202.442767,
+    "seen": 1789908223.7018538,
+    "ast_hash": "49a2699a24925354c2ba209e278342f7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/BooleanWidget.java": {
+    "mtime": 1788814202.4443252,
+    "seen": 1789908223.7018547,
+    "ast_hash": "c056d33b601cf5d25eba086e667a943d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/ColorWidget.java": {
+    "mtime": 1788814202.4474547,
+    "seen": 1789908223.7018557,
+    "ast_hash": "6e9bf4e63ea6895f580ad5445241cc43",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/IconListWidget.java": {
+    "mtime": 1788814202.4490237,
+    "seen": 1789908223.701857,
+    "ast_hash": "6ba3362bba36fef18bad3a613c17a620",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/KeybindWidget.java": {
+    "mtime": 1788814202.4506454,
+    "seen": 1789908223.7018578,
+    "ast_hash": "01248a50019c994d376adfb1b29fc20a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/ModeWidget.java": {
+    "mtime": 1788814202.4522018,
+    "seen": 1789908223.7018595,
+    "ast_hash": "dbb48dab2c42372e718270b3576b2c04",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/SettingWidget.java": {
+    "mtime": 1788814202.4537542,
+    "seen": 1789908223.7018607,
+    "ast_hash": "f45a5ad27a93ec3c35b7d6ede42f9098",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/SliderWidget.java": {
+    "mtime": 1788814202.455302,
+    "seen": 1789908223.7018616,
+    "ast_hash": "b7129a837d40689f9a20507fa7170847",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/gui/widget/StringWidget.java": {
+    "mtime": 1788814202.4573672,
+    "seen": 1789908223.7018626,
+    "ast_hash": "7c681c8f3b32b9b79db3c0f5fe224eb0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/HudComponent.java": {
+    "mtime": 1788814202.4589107,
+    "seen": 1789908223.7018638,
+    "ast_hash": "66ca1c189ee2d715a7ac6d3a0c14b26a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/HudDragController.java": {
+    "mtime": 1788814202.4600146,
+    "seen": 1789908223.701865,
+    "ast_hash": "67e4ab296ffc8df5297588a308cf16a2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/HudManager.java": {
+    "mtime": 1788897735.3853312,
+    "seen": 1789908223.701866,
+    "ast_hash": "6f291b062be8445ea0efb400aa8fd7a9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/ArmorHud.java": {
+    "mtime": 1788814202.4651976,
+    "seen": 1789908223.701867,
+    "ast_hash": "854be2af12ef3c305ff92c0ac9a8650d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/ArrayListHud.java": {
+    "mtime": 1788814202.4667456,
+    "seen": 1789908223.7018683,
+    "ast_hash": "28b64e3646a6ddbfdb8655c3c333032f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/InfoHud.java": {
+    "mtime": 1788814202.4677732,
+    "seen": 1789908223.7018692,
+    "ast_hash": "cb305b3fe2681a0a35c442b92f985c90",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/KeystrokesHud.java": {
+    "mtime": 1788814202.469326,
+    "seen": 1789908223.7018704,
+    "ast_hash": "8b7b7cd6fa61a912a761e3df4688482a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/PotionsHud.java": {
+    "mtime": 1788814202.471459,
+    "seen": 1789908223.7018714,
+    "ast_hash": "9553e52473f12704b7e145502b956a97",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/RadarHud.java": {
+    "mtime": 1788814202.4740496,
+    "seen": 1789908223.7018723,
+    "ast_hash": "e0bdcad9cb318237d5258ed3d6351c28",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/RegionMapHud.java": {
+    "mtime": 1788814202.4766202,
+    "seen": 1789908223.7018733,
+    "ast_hash": "3bb49f6a9090388d5ccc5ff06ecd6553",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/SpotifyHud.java": {
+    "mtime": 1788895541.5156431,
+    "seen": 1789908223.7018745,
+    "ast_hash": "12c4edea45c294013e1b3a914730f2c2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/StaffListHud.java": {
+    "mtime": 1788814202.4849596,
+    "seen": 1789908223.7018754,
+    "ast_hash": "b57ba28dc331d73b358fdc244aec1919",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/hud/components/WatermarkHud.java": {
+    "mtime": 1788895522.022727,
+    "seen": 1789908223.7018764,
+    "ast_hash": "446e7fed1d4ee68324922d630c347fd7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/license/LicenseConfig.java": {
+    "mtime": 1788814202.4880526,
+    "seen": 1789908223.7018778,
+    "ast_hash": "6c109c0825f840d74c971e1a8b73e6c8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/license/LicenseException.java": {
+    "mtime": 1788814202.4885693,
+    "seen": 1789908223.7018788,
+    "ast_hash": "6605737805a8141edc2e4552e84e93a5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/license/LicenseGuard.java": {
+    "mtime": 1788814202.4890902,
+    "seen": 1789908223.7018797,
+    "ast_hash": "051418a0b6e83fb5a33a476b475f2461",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/license/ProtectedContent.java": {
+    "mtime": 1788814202.490725,
+    "seen": 1789908223.701881,
+    "ast_hash": "1851a37d7a5dfd55dfa93cf781ae008d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/license/ProtectedFeature.java": {
+    "mtime": 1788814202.4912412,
+    "seen": 1789908223.701882,
+    "ast_hash": "6565942439548ac7904dd004cc02d1b1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/AbstractClientPlayerMixin.java": {
+    "mtime": 1788814202.492813,
+    "seen": 1789908223.7018828,
+    "ast_hash": "ec4ef7fd48b70f5e48bdd04ae1462d10",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/AbstractContainerScreenAccessor.java": {
+    "mtime": 1788814202.4938476,
+    "seen": 1789908223.7018843,
+    "ast_hash": "4210a579ba22a48d0bbed99d768321e5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/CameraFreeLookMixin.java": {
+    "mtime": 1788815065.732781,
+    "seen": 1789908223.7018852,
+    "ast_hash": "535ca5d26ff572393d2780f1ecf62f75",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/CameraFreecamMixin.java": {
+    "mtime": 1788815065.733812,
+    "seen": 1789908223.7018862,
+    "ast_hash": "ebda8308ce2d5bfefc4d4096e682e2f7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/ChatComponentMixin.java": {
+    "mtime": 1788814202.4979918,
+    "seen": 1789908223.7018874,
+    "ast_hash": "32672cf6eaef3fae61f05cd8d9581f4a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/ClientInputAccessor.java": {
+    "mtime": 1788815051.5327163,
+    "seen": 1789908223.7018886,
+    "ast_hash": "81957302d9b0ce48aa33cb38348f830a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/ClientPacketListenerMixin.java": {
+    "mtime": 1788814202.5011811,
+    "seen": 1789908223.7018893,
+    "ast_hash": "6183944dee40aa114bdd687a8d1ddc75",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/EntityFreeLookMixin.java": {
+    "mtime": 1788815065.7290943,
+    "seen": 1789908223.7018902,
+    "ast_hash": "cf5f0f7c6f358671deb88229a83ca400",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/EntityFreecamMixin.java": {
+    "mtime": 1788815065.7307057,
+    "seen": 1789908223.7018914,
+    "ast_hash": "f01df0666757ea5a09073330a97a551b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/EntityHitboxMixin.java": {
+    "mtime": 1788815065.7280595,
+    "seen": 1789908223.7018924,
+    "ast_hash": "c5acf0ea9402901c3298377598b2c137",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/EntityNameTagMixin.java": {
+    "mtime": 1789499189.215217,
+    "seen": 1789908223.7018933,
+    "ast_hash": "7ee2553aa8d12dd94b10904b71a53299",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/EquipmentLayerRendererMixin.java": {
+    "mtime": 1788814202.5084872,
+    "seen": 1789908223.7018943,
+    "ast_hash": "056b87c581f22416d3be1c3a177d1196",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/FullbrightCurveMixin.java": {
+    "mtime": 1789506126.33146,
+    "seen": 1789908223.7018955,
+    "ast_hash": "ba2a90653f4870f085d71d6ddf6b1380",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/GameRendererMixin.java": {
+    "mtime": 1788814202.5111494,
+    "seen": 1789908223.7018964,
+    "ast_hash": "95ccb6fd3d87950977c5c476f1f150f2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/GuiCrosshairMixin.java": {
+    "mtime": 1788814202.5127044,
+    "seen": 1789908223.7018974,
+    "ast_hash": "e0ac43c3a595d301cf50c14b0c5fc530",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/GuiNametagEquipmentMixin.java": {
+    "mtime": 1788815065.7259922,
+    "seen": 1789908223.7018986,
+    "ast_hash": "3c56420707f2c3b6900a55b827c0183e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/GuiSidebarMixin.java": {
+    "mtime": 1788814202.515822,
+    "seen": 1789908223.7018995,
+    "ast_hash": "c769ff00c4232e70684902db745cb6c6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/KeyMappingAccessor.java": {
+    "mtime": 1788815065.7224562,
+    "seen": 1789908223.7019005,
+    "ast_hash": "f05b3c8977cab6ad94a08a46eb7aac04",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/KeyboardHandlerMixin.java": {
+    "mtime": 1789330715.460575,
+    "seen": 1789908223.7019017,
+    "ast_hash": "adfb80dfc6312290ff6b1e29de0d1e2f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/KeyboardInputFreecamMixin.java": {
+    "mtime": 1788815065.7244415,
+    "seen": 1789908223.7019026,
+    "ast_hash": "a63ceb0310d7ab45f0fb1e560eb16f89",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/LevelRendererMixin.java": {
+    "mtime": 1789769465.407173,
+    "seen": 1789908223.7019036,
+    "ast_hash": "723ee456b4369478881bc8d19c5b814c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/LightPacketMixin.java": {
+    "mtime": 1788815065.7213955,
+    "seen": 1789908223.701906,
+    "ast_hash": "497c2e30e7843b12d3ac39a5c6e5b349",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/LightTextureMixin.java": {
+    "mtime": 1788814202.5246768,
+    "seen": 1789908223.701907,
+    "ast_hash": "2518c3917c50d918bf53c189882b4e9c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/LivingEntityJumpMixin.java": {
+    "mtime": 1789831765.5138855,
+    "seen": 1789908223.7019079,
+    "ast_hash": "c4294e3e256f079302de7ee1505fd571",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/LivingEntitySwingMixin.java": {
+    "mtime": 1788814202.5267496,
+    "seen": 1789908223.701909,
+    "ast_hash": "7a5d5141d3155f25d6ed1d2c0f9eb605",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/LocalPlayerFreecamMixin.java": {
+    "mtime": 1788815065.7197702,
+    "seen": 1789908223.70191,
+    "ast_hash": "a6fe2cba73783b329b0a3515551a1deb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/MinecraftAccessor.java": {
+    "mtime": 1788815065.718182,
+    "seen": 1789908223.701911,
+    "ast_hash": "8ff50c94a58d5692822ab92f532e8a3c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/MouseHandlerFreecamMixin.java": {
+    "mtime": 1788815065.7166047,
+    "seen": 1789908223.7019124,
+    "ast_hash": "999c055aabf1a67c2217c448bb3f5f0c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/MouseHandlerMixin.java": {
+    "mtime": 1788814202.5320046,
+    "seen": 1789908223.701913,
+    "ast_hash": "aced4178ac57ad180adb0cccb45e03e8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/MultiPlayerGameModeAttackMixin.java": {
+    "mtime": 1788897644.0427723,
+    "seen": 1789908223.701914,
+    "ast_hash": "229701e8fed2d595ed2d9d4c6a5d9b68",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/PlayerTabOverlayMixin.java": {
+    "mtime": 1788814202.5346034,
+    "seen": 1789908223.701915,
+    "ast_hash": "ee68857e985bc8174013e4e7e335c4ab",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/XRayBlockCullMixin.java": {
+    "mtime": 1788897595.6486135,
+    "seen": 1789908223.7019162,
+    "ast_hash": "c2988783cf2474ee6550a783c4f20295",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/sodium/SodiumMixinPlugin.java": {
+    "mtime": 1789418092.2255404,
+    "seen": 1789908223.7019172,
+    "ast_hash": "7ac648803312f542545ee4a445e921b0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/sodium/SodiumXRayCullMixin.java": {
+    "mtime": 1789584959.0364923,
+    "seen": 1789908223.7019181,
+    "ast_hash": "3b224e9b565df03908f706298f611b0e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/AimAssistCompute.java": {
+    "mtime": 1788814202.5356388,
+    "seen": 1789908223.7019193,
+    "ast_hash": "90652bcf35bb6e3ffdc4d951cd3f5870",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/Category.java": {
+    "mtime": 1789210425.3408718,
+    "seen": 1789908223.7019203,
+    "ast_hash": "62830c3ae0f69fbb65f3d3364cd58dbd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/MergedModuleManager.java": {
+    "mtime": 1789828747.4151883,
+    "seen": 1789908223.7019212,
+    "ast_hash": "d90d49c03a9fcafd7fe0ba25ac6f00b7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/Module.java": {
+    "mtime": 1788988587.182326,
+    "seen": 1789908223.7019224,
+    "ast_hash": "38b33b1cdc49833cdd23c4732a8e70f3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/ModuleManager.java": {
+    "mtime": 1789907226.2167284,
+    "seen": 1789908223.7019234,
+    "ast_hash": "68b332abce95744c95c3b3271aad835e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/Modules.java": {
+    "mtime": 1789416128.49453,
+    "seen": 1789908223.701924,
+    "ast_hash": "cb941fd7826a2194afeacf2bf4dd3500",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/NyxModuleBridge.java": {
+    "mtime": 1789831898.2377887,
+    "seen": 1789908223.701925,
+    "ast_hash": "1cb8a81817640bcd550779a5e91649af",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/RotationHumanizer.java": {
+    "mtime": 1789907582.953255,
+    "seen": 1789908223.7019262,
+    "ast_hash": "779ce200220cf08a95cfd57997cffa78",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/WaterModuleBridge.java": {
+    "mtime": 1788813779.902756,
+    "seen": 1789908223.7019272,
+    "ast_hash": "b24e0beb5905481dfbff50a35f6c3678",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AimAssistModule.java": {
+    "mtime": 1789832528.8993459,
+    "seen": 1789908223.7019281,
+    "ast_hash": "aefa81006a819e042f27681173b81dc2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AnchorMacroModule.java": {
+    "mtime": 1788814202.5486867,
+    "seen": 1789908223.7019293,
+    "ast_hash": "ca19ea77891ce15e35c652afa48596c9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AntiAfkModule.java": {
+    "mtime": 1789415538.620043,
+    "seen": 1789908223.7019303,
+    "ast_hash": "8d34c5445cf4d581443ab314b880073c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ArmorTrimHiderModule.java": {
+    "mtime": 1789830572.7556381,
+    "seen": 1789908223.7019312,
+    "ast_hash": "57d51f7040851ca205a1e3d34b00a684",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoClickerModule.java": {
+    "mtime": 1789827042.4829676,
+    "seen": 1789908223.7019322,
+    "ast_hash": "7cee3f3eef7e85c8e2bbe5ee60499125",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoCrystalModule.java": {
+    "mtime": 1788814202.557053,
+    "seen": 1789908223.7019334,
+    "ast_hash": "a7e7d7aa08b318c45a08007ade33917f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoInventoryTotemModule.java": {
+    "mtime": 1788814202.559645,
+    "seen": 1789908223.701934,
+    "ast_hash": "1ab7d02e0e1d4231b4b167b53faac3af",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoRespawnModule.java": {
+    "mtime": 1788897607.5723746,
+    "seen": 1789908223.701935,
+    "ast_hash": "eda65b91419f897927f4913b71e63c07",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoSprintModule.java": {
+    "mtime": 1789415532.7477648,
+    "seen": 1789908223.7019362,
+    "ast_hash": "69cbb87be0a3eb1651bfb64ab7ddbb86",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoTotemModule.java": {
+    "mtime": 1788814202.562818,
+    "seen": 1789908223.7019372,
+    "ast_hash": "69c647af773d7210d6049a143b0b193e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoTpaModule.java": {
+    "mtime": 1789827016.2701254,
+    "seen": 1789908223.7019382,
+    "ast_hash": "436c0865cb261f9518ad6e79a8a9edad",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/AutoWalkModule.java": {
+    "mtime": 1789827021.4760363,
+    "seen": 1789908223.701939,
+    "ast_hash": "0cae55f6a682c1efd956e83181ae272a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/BlockEntityEspModule.java": {
+    "mtime": 1788814202.5711613,
+    "seen": 1789908223.7019403,
+    "ast_hash": "178438b0f8c61eb5f476bfbb3a6135f6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/BlockEspModule.java": {
+    "mtime": 1788814202.5721843,
+    "seen": 1789908223.701941,
+    "ast_hash": "928b71302a7f8d0550cb6df268c5fd84",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ChatMacroModule.java": {
+    "mtime": 1788814202.5737357,
+    "seen": 1789908223.701942,
+    "ast_hash": "f08793f15ceffc0c704b84c2a7160727",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ChunkFinderModule.java": {
+    "mtime": 1788814202.5762937,
+    "seen": 1789908223.7019432,
+    "ast_hash": "c93c82e7ea7e8c304d2f8d5b5ab2d711",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/CoordSnapperModule.java": {
+    "mtime": 1789830576.138768,
+    "seen": 1789908223.701944,
+    "ast_hash": "9c616e924b0c5aac55034c648e860de4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/CriticalsModule.java": {
+    "mtime": 1788897629.4852464,
+    "seen": 1789908223.701945,
+    "ast_hash": "983dedd90bd40714529d3b4a0b0d8da7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/CustomAccessoriesModule.java": {
+    "mtime": 1788895706.764697,
+    "seen": 1789908223.701946,
+    "ast_hash": "3be43748faeb50508e9da00423ff9cba",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/CustomCrosshairModule.java": {
+    "mtime": 1789830701.2347467,
+    "seen": 1789908223.7019472,
+    "ast_hash": "e8e0357c7b95411b6eb5afbe386cddf0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/CustomFovModule.java": {
+    "mtime": 1789830698.1892765,
+    "seen": 1789908223.7019482,
+    "ast_hash": "af04a7ef9d1c3e9c7f2ede177dd720b4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/CustomGlintModule.java": {
+    "mtime": 1789830704.7544675,
+    "seen": 1789908223.7019491,
+    "ast_hash": "628a2557621c8f9478979de81e4bdf60",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/DebugHoleEspModule.java": {
+    "mtime": 1788814202.5882578,
+    "seen": 1789908223.7019503,
+    "ast_hash": "0cccbd1f8f33cc4fb5a1003988ed5f66",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/DoubleAnchorModule.java": {
+    "mtime": 1788814202.5909154,
+    "seen": 1789908223.701951,
+    "ast_hash": "af3d7e962449e282d5e7d76bab08cc14",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ElytraSwapModule.java": {
+    "mtime": 1788814202.5934768,
+    "seen": 1789908223.701952,
+    "ast_hash": "3b1bf7f89a48fee76d20618305284765",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FakePayModule.java": {
+    "mtime": 1788820728.594094,
+    "seen": 1789908223.701953,
+    "ast_hash": "730f5e1d9737a3506e39c44b3050543d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FakeRolesModule.java": {
+    "mtime": 1788820769.1154308,
+    "seen": 1789908223.7019541,
+    "ast_hash": "e8df5afde6ef60de9f0c89e0de56d5a4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FakeStatsModule.java": {
+    "mtime": 1788820769.2294595,
+    "seen": 1789908223.701955,
+    "ast_hash": "8ae1af03df3084488f1b3fddd7b546ef",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FastUseModule.java": {
+    "mtime": 1789827044.984689,
+    "seen": 1789908223.701956,
+    "ast_hash": "978d9edce268a8cca2951d41296a20f3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FreeLookModule.java": {
+    "mtime": 1789830709.9262164,
+    "seen": 1789908223.7019572,
+    "ast_hash": "209a82cda6919cc1d68c2e8ee3034abc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FreecamModule.java": {
+    "mtime": 1789827033.6121812,
+    "seen": 1789908223.7019582,
+    "ast_hash": "85315dcb24176a157219b8373f3eae4a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FriendlyMobEspModule.java": {
+    "mtime": 1789504984.356215,
+    "seen": 1789908223.7019591,
+    "ast_hash": "d884d2ee99dc7ab03cf98f7c8818ee50",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/FullbrightModule.java": {
+    "mtime": 1788814202.6309476,
+    "seen": 1789908223.70196,
+    "ast_hash": "d312e56716e60bf820c700ea0aba328d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/GambleRiggerModule.java": {
+    "mtime": 1789828566.0850265,
+    "seen": 1789908223.7019613,
+    "ast_hash": "7f7b29ffd1d9649c93d004a81c622416",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/HitBoxModule.java": {
+    "mtime": 1788814202.6350563,
+    "seen": 1789908223.701962,
+    "ast_hash": "6ee6e27c3fd5d9830b15b8a2fbee95f4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/HitParticlesModule.java": {
+    "mtime": 1788895624.2924557,
+    "seen": 1789908223.701963,
+    "ast_hash": "c272f17430f50653d84215b1242683fb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/HoverTotemModule.java": {
+    "mtime": 1788814202.6443758,
+    "seen": 1789908223.7019641,
+    "ast_hash": "682edc7ca81bd24700d57f33d1353a52",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/JumpCirclesModule.java": {
+    "mtime": 1788895592.0002315,
+    "seen": 1789908223.701965,
+    "ast_hash": "5f5281529f548e3915627dc429b7006d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/MaceBomberModule.java": {
+    "mtime": 1788814202.647998,
+    "seen": 1789908223.701966,
+    "ast_hash": "2a372cf60ff124b10a02d2f5db04e73b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/MaceSwapModule.java": {
+    "mtime": 1788814202.6495545,
+    "seen": 1789908223.701967,
+    "ast_hash": "de83ea571398649b3143bc43863bda67",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/MobEspModule.java": {
+    "mtime": 1789504976.4516988,
+    "seen": 1789908223.7019682,
+    "ast_hash": "67d4f405611c1a5e3f13e97e55d295c1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/MotionBlurModule.java": {
+    "mtime": 1788895609.6150765,
+    "seen": 1789908223.7019691,
+    "ast_hash": "d91d9cc50ab2252a19e329d7413433f5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/NameProtectModule.java": {
+    "mtime": 1789830579.225348,
+    "seen": 1789908223.70197,
+    "ast_hash": "e17b0af0ec8b336e621de7b021e14f26",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/NameTagsModule.java": {
+    "mtime": 1789830707.3702824,
+    "seen": 1789908223.7019713,
+    "ast_hash": "d35799a5882dfe9714d918a2c3d2d0f5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/NoClipModule.java": {
+    "mtime": 1789907166.6404047,
+    "seen": 1789908223.7019722,
+    "ast_hash": "cb00f83a9c3588f34547c6a6337b4c6b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/PhaseModule.java": {
+    "mtime": 1789907258.8256428,
+    "seen": 1789908223.7019732,
+    "ast_hash": "f7c29f2333a6dc80dc946caef7e9cc2b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/PlayerEspModule.java": {
+    "mtime": 1789504968.428815,
+    "seen": 1789908223.7019742,
+    "ast_hash": "0036c296deae1d8fdd1fc1235870f27f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/RegionMapModule.java": {
+    "mtime": 1789827050.1698747,
+    "seen": 1789908223.701975,
+    "ast_hash": "1563233f8685b2e18a917b24f2552a51",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ShieldBreakerModule.java": {
+    "mtime": 1788814202.6600034,
+    "seen": 1789908223.701976,
+    "ast_hash": "6b60b8765601d4c4a8636ddd278ac765",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/SkinProtectModule.java": {
+    "mtime": 1789830582.1531956,
+    "seen": 1789908223.701977,
+    "ast_hash": "4e11cfbb56aada44760aca3caa96aa79",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/SpawnerNametagsModule.java": {
+    "mtime": 1788814202.663644,
+    "seen": 1789908223.7019782,
+    "ast_hash": "9342d47ba457764fa2ed1fe6cd82dd71",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/SpawnerProtectModule.java": {
+    "mtime": 1789828533.4360147,
+    "seen": 1789908223.701979,
+    "ast_hash": "8419f97c75be3011d806bd502891f507",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/StaffListModule.java": {
+    "mtime": 1788895564.7516367,
+    "seen": 1789908223.7019799,
+    "ast_hash": "1550b880c0c285eb23f5820998e2f5d0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/StorageEspModule.java": {
+    "mtime": 1788814202.6797104,
+    "seen": 1789908223.7019808,
+    "ast_hash": "189a9e0c478eb112599fae72d9d5533f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/SwingSpeedModule.java": {
+    "mtime": 1788814202.6807897,
+    "seen": 1789908223.701982,
+    "ast_hash": "0c4f78603e8468c8431a0c9fb8955e2d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/TriggerbotModule.java": {
+    "mtime": 1788814202.6828551,
+    "seen": 1789908223.701983,
+    "ast_hash": "fd8a6ca1075b488aa304dcb1c80fb0c3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ViewModule.java": {
+    "mtime": 1789827036.6205945,
+    "seen": 1789908223.701984,
+    "ast_hash": "b285d899136965ae95645c00dde208a2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/WeatherNotifierModule.java": {
+    "mtime": 1789830585.0939288,
+    "seen": 1789908223.7019851,
+    "ast_hash": "d82844f16ec7a7e9cb843a359081a980",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/XRayModule.java": {
+    "mtime": 1789769418.4816456,
+    "seen": 1789908223.701986,
+    "ast_hash": "d7e842e63f6345f350ec12a0229466a1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/module/impl/ZoomModule.java": {
+    "mtime": 1789830695.0642033,
+    "seen": 1789908223.701987,
+    "ast_hash": "c3a20e653972f240d25984dd1b5c1307",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/notification/NotificationManager.java": {
+    "mtime": 1788814202.689536,
+    "seen": 1789908223.7019877,
+    "ast_hash": "b12fe5e0f6a4e079422f73956930227f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/NyxClient.java": {
+    "mtime": 1788814865.9287786,
+    "seen": 1789908223.701989,
+    "ast_hash": "56ade2bd60fc67c31c5088d3bfbeaa65",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/auth/AuthGate.java": {
+    "mtime": 1788987002.8384778,
+    "seen": 1789908223.70199,
+    "ast_hash": "8b186e677349b2abd7e7e48c68490388",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/config/Manager.java": {
+    "mtime": 1788814202.6937485,
+    "seen": 1789908223.7019928,
+    "ast_hash": "5f17bf2ae0e407f160a15b8d32e8204e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/duck/ChamsLivingEntityRendererMixinHelper.java": {
+    "mtime": 1788814202.6952994,
+    "seen": 1789908223.701994,
+    "ast_hash": "f31c12c3215b4487eb1e54fc540f68f8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/imgui/AlbumArtCache.java": {
+    "mtime": 1788814202.697341,
+    "seen": 1789908223.701995,
+    "ast_hash": "5484ed444b3a73676e3a06255b4d326a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/imgui/ImGuiFonts.java": {
+    "mtime": 1788814202.7269404,
+    "seen": 1789908223.7019958,
+    "ast_hash": "4739e1d1837c804c97e982175c9c84e6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/internal/CodeEngineScreenUtil.java": {
+    "mtime": 1788814202.761755,
+    "seen": 1789908223.7019968,
+    "ast_hash": "8bab74a20258eb010fa6bda633e435fc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/internal/HUDModuleData.java": {
+    "mtime": 1788814202.7627888,
+    "seen": 1789908223.7019978,
+    "ast_hash": "ed21a659ed75aa8c4847834541ae5c0e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/internal/InternalData.java": {
+    "mtime": 1788814202.763302,
+    "seen": 1789908223.701999,
+    "ast_hash": "2108b6aeaabc994b4cda4a04e512a901",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/internal/InternalUtil.java": {
+    "mtime": 1788814202.7643344,
+    "seen": 1789908223.702,
+    "ast_hash": "d2323a7ba0cd94af8fbe5da0460dc5b5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/internal/util/ThrowableUtils.java": {
+    "mtime": 1788814202.7711554,
+    "seen": 1789908223.7020009,
+    "ast_hash": "6d9876586db7aec9a42b7e166c10b4c9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/AutoWalkFocusMixin.java": {
+    "mtime": 1788814202.7727087,
+    "seen": 1789908223.7020018,
+    "ast_hash": "0865d86977d86f7bd692693447bf3617",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/AutoWalkInputMixin.java": {
+    "mtime": 1788814202.7742627,
+    "seen": 1789908223.7020028,
+    "ast_hash": "e592ffe21ea029426c4d9eacfb58f686",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/BacktrackEntityUpdateMixin.java": {
+    "mtime": 1788814202.7768226,
+    "seen": 1789908223.7020037,
+    "ast_hash": "e825f37d843bf417148b19861a84c713",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/CameraLookRedirectMixin.java": {
+    "mtime": 1788814202.7788873,
+    "seen": 1789908223.7020047,
+    "ast_hash": "8d9aa699eced44b0e00a6bbc5b40517e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChamsLivingEntityRendererMixin.java": {
+    "mtime": 1788814202.7799137,
+    "seen": 1789908223.7020059,
+    "ast_hash": "65ad6d27b2d151ded1c66a241fd0103b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChamsRenderStateExtMixin.java": {
+    "mtime": 1788814202.7804976,
+    "seen": 1789908223.7020068,
+    "ast_hash": "331b0bc86ad00340099bea3895fd9aa7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChamsUpdateRenderStateMixin.java": {
+    "mtime": 1788814202.7815328,
+    "seen": 1789908223.7020075,
+    "ast_hash": "d691c7c2480bf29ccb3e255d8f2643ad",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChatFilterMixin.java": {
+    "mtime": 1788814202.7831142,
+    "seen": 1789908223.7020085,
+    "ast_hash": "807bd9d703c44d1f3c72c833164a0acc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChromaXPMixin.java": {
+    "mtime": 1788814202.7841446,
+    "seen": 1789908223.7020097,
+    "ast_hash": "d399fdc8df13faceebd80df2f65db143",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChunkLightProviderAccessor.java": {
+    "mtime": 1788814202.7846594,
+    "seen": 1789908223.7020106,
+    "ast_hash": "598301e01ce67cba3a1a4bc90c20fc4f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChunkNibbleArrayAccessor.java": {
+    "mtime": 1788814202.7851768,
+    "seen": 1789908223.7020116,
+    "ast_hash": "63bc2ade258d4ca59dd41a166534bcbe",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChunkSnapshotMixin.java": {
+    "mtime": 1788814202.7862077,
+    "seen": 1789908223.702013,
+    "ast_hash": "ce32a54ebe0a30faf1235ae86a79d5e2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ChunkSpoofPacketMixin.java": {
+    "mtime": 1788814202.7872417,
+    "seen": 1789908223.7020137,
+    "ast_hash": "f645bcee15d80ff5637f0786c5a39ee6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClearWorldFogMixin.java": {
+    "mtime": 1788814202.787758,
+    "seen": 1789908223.7020147,
+    "ast_hash": "1dd8818511e09c15785ac92a2aad3c3d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClearWorldMixins.java": {
+    "mtime": 1788814202.788792,
+    "seen": 1789908223.7020156,
+    "ast_hash": "316f5098c16f1628f2cc075db280e501",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClearWorldParticleMixin.java": {
+    "mtime": 1788814202.7893064,
+    "seen": 1789908223.7020168,
+    "ast_hash": "4848ab36d422973081ecb951b96376f8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClearWorldWeatherMixin.java": {
+    "mtime": 1788814202.7903447,
+    "seen": 1789908223.7020178,
+    "ast_hash": "edf39c8225cf8e620a24211fcb1a3638",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClientChunkManagerNoUnloadMixin.java": {
+    "mtime": 1788814202.791443,
+    "seen": 1789908223.7020185,
+    "ast_hash": "7d06bd0dd4721652863a200c8b7b6b50",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClientPlayNetworkHandlerMixin.java": {
+    "mtime": 1788814202.794539,
+    "seen": 1789908223.7020197,
+    "ast_hash": "7243c07c56129e89f82b3f66758e7cdd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClientPlayerInteractionManagerAccessor.java": {
+    "mtime": 1788814202.7924764,
+    "seen": 1789908223.7020206,
+    "ast_hash": "8c2b8581b0c4f73f77d2b5daf2c5e2ed",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClientPlayerInteractionManagerAttackMixin.java": {
+    "mtime": 1788814202.7935014,
+    "seen": 1789908223.7020218,
+    "ast_hash": "840641cb40d5b1331b940a536e0a16f1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClientWorldAccessor.java": {
+    "mtime": 1788814202.795565,
+    "seen": 1789908223.7020226,
+    "ast_hash": "8f09f164289e221926479473b6a978f8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ContainerSnapshotMixin.java": {
+    "mtime": 1788814202.7965908,
+    "seen": 1789908223.7020237,
+    "ast_hash": "d256073b46c1e89bd7c87d74807f7614",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/FreecamInputFreezeMixin.java": {
+    "mtime": 1788814202.7971034,
+    "seen": 1789908223.7020247,
+    "ast_hash": "684fb0f5e045087725b028e29b8aafbc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/FreelookCameraClipMixin.java": {
+    "mtime": 1788814202.7981703,
+    "seen": 1789908223.7020257,
+    "ast_hash": "053e8e1a1a0f04c6ca42ada29b26b5e2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/GlowIsGlowingMixin.java": {
+    "mtime": 1788814202.7992055,
+    "seen": 1789908223.7020266,
+    "ast_hash": "c87a2c58a2610e42c37a52c7b98ee817",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/GlowTeamColorMixin.java": {
+    "mtime": 1788814202.799725,
+    "seen": 1789908223.7020276,
+    "ast_hash": "8e210fec1b7e272bdd0fcd9b07c5ebe0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/HitboxEntityMixin.java": {
+    "mtime": 1788814202.8008206,
+    "seen": 1789908223.7020285,
+    "ast_hash": "a5993f97815bd05ad7b28ede15104b94",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/HitboxTargetPredicateMixin.java": {
+    "mtime": 1788814202.8013344,
+    "seen": 1789908223.7020292,
+    "ast_hash": "41290b7e4be8def3c5762e9c97b40f73",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/IceSpeedFrictionMixin.java": {
+    "mtime": 1788814202.8018496,
+    "seen": 1789908223.7020304,
+    "ast_hash": "b8e4e48d19b2d18546e35714c877e01c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/InventoryMoveKeyBindingMixin.java": {
+    "mtime": 1788814202.8028853,
+    "seen": 1789908223.7020314,
+    "ast_hash": "bd254be09ea64492dc86a1a31af43ea7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/InventoryMoveMouseMixin.java": {
+    "mtime": 1788814202.8039188,
+    "seen": 1789908223.7020323,
+    "ast_hash": "6fbc2240ad7fbf84029fadba1f1e6cf1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ItemPhysicsMixin.java": {
+    "mtime": 1788814202.8044322,
+    "seen": 1789908223.7020335,
+    "ast_hash": "475011a8a6baef379fae9240c46e8c5a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/KeyBindingAccessor.java": {
+    "mtime": 1788814202.8054595,
+    "seen": 1789908223.7020345,
+    "ast_hash": "b3072f47b738739ded59a8320012060b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/KillEffectsEntityStatusMixin.java": {
+    "mtime": 1788814202.8059723,
+    "seen": 1789908223.7020352,
+    "ast_hash": "3d7a052bfb5745e3ccc6115569bcbe62",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/LightBloomWorldRendererMixin.java": {
+    "mtime": 1788814202.8075197,
+    "seen": 1789908223.7020361,
+    "ast_hash": "d5ebe5bcdbe9ce4fd4b18b0932580e88",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/LightStorageAccessor.java": {
+    "mtime": 1788814202.8080368,
+    "seen": 1789908223.7020373,
+    "ast_hash": "f618d718812f7bdf0fd0062c77461e13",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/LivingEntityAccessor.java": {
+    "mtime": 1788814202.8085535,
+    "seen": 1789908223.7020383,
+    "ast_hash": "265b763c06551974a9c22db54ebded53",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/MinecraftClientAccessor.java": {
+    "mtime": 1788814202.8090672,
+    "seen": 1789908223.702039,
+    "ast_hash": "357f8e4a37ef73bd5eb8edd19e5b2c35",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/MinecraftClientInvoker.java": {
+    "mtime": 1788814202.809585,
+    "seen": 1789908223.70204,
+    "ast_hash": "9c0bcd2f683f087215d6bf2ffad30afe",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/MixinClientTickGate.java": {
+    "mtime": 1788814202.8106802,
+    "seen": 1789908223.7020411,
+    "ast_hash": "5ce3c8522bb52c98778f7387babefffb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/MixinWorldRenderer.java": {
+    "mtime": 1788814202.8117185,
+    "seen": 1789908223.702042,
+    "ast_hash": "de5a11163f5ad2ee79405f88a9877ee9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/MovementSpeedMixin.java": {
+    "mtime": 1788814202.8127544,
+    "seen": 1789908223.702043,
+    "ast_hash": "250f47e3c6490cd1b1baa6e5024e4707",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/NicknamePlayerListMixin.java": {
+    "mtime": 1788814202.813295,
+    "seen": 1789908223.7020442,
+    "ast_hash": "21c11d4b657a306c0e5b7861cd4cc553",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/NoFallOnGroundSpoofMixin.java": {
+    "mtime": 1788814202.8143296,
+    "seen": 1789908223.702045,
+    "ast_hash": "2072a97f03152d152f1e108d5ee8413a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/NyxCameraInvoker.java": {
+    "mtime": 1788814202.8148446,
+    "seen": 1789908223.7020462,
+    "ast_hash": "0850a9b8bf5f3514b0de9c83c34e550d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/NyxCameraMixin.java": {
+    "mtime": 1788814202.8158772,
+    "seen": 1789908223.7020469,
+    "ast_hash": "497b695c0015afe8fdb03c9944b0f299",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/OptionInstanceAccessor.java": {
+    "mtime": 1788814202.8169093,
+    "seen": 1789908223.702048,
+    "ast_hash": "68fff7927fe334f9e7a42e5e281b414f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/OutlineThicknessMixin.java": {
+    "mtime": 1788814202.817426,
+    "seen": 1789908223.702049,
+    "ast_hash": "d42d94fd7c4baf347204cdfcf67784eb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/PlayerMoveC2SPacketMixin.java": {
+    "mtime": 1788814202.8184648,
+    "seen": 1789908223.70205,
+    "ast_hash": "05c351cb1185f49afdce4d15f015aeec",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ReachBlockRangeMixin.java": {
+    "mtime": 1788814202.8195019,
+    "seen": 1789908223.702051,
+    "ast_hash": "29c097d1ee78207ae8106e7e515d2127",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ReachEntityRangeMixin.java": {
+    "mtime": 1788814202.8206196,
+    "seen": 1789908223.7020519,
+    "ast_hash": "c8b12857aa40e03d81c8811ba3aafa2e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ScoreboardNicknameMixin.java": {
+    "mtime": 1788814202.8221576,
+    "seen": 1789908223.7020528,
+    "ast_hash": "e5bf889b02cf99f8c624db76b1691902",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/SmartCullAccessor.java": {
+    "mtime": 1788814202.8226697,
+    "seen": 1789908223.7020538,
+    "ast_hash": "b8f4e3a6e6a16ceca2e36c4034a40200",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/StepHeightMixin.java": {
+    "mtime": 1788814202.823699,
+    "seen": 1789908223.7020547,
+    "ast_hash": "4d70d19559f61439105f76af5315757c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/SwingDurationMixin.java": {
+    "mtime": 1788814202.8247313,
+    "seen": 1789908223.7020557,
+    "ast_hash": "b42cf2d824ba0254ccfd22291644713e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/VelocityExplosionMixin.java": {
+    "mtime": 1788814202.825244,
+    "seen": 1789908223.7020566,
+    "ast_hash": "b0ffe89c5c09e76c9bf1913f6aee2f3e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/VelocityPacketMixin.java": {
+    "mtime": 1788814202.8267844,
+    "seen": 1789908223.7020578,
+    "ast_hash": "7960dfa5d77c5ba91a3c555be6994460",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ViewModelMixin.java": {
+    "mtime": 1788814202.8283463,
+    "seen": 1789908223.7020588,
+    "ast_hash": "510c414bf0de148e6c8d0089ee4babd9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/YAxisPhysicsMixin.java": {
+    "mtime": 1788814202.8288631,
+    "seen": 1789908223.7020597,
+    "ast_hash": "202aa943dabe497362c08a6f816a46f5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ZoomGameRendererMixin.java": {
+    "mtime": 1788814202.829378,
+    "seen": 1789908223.7020607,
+    "ast_hash": "dd4cbaea010e66274285a62c1ac89fe0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/Category.java": {
+    "mtime": 1788814202.8310256,
+    "seen": 1789908223.702062,
+    "ast_hash": "affda26d65d03d891a83c5d69ac8cdd9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/Module.java": {
+    "mtime": 1788814202.8325741,
+    "seen": 1789908223.7020626,
+    "ast_hash": "be1f3c5415a6a37b3bd0d4cf9811179a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/ModuleManager.java": {
+    "mtime": 1789828479.1521773,
+    "seen": 1789908223.7020636,
+    "ast_hash": "0926194c0e5a21934d669b5514ac0b83",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/BlockGlowModule.java": {
+    "mtime": 1788814202.841882,
+    "seen": 1789908223.7020648,
+    "ast_hash": "a1faedf138d542f42e3b5e8ca99e6726",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/BlockOutlineModule.java": {
+    "mtime": 1788814202.844478,
+    "seen": 1789908223.7020657,
+    "ast_hash": "d06c04f8d33bb6fc6bfbbc46befff978",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/BreakParticlesModule.java": {
+    "mtime": 1788814202.8465307,
+    "seen": 1789908223.7020667,
+    "ast_hash": "4dfa4454c38b1f41b860769ee5a3aaf0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/DragonWingsModule.java": {
+    "mtime": 1788814202.8496222,
+    "seen": 1789908223.7020676,
+    "ast_hash": "05caf8bdd491b04b5f459e22adeadc7f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/GlintCustomiserModule.java": {
+    "mtime": 1788814202.8517475,
+    "seen": 1789908223.7020686,
+    "ast_hash": "ed252f8172b46ad0e905dd41bf605537",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/HitParticlesModule.java": {
+    "mtime": 1788814202.8538077,
+    "seen": 1789908223.7020695,
+    "ast_hash": "db3e7d4518384df2fde699045f011636",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/KillEffectsModule.java": {
+    "mtime": 1788814645.2645278,
+    "seen": 1789908223.7020705,
+    "ast_hash": "24767ec15cbd7650713782c3e34819ab",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/addons/PlayerParticlesModule.java": {
+    "mtime": 1788814202.8635597,
+    "seen": 1789908223.7020717,
+    "ast_hash": "585506e44bc037ffb12c7a2ca15e98fe",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/ChatFilter.java": {
+    "mtime": 1788814202.8878748,
+    "seen": 1789908223.7020729,
+    "ast_hash": "51f60b1161fa3a132c0ffaa51d9a67d0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/ChromaXPModule.java": {
+    "mtime": 1788814202.8889012,
+    "seen": 1789908223.7020738,
+    "ast_hash": "fec5b41d46afd8193e989565f92d2b56",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/ClickGUIModule.java": {
+    "mtime": 1789418327.04884,
+    "seen": 1789908223.7020748,
+    "ast_hash": "866c7d29a6f815e9832500d1ffc8b0be",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/ClickSounds.java": {
+    "mtime": 1788814603.5442038,
+    "seen": 1789908223.702076,
+    "ast_hash": "11c50e2f6c1af3e36580fc80bbf6429e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/CustomTitleModule.java": {
+    "mtime": 1788814202.8941305,
+    "seen": 1789908223.702077,
+    "ast_hash": "01b58c54a8a8f3586a13e20be156e95e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/HOVER.java": {
+    "mtime": 1788814202.8946545,
+    "seen": 1789908223.702078,
+    "ast_hash": "37f29e87ac48f186a251ec8ab8adee61",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/HUDModule.java": {
+    "mtime": 1788814202.9003446,
+    "seen": 1789908223.702079,
+    "ast_hash": "976fad491351aee68cc7aa22200d16db",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/KeystrokeHUDModule.java": {
+    "mtime": 1788814202.9049742,
+    "seen": 1789908223.70208,
+    "ast_hash": "fabd829dab738e1e493008ce9ff2f885",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/RPCModule.java": {
+    "mtime": 1788814202.9075716,
+    "seen": 1789908223.702081,
+    "ast_hash": "918282658fa5a5782709fd41c4836e72",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/TabGUIModule.java": {
+    "mtime": 1788814202.910712,
+    "seen": 1789908223.7020822,
+    "ast_hash": "c6a0fd4b1a725915b717dfe4b9b27fe7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/TargetHUDModule.java": {
+    "mtime": 1788814202.9153397,
+    "seen": 1789908223.702083,
+    "ast_hash": "ddbcb67c2ff57f6201ec3e168f069011",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/ThemeSelectorModule.java": {
+    "mtime": 1788814202.9168909,
+    "seen": 1789908223.702084,
+    "ast_hash": "2d0cb60c0c040b8e1c1f01239a0f5b02",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/AntiKnockbackModule.java": {
+    "mtime": 1788814202.91844,
+    "seen": 1789908223.702085,
+    "ast_hash": "937fbe3b46ded262754ab7c711565bd8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/AutoArmor.java": {
+    "mtime": 1788814202.9298587,
+    "seen": 1789908223.702086,
+    "ast_hash": "eb658544fca59abdb7ec51fa63ebce12",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/AutoClickerModule.java": {
+    "mtime": 1788814202.9319816,
+    "seen": 1789908223.702087,
+    "ast_hash": "a8cdda37491a1cd3967b6c08328eac66",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/AutoCrystalModule.java": {
+    "mtime": 1789830927.2946153,
+    "seen": 1789908223.7020879,
+    "ast_hash": "392f558db36dfb91f8b467c44b9058c3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/AutoLogModule.java": {
+    "mtime": 1788814202.9386954,
+    "seen": 1789908223.702089,
+    "ast_hash": "88b556ab590321fb39ec278566787b6a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/AutoTotemModule.java": {
+    "mtime": 1789830932.4344003,
+    "seen": 1789908223.70209,
+    "ast_hash": "051ae8f32f7293158d14bc83018e0892",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/BacktrackModule.java": {
+    "mtime": 1788814202.942902,
+    "seen": 1789908223.702091,
+    "ast_hash": "8d001c6b0819efca574b0f9f6c53ae4a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/ChestStealerModule.java": {
+    "mtime": 1788814202.94548,
+    "seen": 1789908223.7020917,
+    "ast_hash": "c90abcfb054c79093b1a0d550803ccfb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/CriticalsModule.java": {
+    "mtime": 1788814202.9485614,
+    "seen": 1789908223.7020931,
+    "ast_hash": "82b533381323901852065d65bbcda247",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/HitboxesModule.java": {
+    "mtime": 1788814202.950701,
+    "seen": 1789908223.7020938,
+    "ast_hash": "8d4cad37920f57cff0b19c2f86243710",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/KillAura.java": {
+    "mtime": 1788814202.9579587,
+    "seen": 1789908223.7020948,
+    "ast_hash": "c2b0783bcf8f4d401a203af23865ca27",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/MaceAuraModule.java": {
+    "mtime": 1788814202.9600165,
+    "seen": 1789908223.702096,
+    "ast_hash": "b6286c0cf9eb565eeba6f44f9924d40b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/ReachModule.java": {
+    "mtime": 1788814202.9616265,
+    "seen": 1789908223.702097,
+    "ast_hash": "0f2496701b9db9246c70b18943fd3f1f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/TriggerBot.java": {
+    "mtime": 1788814202.9652295,
+    "seen": 1789908223.702098,
+    "ast_hash": "646fe886e9e5e9da75ae290047e5c181",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/combat/VelocityModule.java": {
+    "mtime": 1788814202.9678254,
+    "seen": 1789908223.7020988,
+    "ast_hash": "c19edc6b003669eb0401a8c2e143df90",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/config/ConfigsModule.java": {
+    "mtime": 1788814202.9704077,
+    "seen": 1789908223.7021,
+    "ast_hash": "4190bebd44d3b72ee3cdc8eb8eaec14d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/AntiTrapModule.java": {
+    "mtime": 1788814657.4656422,
+    "seen": 1789908223.702101,
+    "ast_hash": "0b66e2c943bd7e7399dd22a7a3aa8c3d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/AutoSell.java": {
+    "mtime": 1788814202.9875584,
+    "seen": 1789908223.7021017,
+    "ast_hash": "4c2f29a2100c9d315fa860a6c4e3ec83",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/AutoSpawnerSellModule.java": {
+    "mtime": 1788814202.9891036,
+    "seen": 1789908223.702103,
+    "ast_hash": "b999a1692ce4bf4d01d981479c495953",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/BlockEntityDebugModule.java": {
+    "mtime": 1788814202.9917498,
+    "seen": 1789908223.7021039,
+    "ast_hash": "843f6de1f92f0e0873c547d4445ecd3e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/ChunkFinderModule.java": {
+    "mtime": 1789830937.135889,
+    "seen": 1789908223.7021048,
+    "ast_hash": "f761de1b6ba1c0f4e52a03681245b977",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/HoleESPModule.java": {
+    "mtime": 1788814202.997906,
+    "seen": 1789908223.7021058,
+    "ast_hash": "8dd1f9bd1de565568c2b68f9ede1e688",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/ItemDropperModule.java": {
+    "mtime": 1788814203.0000212,
+    "seen": 1789908223.702107,
+    "ast_hash": "9e58176ea8a41d00b79be16687861298",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/LightFinderModule.java": {
+    "mtime": 1788814203.0031116,
+    "seen": 1789908223.702108,
+    "ast_hash": "48db32a81f979bb9d12b8caa71b553b4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/NetheriteFinderModule.java": {
+    "mtime": 1788814203.004663,
+    "seen": 1789908223.7021089,
+    "ast_hash": "3d76131a6ebced675fb25ef277bf82b5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/NicknameModule.java": {
+    "mtime": 1788814203.0056877,
+    "seen": 1789908223.70211,
+    "ast_hash": "eccb3a236c1cf14b3620fd8358e898d1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/PlayerChunksModule.java": {
+    "mtime": 1788814203.0077488,
+    "seen": 1789908223.7021108,
+    "ast_hash": "2ba2a751481a8874a12b8fc49201492c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/PrimeChunkFinderModule.java": {
+    "mtime": 1788814203.0114202,
+    "seen": 1789908223.702112,
+    "ast_hash": "f9925d23d92f5347fa6230e0db868c80",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/RegionMap.java": {
+    "mtime": 1788814203.016591,
+    "seen": 1789908223.702113,
+    "ast_hash": "4d2a9be3fa6bcd65684867ec99f02c32",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/SeedChunkFinder.java": {
+    "mtime": 1788814203.0222602,
+    "seen": 1789908223.702114,
+    "ast_hash": "4fe0310d1cd44738fd9e8d97b1fb8053",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/donutsmp/SpawnerProtectModule.java": {
+    "mtime": 1788814608.577627,
+    "seen": 1789908223.702115,
+    "ast_hash": "665a08252f33ce53d1ac61e3060729a3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/AirJumpModule.java": {
+    "mtime": 1788814203.0253527,
+    "seen": 1789908223.702116,
+    "ast_hash": "14fddb867703c88cb6ba8d5b7b71474f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/AntiVoidModule.java": {
+    "mtime": 1788814203.027405,
+    "seen": 1789908223.702117,
+    "ast_hash": "7d6b4e2b17345ec191da5b334365bfd8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/AutoWalkModule.java": {
+    "mtime": 1788814203.0284362,
+    "seen": 1789908223.702118,
+    "ast_hash": "4bf4a11e0bfc67c4630e79caf594840c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/ChunkSpoof.java": {
+    "mtime": 1788814203.030594,
+    "seen": 1789908223.7021189,
+    "ast_hash": "20cbb1b98f2262b38392986ecf096336",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/EagleAuraModule.java": {
+    "mtime": 1788814203.0321403,
+    "seen": 1789908223.7021198,
+    "ast_hash": "ef7fb6f579abfc242d82f80065d80626",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/ElytraFlyModule.java": {
+    "mtime": 1789907866.2460637,
+    "seen": 1789908223.702121,
+    "ast_hash": "269454a728e2347d41b5f86026b0a0a0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/FlyModule.java": {
+    "mtime": 1789907859.5941834,
+    "seen": 1789908223.702122,
+    "ast_hash": "ee6ad35436c92573be7b9fb5c722f487",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/FreecamModule.java": {
+    "mtime": 1788814203.0398412,
+    "seen": 1789908223.702123,
+    "ast_hash": "3421268084dd57a3aff17f9d70c161c1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/FreelookModule.java": {
+    "mtime": 1788814203.04146,
+    "seen": 1789908223.702124,
+    "ast_hash": "e571af23c669689eb02304b3895a5769",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/HighJumpModule.java": {
+    "mtime": 1789831751.3123167,
+    "seen": 1789908223.702125,
+    "ast_hash": "d54430c6947d8027f91f8731e4251919",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/IceSpeedModule.java": {
+    "mtime": 1788814203.044032,
+    "seen": 1789908223.7021258,
+    "ast_hash": "11740e5c8c3fff59c3b05dc7e4122800",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/InventoryMoveModule.java": {
+    "mtime": 1788814203.0461197,
+    "seen": 1789908223.7021267,
+    "ast_hash": "475d7ef8dd42ffbabe311f4ad148fac1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/JesusModule.java": {
+    "mtime": 1788814203.0476606,
+    "seen": 1789908223.702128,
+    "ast_hash": "de375da65c960942c0761ced5f817a9c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/LongJumpModule.java": {
+    "mtime": 1788814203.0492046,
+    "seen": 1789908223.702129,
+    "ast_hash": "af91717a52327f6b21f6cb633f287516",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/NoFallModule.java": {
+    "mtime": 1789831907.2701845,
+    "seen": 1789908223.7021298,
+    "ast_hash": "874d7f91b7b5af6990409c55617111bb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/NoSlowModule.java": {
+    "mtime": 1788814203.0534012,
+    "seen": 1789908223.7021308,
+    "ast_hash": "a9adee86cd8f960b32fb0203eed1fbd6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/SpeedModule.java": {
+    "mtime": 1789907218.3740404,
+    "seen": 1789908223.7021317,
+    "ast_hash": "121380fb77105c0cafef3c4dd5938160",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/SpiderModule.java": {
+    "mtime": 1788814203.0559714,
+    "seen": 1789908223.7021327,
+    "ast_hash": "4ba999c383b427dd71435e00f12eb531",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/SprintModule.java": {
+    "mtime": 1788814203.05752,
+    "seen": 1789908223.7021337,
+    "ast_hash": "1e2d3fad3eb3a45bd55324d437d84cdc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/StepModule.java": {
+    "mtime": 1788814203.0585494,
+    "seen": 1789908223.7021348,
+    "ast_hash": "c4164ebee3c6648fa22e5e76827093f3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/StrafeModule.java": {
+    "mtime": 1788814203.0595715,
+    "seen": 1789908223.7021358,
+    "ast_hash": "1089fb60b536edf34903a2df8fc37ef1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/AntiAFKModule.java": {
+    "mtime": 1788814203.062245,
+    "seen": 1789908223.7021365,
+    "ast_hash": "799ed7fb91c4df318177601bb776f977",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/AutoDropModule.java": {
+    "mtime": 1788814203.0643072,
+    "seen": 1789908223.7021377,
+    "ast_hash": "33c26e71487c75db0bf8fd41d5880d97",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/AutoEatModule.java": {
+    "mtime": 1788814203.066881,
+    "seen": 1789908223.7021387,
+    "ast_hash": "f7b6b16571fbc9c7862a346b0075b2f3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/AutoFish.java": {
+    "mtime": 1788814203.068934,
+    "seen": 1789908223.7021396,
+    "ast_hash": "957ee9bf37be2f2d5f4075b7bf86d634",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/AutoRespawnModule.java": {
+    "mtime": 1788814203.0705488,
+    "seen": 1789908223.7021406,
+    "ast_hash": "aee07000f2b8ddcb0f8c780b7cc8201d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/AutoToolModule.java": {
+    "mtime": 1788814203.0731158,
+    "seen": 1789908223.7021418,
+    "ast_hash": "d830ed10dfb941ff5ee5ed566f2bb8b4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/FastPlaceModule.java": {
+    "mtime": 1789827615.800599,
+    "seen": 1789908223.7021427,
+    "ast_hash": "d0ca0c4d01f69abc250f2cc81ade9bdf",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/FastUseModule.java": {
+    "mtime": 1788814203.0757039,
+    "seen": 1789908223.7021437,
+    "ast_hash": "62c241179df714c5abae8618f6bcb527",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/MiddleClickModule.java": {
+    "mtime": 1788814203.0793278,
+    "seen": 1789908223.7021449,
+    "ast_hash": "0d1cddc60f9463aeab0f42742aa2c9cf",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/NoJumpDelayModule.java": {
+    "mtime": 1788814203.0803616,
+    "seen": 1789908223.7021458,
+    "ast_hash": "f0f9160facafec3a9ff894bd76e73830",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/PortalGodModeModule.java": {
+    "mtime": 1788814203.0809543,
+    "seen": 1789908223.7021468,
+    "ast_hash": "1ac8e21121c6738c791b073a2dd7cb56",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/player/SwingAnimationModule.java": {
+    "mtime": 1788814203.0835328,
+    "seen": 1789908223.7021475,
+    "ast_hash": "5a4e617c3701e87ebe06cef217a4e518",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ArrowESPModule.java": {
+    "mtime": 1788814203.0856,
+    "seen": 1789908223.7021487,
+    "ast_hash": "dd16244cbd1d600d3f5f900c3fd436f7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/BedESPModule.java": {
+    "mtime": 1788814203.088686,
+    "seen": 1789908223.7021496,
+    "ast_hash": "4c5698fc0113dae7440fa9ca29f8140d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/CauldronESPModule.java": {
+    "mtime": 1788814203.1016576,
+    "seen": 1789908223.7021506,
+    "ast_hash": "db10fb949f1c1b85a234b17fa7bb60c2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/Chams.java": {
+    "mtime": 1788814203.103205,
+    "seen": 1789908223.7021518,
+    "ast_hash": "58842d41875811aa4aa04eb488c015c4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ClearWorldModule.java": {
+    "mtime": 1788814203.104242,
+    "seen": 1789908223.7021527,
+    "ast_hash": "53c9155bb1b24e1832cca253062ef902",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/CornerBoxESPModule.java": {
+    "mtime": 1788814203.1062949,
+    "seen": 1789908223.7021537,
+    "ast_hash": "d29eb676391f1a55a24b5b7599a94002",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ESP.java": {
+    "mtime": 1788814203.1105027,
+    "seen": 1789908223.7021544,
+    "ast_hash": "498e9c19d05ea3562b909c6969876ff3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/FullbrightModule.java": {
+    "mtime": 1788814203.1115377,
+    "seen": 1789908223.7021558,
+    "ast_hash": "df143c1d4f66e62b0c6086e335ac74a8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/HealthTagsModule.java": {
+    "mtime": 1788814203.1136057,
+    "seen": 1789908223.7021565,
+    "ast_hash": "2631f94b28c81229b528e7b4e905b50c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/HeatMapChunkRadarModule.java": {
+    "mtime": 1788814203.1161833,
+    "seen": 1789908223.7021577,
+    "ast_hash": "4613d20199571b843e425aa1706adaa6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/HoveredContainerPreviewModule.java": {
+    "mtime": 1788814203.1270778,
+    "seen": 1789908223.7021587,
+    "ast_hash": "9ef81f69b4abce71894859d7b9644ba6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ItemESPModule.java": {
+    "mtime": 1788814203.132802,
+    "seen": 1789908223.7021596,
+    "ast_hash": "8d9b2726bced00d23148b2fccd42687a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ItemPhysicsModule.java": {
+    "mtime": 1788814203.1338353,
+    "seen": 1789908223.7021606,
+    "ast_hash": "61ffc28e4e5c5e592e66eb86bd64488a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/MovementTrailsModule.java": {
+    "mtime": 1788814203.1358922,
+    "seen": 1789908223.7021616,
+    "ast_hash": "11b273183282917f170810bd445f5585",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/NametagsModule.java": {
+    "mtime": 1788814203.1509583,
+    "seen": 1789908223.7021737,
+    "ast_hash": "153d5aa406c46c7f15f68da809ebb80e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/NoHurtCamModule.java": {
+    "mtime": 1788814203.1514733,
+    "seen": 1789908223.7021747,
+    "ast_hash": "702beb6aad26d2a9bbffdf81e520ccaf",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/OutlineESPModule.java": {
+    "mtime": 1788814203.1540606,
+    "seen": 1789908223.7021759,
+    "ast_hash": "06e9de556e92912919efa9de3413471d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/OutlinesModule.java": {
+    "mtime": 1788814203.1561415,
+    "seen": 1789908223.7021766,
+    "ast_hash": "9d22cbc88bb47d58d53f248a2a70f20b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/PortalESP.java": {
+    "mtime": 1788814203.160838,
+    "seen": 1789908223.7021775,
+    "ast_hash": "c926c3bdb947be8360e69a71a236b0cd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ProjectileArcModule.java": {
+    "mtime": 1788814203.1629086,
+    "seen": 1789908223.7021785,
+    "ast_hash": "51d18ee919194f450a7d4b28bc0458bb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/RadarModule.java": {
+    "mtime": 1788814203.1660087,
+    "seen": 1789908223.7021797,
+    "ast_hash": "e3352adad3d3177f11afd6225d95dde7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/RaidPlannerModule.java": {
+    "mtime": 1788814203.1702552,
+    "seen": 1789908223.7021806,
+    "ast_hash": "2a5aa299b211b670bccfd08bc538c413",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/SpawnerESPModule.java": {
+    "mtime": 1788814203.17387,
+    "seen": 1789908223.7021816,
+    "ast_hash": "cb3d09f234d3a5d6565e0bd1c6a40ea9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/SpectatorDetectorModule.java": {
+    "mtime": 1788814645.191955,
+    "seen": 1789908223.7021828,
+    "ast_hash": "b3b0f6eb816217785130ff893d1564c7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/StashFinder.java": {
+    "mtime": 1788814203.1853414,
+    "seen": 1789908223.7021837,
+    "ast_hash": "aab9c761607076bf0a6af30d79365e7b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/StorageESPModule.java": {
+    "mtime": 1788814203.190561,
+    "seen": 1789908223.7021844,
+    "ast_hash": "964e3dc70324d4da6430b8cab5df488b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/TracersModule.java": {
+    "mtime": 1788814203.2046075,
+    "seen": 1789908223.7021854,
+    "ast_hash": "316971e6ac43f1ccb3aa276daa4e3389",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ViewModelModule.java": {
+    "mtime": 1788814203.206156,
+    "seen": 1789908223.7021866,
+    "ast_hash": "76e50d12b756afb72060ca834efd960c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/VoidESPModule.java": {
+    "mtime": 1788814203.2087586,
+    "seen": 1789908223.7021875,
+    "ast_hash": "42db789ce92c251500c60ac5fe2bd2f4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/XRay.java": {
+    "mtime": 1789210816.448656,
+    "seen": 1789908223.7021885,
+    "ast_hash": "b59fa7fb0b32fca2efc8b49561436fc5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/ZoomModule.java": {
+    "mtime": 1788814203.2140067,
+    "seen": 1789908223.7022007,
+    "ast_hash": "10b1a569dfb741a58903c97a3d9304c1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/render/donutsmp/SusChunkFinderModule.java": {
+    "mtime": 1788814203.217635,
+    "seen": 1789908223.7022018,
+    "ast_hash": "4187de70b010bb9cf0089d772666376e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/AutoBridgeModule.java": {
+    "mtime": 1788814203.2213013,
+    "seen": 1789908223.7022028,
+    "ast_hash": "b4872289fe028e641588e3a15c74016b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/AutoMLGModule.java": {
+    "mtime": 1788814203.2243888,
+    "seen": 1789908223.702204,
+    "ast_hash": "634432a4ea66299bb7d6baa523130ab0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/AutoSmeltModule.java": {
+    "mtime": 1788814203.2279887,
+    "seen": 1789908223.702205,
+    "ast_hash": "ddb5f2ae2b03a0e2d20f64975d33fc0e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/AutoStoreModule.java": {
+    "mtime": 1788814203.2300649,
+    "seen": 1789908223.7022057,
+    "ast_hash": "82118fac411392a1503701c4e1d8d262",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/AutoTreeModule.java": {
+    "mtime": 1788814203.2363446,
+    "seen": 1789908223.702207,
+    "ast_hash": "36bf41a6cac8fca26ad1efaf3fde7bdf",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/AutoTunnel.java": {
+    "mtime": 1788814203.26293,
+    "seen": 1789908223.7022078,
+    "ast_hash": "9ca75ff6e3566575b8dfa49e14519b8a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/ChunkKeeperModule.java": {
+    "mtime": 1788814203.2639678,
+    "seen": 1789908223.7022088,
+    "ast_hash": "3b8242deeb0960be220709aeaec48961",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/InfoOrb.java": {
+    "mtime": 1788814203.2680984,
+    "seen": 1789908223.7022097,
+    "ast_hash": "3cdb8caf641a144e0ffb61a5b375162a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/NukerModule.java": {
+    "mtime": 1788814203.2739134,
+    "seen": 1789908223.702211,
+    "ast_hash": "874fa8348e83c7a48bf3eca0dd9c1ac4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/RtpBaseFinder.java": {
+    "mtime": 1788814203.3015597,
+    "seen": 1789908223.7022116,
+    "ast_hash": "a132f02bc9f4b96ebb1395ba844d3daa",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/ScaffoldModule.java": {
+    "mtime": 1788814203.3051832,
+    "seen": 1789908223.7022126,
+    "ast_hash": "4fe1375ed3e7129975a8e609b54e9b5b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/TimerSpeedModule.java": {
+    "mtime": 1788814203.3072526,
+    "seen": 1789908223.7022135,
+    "ast_hash": "feb28cfe6c4d40f26ba95495b65b76d0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/render/GlintTextureReplacer.java": {
+    "mtime": 1788814203.3156562,
+    "seen": 1789908223.7022147,
+    "ast_hash": "f9a13ebe2f309633ed81b0667855d6e8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/render/ListUtils.java": {
+    "mtime": 1788814203.3270836,
+    "seen": 1789908223.7022157,
+    "ast_hash": "1c3680f7032fa339b8aaf7b5f3340944",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/render/Sampler0.java": {
+    "mtime": 1788814203.3286252,
+    "seen": 1789908223.7022166,
+    "ast_hash": "6f43a94a807b9a968c5722e671ba6365",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/render/Sampler1.java": {
+    "mtime": 1788814203.3296552,
+    "seen": 1789908223.7022178,
+    "ast_hash": "25763147e584be2fd7562c2300484119",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/render/c$bUtils.java": {
+    "mtime": 1788814203.3125582,
+    "seen": 1789908223.7022185,
+    "ast_hash": "3794e03aee36422f976c1265387ce2b3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/screen/CodeEngineScreen.java": {
+    "mtime": 1788814203.3557594,
+    "seen": 1789908223.7022195,
+    "ast_hash": "8940a8f1727171f759cc8795c39564d5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/BindSetting.java": {
+    "mtime": 1788814203.3583493,
+    "seen": 1789908223.7022204,
+    "ast_hash": "adc79e92857d069251900e01a70b95b3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/BooleanSetting.java": {
+    "mtime": 1788814203.3593886,
+    "seen": 1789908223.7022216,
+    "ast_hash": "45e5973f3d26c83537d66896f69e5d03",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/ColorSetting.java": {
+    "mtime": 1788814203.3625696,
+    "seen": 1789908223.7022226,
+    "ast_hash": "b3892f8049f0b566ff8b2dfb29bd4743",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/DoubleListSetting.java": {
+    "mtime": 1788814203.367242,
+    "seen": 1789908223.7022235,
+    "ast_hash": "d5d8a4338e883e81bda9546cbb8cb217",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/ModeSetting.java": {
+    "mtime": 1788814203.3683238,
+    "seen": 1789908223.7022247,
+    "ast_hash": "187db1cb59952a1610663cbb260775cb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/NumberSetting.java": {
+    "mtime": 1788814203.3698797,
+    "seen": 1789908223.7022257,
+    "ast_hash": "235b9147bdb8a705e60307a311741da3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/Setting.java": {
+    "mtime": 1788814203.3709934,
+    "seen": 1789908223.7022266,
+    "ast_hash": "89a07cab94449671f2584747b733cd45",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/setting/StringSetting.java": {
+    "mtime": 1788814203.372025,
+    "seen": 1789908223.7022278,
+    "ast_hash": "6203cdc7f3457e0051b69f938a7e2177",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/storage/Chest$KindUtils.java": {
+    "mtime": 1788814203.379812,
+    "seen": 1789908223.7022288,
+    "ast_hash": "a12f89da30ea565d1544bd58270535cf",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/storage/Chest.java": {
+    "mtime": 1788814203.3819647,
+    "seen": 1789908223.7022297,
+    "ast_hash": "78eccb6fa0ed610f543c4c3d53f2309e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/storage/ClientPlayNetworkHandlerMixinUtil.java": {
+    "mtime": 1788814203.3840716,
+    "seen": 1789908223.7022307,
+    "ast_hash": "3b3327dd162d98d756deb7a933189441",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/storage/ContainerSnapshotMixinEntry.java": {
+    "mtime": 1788814203.386139,
+    "seen": 1789908223.702232,
+    "ast_hash": "54937708f87a856971ee0842dcf1fcea",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/tracker/BaseFindingTracker.java": {
+    "mtime": 1788814203.3965962,
+    "seen": 1789908223.7022326,
+    "ast_hash": "e0f9aff33e2fe34c6431938a31668472",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/tracker/ChunkActivityScanner.java": {
+    "mtime": 1788814203.405509,
+    "seen": 1789908223.7022336,
+    "ast_hash": "611712e46664bfe797fe84b0b0b52341",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/tracker/MapUtils.java": {
+    "mtime": 1788814203.4254003,
+    "seen": 1789908223.7022345,
+    "ast_hash": "30b6b293103453f73d1c5de7221719d6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/ui/INFO.java": {
+    "mtime": 1788814203.426435,
+    "seen": 1789908223.702236,
+    "ast_hash": "a180a94b892213696c943d28ae34a824",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/ui/Notification.java": {
+    "mtime": 1788814203.4285119,
+    "seen": 1789908223.7022371,
+    "ast_hash": "c45fa254fe71da060fced2b3cd61d42c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/ui/NotificationUtils.java": {
+    "mtime": 1788814203.4327836,
+    "seen": 1789908223.7022383,
+    "ast_hash": "5a5d8863470cb3a117618facac33123e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/ui/Theme.java": {
+    "mtime": 1788814203.4343405,
+    "seen": 1789908223.7022393,
+    "ast_hash": "211cb392b23c26e5f8d0ecb2ec9bfd72",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AntiAFKModuleUtil.java": {
+    "mtime": 1788814203.436428,
+    "seen": 1789908223.7022402,
+    "ast_hash": "73450ae186fd09f81f24d5dff15a330e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AntiDebugUtil.java": {
+    "mtime": 1788814203.4379885,
+    "seen": 1789908223.7022412,
+    "ast_hash": "b595db36561f9bf3bce32837d92ce665",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AntiVoidModuleHelper.java": {
+    "mtime": 1788814203.4390292,
+    "seen": 1789908223.7022424,
+    "ast_hash": "733243cc9f54856b9e52d2ae01ef834a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AutoCrystalModuleUtil.java": {
+    "mtime": 1788814203.440071,
+    "seen": 1789908223.7022433,
+    "ast_hash": "4ea7c4d16b633ee4f3791ee45f07bac1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AutoTunnelHelper.java": {
+    "mtime": 1788814203.4427283,
+    "seen": 1789908223.702244,
+    "ast_hash": "b0533750a2b8d160692d2887cdaff867",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AutoTunnelUtil.java": {
+    "mtime": 1788814203.4437559,
+    "seen": 1789908223.7022452,
+    "ast_hash": "328a0630c3d89fdcc33ac252a0eef53c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AutoTunnelUtil2.java": {
+    "mtime": 1788814203.4453318,
+    "seen": 1789908223.7022462,
+    "ast_hash": "6cab6a695ffca396e3cf82ce5ce0b269",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/AutoTunnelUtil3.java": {
+    "mtime": 1788814203.4468775,
+    "seen": 1789908223.7022471,
+    "ast_hash": "c6b937b22fb2798f725ceb4cec3a1e55",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/ChatFilterHelper.java": {
+    "mtime": 1788814203.4494705,
+    "seen": 1789908223.702248,
+    "ast_hash": "c594af5952d3cca6c64f78343b4dd620",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/CodeEngineFreecam.java": {
+    "mtime": 1788814203.4505916,
+    "seen": 1789908223.702249,
+    "ast_hash": "5ef9001d255ef99c3efc21fcd5277caf",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/CodeEngineScreenUtil2.java": {
+    "mtime": 1788814203.4521534,
+    "seen": 1789908223.70225,
+    "ast_hash": "1c19e3f931a670abb391d4dadbde8620",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/CornerBoxESPModuleUtil.java": {
+    "mtime": 1788814203.4531927,
+    "seen": 1789908223.702251,
+    "ast_hash": "82c9a150b05a2b93e8b99542c07913ac",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/HumanMotionSim.java": {
+    "mtime": 1788814203.459434,
+    "seen": 1789908223.7022517,
+    "ast_hash": "26d904f3cf3f5cfb312074a499aeb5d7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/InputUtil$class_306Utils.java": {
+    "mtime": 1788814203.4615822,
+    "seen": 1789908223.7022529,
+    "ast_hash": "7329de28669942fd0e886066719c7936",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/InternalData2.java": {
+    "mtime": 1788814203.4625108,
+    "seen": 1789908223.7022538,
+    "ast_hash": "918e89f40b292eae906b979abd36f461",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/Map$EntryUtils.java": {
+    "mtime": 1788814203.4682112,
+    "seen": 1789908223.7022548,
+    "ast_hash": "05a2682738610757c499b70713139cc6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/Matrix4fUtils.java": {
+    "mtime": 1788814203.4692528,
+    "seen": 1789908223.702256,
+    "ast_hash": "88ad364bd6693d24595958d7cf3a230f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/MinerMovementHelper.java": {
+    "mtime": 1788814203.475053,
+    "seen": 1789908223.7022567,
+    "ast_hash": "f8043d1a4b18b33d624003d0aa2bba3e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/OptionalUtils.java": {
+    "mtime": 1788814203.4766054,
+    "seen": 1789908223.7022576,
+    "ast_hash": "b97af6ba660714042369f227a56eeed8",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/OptionalUtils_2.java": {
+    "mtime": 1788814203.4776404,
+    "seen": 1789908223.7022586,
+    "ast_hash": "6f8d25573c8bbd38a172863b5a84f690",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/PacketSenderUtils.java": {
+    "mtime": 1788814203.4808104,
+    "seen": 1789908223.7022598,
+    "ast_hash": "140ec5b48c73b5fb9df60981dcca96e9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/PathUtils.java": {
+    "mtime": 1788814203.484952,
+    "seen": 1789908223.7022607,
+    "ast_hash": "7270098598e3f96d497d44587b012c76",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/PathUtils_2.java": {
+    "mtime": 1788814203.4870198,
+    "seen": 1789908223.702262,
+    "ast_hash": "d2c97b7a01646e2661af0161efea3f3c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/PathUtils_2_3.java": {
+    "mtime": 1788814203.490762,
+    "seen": 1789908223.7022629,
+    "ast_hash": "6e92583bdb075bdb873d8c520a696f7d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/PathUtils_2_3_4.java": {
+    "mtime": 1788814203.493894,
+    "seen": 1789908223.7022638,
+    "ast_hash": "b3c3f182e4f3f04715ada59e0298f16b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/SplittableRandomUtils.java": {
+    "mtime": 1788814203.4970043,
+    "seen": 1789908223.7022648,
+    "ast_hash": "48f72eb79c1b7aad4629c8c20b82f421",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/StringBuilderUtils.java": {
+    "mtime": 1788814203.4985628,
+    "seen": 1789908223.7022657,
+    "ast_hash": "6b3314a0211a8f5b253e6c2b93eca7ba",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/d$aUtils.java": {
+    "mtime": 1788814631.8634605,
+    "seen": 1789908223.702267,
+    "ast_hash": "e61de7276dcac73fc18edef6573daed6",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/util/m$aUtils.java": {
+    "mtime": 1788814203.466135,
+    "seen": 1789908223.702268,
+    "ast_hash": "3b2e974464c4885669c315d81a991a36",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/AccessoryRenderer.java": {
+    "mtime": 1789828590.2477765,
+    "seen": 1789908223.7022686,
+    "ast_hash": "d874ebaece9987f64368186332b4a944",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/BlockEntityEspRenderer.java": {
+    "mtime": 1788814203.5085504,
+    "seen": 1789908223.7022698,
+    "ast_hash": "9fb82312f73f4dfcac4bb311a943cb7c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/BlockEspRenderer.java": {
+    "mtime": 1788814203.5117376,
+    "seen": 1789908223.7022707,
+    "ast_hash": "92a4fe19d0f5f751474c014ae908fc3b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/BlockOutlineRenderer.java": {
+    "mtime": 1788814203.5143456,
+    "seen": 1789908223.7022717,
+    "ast_hash": "2034171b4f5608e25fb25113378c4b18",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/BlockScanCache.java": {
+    "mtime": 1788814203.5164149,
+    "seen": 1789908223.7022727,
+    "ast_hash": "a948d8257e6a0bb90be663772376bef9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/BlurHook.java": {
+    "mtime": 1788814203.5174518,
+    "seen": 1789908223.7022736,
+    "ast_hash": "c385eaa1ad4e130a8aaa79928a63decb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/ChunkFinderRenderer.java": {
+    "mtime": 1788814203.518491,
+    "seen": 1789908223.7022746,
+    "ast_hash": "ed7e4c3bc61465c5063531ca6d702cbd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/EntityEspRenderer.java": {
+    "mtime": 1789757415.4170341,
+    "seen": 1789908223.7022755,
+    "ast_hash": "2d3b427d2186b3826c7344b467e4e68e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/EspBoxRenderer.java": {
+    "mtime": 1788814203.5232658,
+    "seen": 1789908223.7022767,
+    "ast_hash": "08970fb5c96bbb4383ef069570af9de1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/FlatOverlay.java": {
+    "mtime": 1788814203.5253494,
+    "seen": 1789908223.7022777,
+    "ast_hash": "2ce3928979f606cddf4c62bffde3e5e5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/GlintTextureTinter.java": {
+    "mtime": 1788814203.5289626,
+    "seen": 1789908223.7022786,
+    "ast_hash": "0668c91d2d57a33a3f9c3db966a59cb2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/HitParticleRenderer.java": {
+    "mtime": 1789828590.31365,
+    "seen": 1789908223.7022796,
+    "ast_hash": "85082b86f82cc5d43aa5781e74149659",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/HoleEspRenderer.java": {
+    "mtime": 1788814203.5373209,
+    "seen": 1789908223.7022808,
+    "ast_hash": "2f6f5accc4c1ac502b9996d170363088",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/IncrementalScan.java": {
+    "mtime": 1788814203.5405343,
+    "seen": 1789908223.7022817,
+    "ast_hash": "f9ffab7f2eebaddf6bba130203a37f38",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/JumpCircleRenderer.java": {
+    "mtime": 1789828590.3584173,
+    "seen": 1789908223.7022824,
+    "ast_hash": "56d40e7fd47c9778064e861439623724",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/MiscBlockEspRenderer.java": {
+    "mtime": 1788814203.5457315,
+    "seen": 1789908223.7022836,
+    "ast_hash": "b5737bff041813c4509f2fc7f4ea8dfd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/MotionBlurRenderer.java": {
+    "mtime": 1788814203.5620081,
+    "seen": 1789908223.7022848,
+    "ast_hash": "e87c4225c1a56699b5f571b26d4afc24",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/NvgDrawable.java": {
+    "mtime": 1788814203.5625317,
+    "seen": 1789908223.7022855,
+    "ast_hash": "26c4bb35c3e3e4594ff04e858823b9d1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/OverlayRenderer.java": {
+    "mtime": 1789505057.174062,
+    "seen": 1789908223.7022865,
+    "ast_hash": "414d546ba50c425d724693adf37231c2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/SeedCaveXrayRenderer.java": {
+    "mtime": 1789769436.7732015,
+    "seen": 1789908223.7022877,
+    "ast_hash": "b309cf1d563771f98a803c32b19065e7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/StorageEspRenderer.java": {
+    "mtime": 1788814203.5693254,
+    "seen": 1789908223.7022886,
+    "ast_hash": "279401553c6c95411efb724bc7751e70",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/SusChunkRenderer.java": {
+    "mtime": 1788814203.5725298,
+    "seen": 1789908223.7022893,
+    "ast_hash": "166addb660022d1fce7d0fa8b6b5f55a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/WorldNametagRenderer.java": {
+    "mtime": 1788814203.586624,
+    "seen": 1789908223.7022908,
+    "ast_hash": "1aaf4309b6015d370bd667e7ec7e8761",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/WorldProjection.java": {
+    "mtime": 1788814203.5881786,
+    "seen": 1789908223.7022917,
+    "ast_hash": "586f88ca1a37d633e016134695e0233b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/anim/Animation.java": {
+    "mtime": 1788814203.5892203,
+    "seen": 1789908223.7022924,
+    "ast_hash": "5c983b9198cac532e53359a6ee707479",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/anim/Easing.java": {
+    "mtime": 1788814203.5902598,
+    "seen": 1789908223.7022934,
+    "ast_hash": "c4ffb6d036e1d7bf56466d82a07415f5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/nanovg/GlStateSnapshot.java": {
+    "mtime": 1788814203.5929196,
+    "seen": 1789908223.7022946,
+    "ast_hash": "95540649c5a86ae3ade737c408a45f78",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/nanovg/NVGIcons.java": {
+    "mtime": 1788819180.831698,
+    "seen": 1789908223.7022955,
+    "ast_hash": "1c90720328ada5551f8a23fdbd3781d0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/nanovg/NVGImages.java": {
+    "mtime": 1788814203.5981207,
+    "seen": 1789908223.7022965,
+    "ast_hash": "9d4bf85574969ab9e9d33f1e2439b174",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/render/nanovg/NVGRenderer.java": {
+    "mtime": 1788819164.117638,
+    "seen": 1789908223.7022977,
+    "ast_hash": "1cf9c62dbfc6a5033915f2d5812e090a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/rt/Deobf.java": {
+    "mtime": 1788814203.6060007,
+    "seen": 1789908223.7022986,
+    "ast_hash": "de557cb1c1ce0c6ac4ddf90f64c2a997",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/secured/AimAssistLogic.java": {
+    "mtime": 1789835012.7842083,
+    "seen": 1789908223.7022998,
+    "ast_hash": "1d7b83893191400f4e11bda0ad35770f",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/BlockListSetting.java": {
+    "mtime": 1788814203.6091168,
+    "seen": 1789908223.702301,
+    "ast_hash": "07962fe22a760a8c2cd72c1b1ad65fc2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/BooleanSetting.java": {
+    "mtime": 1788814203.610155,
+    "seen": 1789908223.702302,
+    "ast_hash": "11de5e14f342cdfa6355f533b6da82eb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/ColorSetting.java": {
+    "mtime": 1788814203.611275,
+    "seen": 1789908223.702303,
+    "ast_hash": "7b140a7021d60ea6f6c6b743c07d98d3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/IconListSetting.java": {
+    "mtime": 1788814203.613362,
+    "seen": 1789908223.7023036,
+    "ast_hash": "bc27dfc0c35b7a81b9b158d03d46f4ff",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/KeybindSetting.java": {
+    "mtime": 1788814203.6144023,
+    "seen": 1789908223.7023048,
+    "ast_hash": "c6b25e4b234fd9bbc63aadbe86d3cfc0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/ModeSetting.java": {
+    "mtime": 1788814203.6154442,
+    "seen": 1789908223.7023058,
+    "ast_hash": "acf12fb0d502a6e9c7c4e2c0302992a9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/Setting.java": {
+    "mtime": 1788814203.6170013,
+    "seen": 1789908223.7023067,
+    "ast_hash": "f40260b1340603d9628ee68480bec267",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/SliderSetting.java": {
+    "mtime": 1788988579.782871,
+    "seen": 1789908223.7023077,
+    "ast_hash": "73c78e77006c914d21f50ec75773a1bd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/settings/StringSetting.java": {
+    "mtime": 1788814203.619084,
+    "seen": 1789908223.7023087,
+    "ast_hash": "2f52d704b121a29ccf04c9ac368e6554",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/spotify/SpotifyService.java": {
+    "mtime": 1789828438.3574817,
+    "seen": 1789908223.7023096,
+    "ast_hash": "1f9385a15a81232b66238c0033882e3d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/spotify/SpotifyState.java": {
+    "mtime": 1788814203.6238244,
+    "seen": 1789908223.7023103,
+    "ast_hash": "1e3114b4c947ac02d199c851be6c90d1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/staff/StaffDetector.java": {
+    "mtime": 1788814203.6274588,
+    "seen": 1789908223.7023115,
+    "ast_hash": "8dfa12127f1e01b12aa2a3851df0ae9e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/staff/StaffEntry.java": {
+    "mtime": 1788814203.6285172,
+    "seen": 1789908223.7023125,
+    "ast_hash": "5d6f9508453e6a8ec1051094bd4a9ed5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/staff/StaffTracker.java": {
+    "mtime": 1789426781.7986448,
+    "seen": 1789908223.7023134,
+    "ast_hash": "c264ce8b16e37c71de8681f1ef25e526",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/suschunk/ServerLightCache.java": {
+    "mtime": 1788814203.6332524,
+    "seen": 1789908223.7023144,
+    "ast_hash": "817ffc39b5200acd1f2f57ee5ab4f283",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/suschunk/SusChunkScanner.java": {
+    "mtime": 1788895548.055354,
+    "seen": 1789908223.7023156,
+    "ast_hash": "7ba934e964e3155626b6d385c0f3e4f9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/theme/RainbowTheme.java": {
+    "mtime": 1788814203.642664,
+    "seen": 1789908223.7023163,
+    "ast_hash": "01465532b19d57e8da6372744788d012",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/theme/SoundSettings.java": {
+    "mtime": 1788895579.4407177,
+    "seen": 1789908223.7023172,
+    "ast_hash": "337fd892c057fb5922189d65bd28d0f3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/theme/Theme.java": {
+    "mtime": 1788814203.6452827,
+    "seen": 1789908223.7023184,
+    "ast_hash": "c9a43946a175235f3cc8e9103ba721f2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/theme/ThemeManager.java": {
+    "mtime": 1788814203.6468408,
+    "seen": 1789908223.7023194,
+    "ast_hash": "8298d26c2cc4e5fcea9d6002a6b21684",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/Amounts.java": {
+    "mtime": 1788814203.6499567,
+    "seen": 1789908223.7023203,
+    "ast_hash": "697f0c84ef11963700d5607281f3ca4e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/BlockHelper.java": {
+    "mtime": 1788814203.651085,
+    "seen": 1789908223.7023213,
+    "ast_hash": "114d8dd6f31cbb57f38daa969a3b2231",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/Colors.java": {
+    "mtime": 1788814203.653165,
+    "seen": 1789908223.7023225,
+    "ast_hash": "b7ff5655ed8201f096157041458b1e53",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/CpsTracker.java": {
+    "mtime": 1788814203.6536827,
+    "seen": 1789908223.7023234,
+    "ast_hash": "9b412a8bdd90e74cb731ed6d5ccaa477",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/InventoryHelper.java": {
+    "mtime": 1788814203.6557531,
+    "seen": 1789908223.7023244,
+    "ast_hash": "09429a85cc1cd45e7db4c040b5f46d13",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/TpsTracker.java": {
+    "mtime": 1788814203.6562688,
+    "seen": 1789908223.7023256,
+    "ast_hash": "fdf408a4d613711345fcffb6ba71ef75",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/UiSoundEvents.java": {
+    "mtime": 1788895977.6752818,
+    "seen": 1789908223.7023263,
+    "ast_hash": "ff1bf1bba7f42ab11f2bbe7424bf0c1a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/util/UiSounds.java": {
+    "mtime": 1788814540.6339612,
+    "seen": 1789908223.7023273,
+    "ast_hash": "52d44b780e861b4392f0f4a65d4bd70d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/WaterClient.java": {
+    "mtime": 1788815523.98361,
+    "seen": 1789908223.7023282,
+    "ast_hash": "08fc936c08d31226ed69384e5b8ffa75",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/ClientPlayerEntityMixin.java": {
+    "mtime": 1788814203.794691,
+    "seen": 1789908223.7023296,
+    "ast_hash": "fb9cc56cd0dd71f77718e8fcd8f70b91",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/ClientWorldMixin.java": {
+    "mtime": 1788814203.7952116,
+    "seen": 1789908223.7023304,
+    "ast_hash": "f12011ee51d3b18454c11d2ed465b104",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/DepthTestFixMixin.java": {
+    "mtime": 1788814203.7963011,
+    "seen": 1789908223.7023315,
+    "ast_hash": "bf8d2f16bb0cc371207033deb9561b50",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/HandledScreenAccessor.java": {
+    "mtime": 1788814203.799942,
+    "seen": 1789908223.702333,
+    "ast_hash": "d9bb81602e4044f45f59d67178a3d09b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/HeldItemRendererMixin.java": {
+    "mtime": 1788814203.801073,
+    "seen": 1789908223.702334,
+    "ast_hash": "07c212634034877253da88c6cfb82cb2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/InputAccessor.java": {
+    "mtime": 1788814203.8015895,
+    "seen": 1789908223.7023346,
+    "ast_hash": "65e237d9044aca6abc46447442f37b78",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/LabelCommandRendererMixin.java": {
+    "mtime": 1788814203.8031433,
+    "seen": 1789908223.7023358,
+    "ast_hash": "9bfc62589f6ca3281a69aee83376367d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/LightningEntityRendererMixin.java": {
+    "mtime": 1788814203.8041847,
+    "seen": 1789908223.7023368,
+    "ast_hash": "ec2e1ee65e2d6f239936bf1a29770e79",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/LivingEntityMixin.java": {
+    "mtime": 1788814203.8057458,
+    "seen": 1789908223.7023377,
+    "ast_hash": "a7cd8a1ed5e5a2306b906be77aec4ccb",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/MinecraftClientAccessor.java": {
+    "mtime": 1788814203.8067782,
+    "seen": 1789908223.702339,
+    "ast_hash": "5cd449353d99469e3eb2f3a753162d23",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/PlayerEntityRendererMixin.java": {
+    "mtime": 1788814203.8115475,
+    "seen": 1789908223.70234,
+    "ast_hash": "8590cef838b8874b133510ea0f6a9472",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/WeatherRenderingMixin.java": {
+    "mtime": 1788814203.8204508,
+    "seen": 1789908223.7023408,
+    "ast_hash": "5a8b8851f5baddce419376ee51834124",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/mixin/WorldMixin.java": {
+    "mtime": 1788814645.3226912,
+    "seen": 1789908223.7023418,
+    "ast_hash": "aee98c9d92ada9c50fc9885b2a593155",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/ActivatableModule.java": {
+    "mtime": 1788814203.8251433,
+    "seen": 1789908223.702343,
+    "ast_hash": "45c18c32b03df1146c38acdd9d91dcd2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/Category.java": {
+    "mtime": 1788814203.826211,
+    "seen": 1789908223.702344,
+    "ast_hash": "3d30a76c469221ab1967f30248a3b275",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/Module.java": {
+    "mtime": 1788815284.2328408,
+    "seen": 1789908223.7023451,
+    "ast_hash": "feddb47135b04aca7a06a2843f4e9005",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/ModuleManager.java": {
+    "mtime": 1788817910.8363993,
+    "seen": 1789908223.7023463,
+    "ast_hash": "43b0c576f0d517f808d579d8ba553388",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/NamedModule.java": {
+    "mtime": 1788814203.8403623,
+    "seen": 1789908223.7023475,
+    "ast_hash": "70731ff9f882e8e79b022ea01ae5c592",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/client/Friends.java": {
+    "mtime": 1788814203.848157,
+    "seen": 1789908223.7023482,
+    "ast_hash": "d5176df3b5e0274b845b00d9631f7e19",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/client/WaterPlus.java": {
+    "mtime": 1788817881.6827748,
+    "seen": 1789908223.7023494,
+    "ast_hash": "9930a5cca2ce13b0622588513580d206",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/combat/AutoTotem.java": {
+    "mtime": 1788814203.894029,
+    "seen": 1789908223.7023504,
+    "ast_hash": "4eaae72c3f8027f843febbf4aa1ab74e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/combat/Hitbox.java": {
+    "mtime": 1788814203.8971114,
+    "seen": 1789908223.7023516,
+    "ast_hash": "f2303d050ee957c560aa119d4184a08e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/combat/HoverTotem.java": {
+    "mtime": 1788814203.8981454,
+    "seen": 1789908223.7023523,
+    "ast_hash": "82edf6a49bd48c77a4a567e9b19501d4",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/combat/ShieldBreaker.java": {
+    "mtime": 1788814203.9002168,
+    "seen": 1789908223.7023535,
+    "ast_hash": "dba81f3c9f66df40c504d5a950642577",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/AutoMine.java": {
+    "mtime": 1788814203.9627738,
+    "seen": 1789908223.7023544,
+    "ast_hash": "4dc956eb32f7bd52d39d93bf378ef346",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/AutoRender.java": {
+    "mtime": 1788814203.964888,
+    "seen": 1789908223.7023554,
+    "ast_hash": "46602511c651c3aa485bb63ac49e47a9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/Freelook.java": {
+    "mtime": 1788815284.2571838,
+    "seen": 1789908223.7023566,
+    "ast_hash": "5286e57d67d6173bc58f346683e2dd45",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/HomeSetter.java": {
+    "mtime": 1788814203.977892,
+    "seen": 1789908223.7023573,
+    "ast_hash": "58d3d10f41ae7e97a9e0800377810911",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/NameProtect.java": {
+    "mtime": 1788814203.978959,
+    "seen": 1789908223.7023582,
+    "ast_hash": "42cf77f075fbef3d004f39408f0799b1",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/Sprint.java": {
+    "mtime": 1788814203.9973216,
+    "seen": 1789908223.7023592,
+    "ast_hash": "8156883fa8f79092f437bb0c5e4548ec",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/SwingSpeed.java": {
+    "mtime": 1788814203.9983687,
+    "seen": 1789908223.7023604,
+    "ast_hash": "c45cf24516fb39ef1014def43c7c94c9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/misc/WeatherNotifier.java": {
+    "mtime": 1788815284.2447484,
+    "seen": 1789908223.7023613,
+    "ast_hash": "bddba2b516c09550ba9d8cef17f542b3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/render/FullBright.java": {
+    "mtime": 1788814204.0323684,
+    "seen": 1789908223.7023623,
+    "ast_hash": "abe6c71c6a8c2504695e6ba257d3f534",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/module/modules/render/NoRender.java": {
+    "mtime": 1788814204.0511658,
+    "seen": 1789908223.7023635,
+    "ast_hash": "fd6737a0178ba30b64e1cb5e4fc4ad6c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/setting/BlocksSetting.java": {
+    "mtime": 1788815033.6190915,
+    "seen": 1789908223.7023647,
+    "ast_hash": "ef6becba9bdf16856d7e000802ace928",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/setting/ItemOption.java": {
+    "mtime": 1788814204.0940535,
+    "seen": 1789908223.7023654,
+    "ast_hash": "6cdbd8fa724ed2dd18094ebc537e7e60",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/setting/ModeSetting.java": {
+    "mtime": 1788814204.0985208,
+    "seen": 1789908223.7023664,
+    "ast_hash": "10ca07175d61369e6ddc80de1bad5b51",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/setting/MultiItemSetting.java": {
+    "mtime": 1788814204.1000566,
+    "seen": 1789908223.7023675,
+    "ast_hash": "115682ef20e1c8532098869bba0de9db",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/setting/Setting.java": {
+    "mtime": 1788814204.1000566,
+    "seen": 1789908223.7023685,
+    "ast_hash": "33c7d2580d23f407036c1bc435fc2e2e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/setting/ToggleableIntegerSetting.java": {
+    "mtime": 1788814204.103242,
+    "seen": 1789908223.7023695,
+    "ast_hash": "04fe2927a40fdefcf8ceeab9748f8756",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/spotify/SpotifyApi.java": {
+    "mtime": 1788817616.5780656,
+    "seen": 1789908223.702371,
+    "ast_hash": "d8c798f954866e89498ba5ee99af8ed2",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/spotify/SpotifyAuth.java": {
+    "mtime": 1788817616.5801573,
+    "seen": 1789908223.7023718,
+    "ast_hash": "635ae6eebcbe5102a0922f7e69d1de97",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/FakeRolesUtil.java": {
+    "mtime": 1788817616.5733824,
+    "seen": 1789908223.7023728,
+    "ast_hash": "fb0a425fd1f3b1c6164855119a644b5c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/NameProtectUtil.java": {
+    "mtime": 1788817616.5759945,
+    "seen": 1789908223.702374,
+    "ast_hash": "7d1e9580c4e1d6894d6d35f8450e7cbe",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/NametagRenderState.java": {
+    "mtime": 1788814204.1190524,
+    "seen": 1789908223.702375,
+    "ast_hash": "e2e58ba27b1a5411a2a188a861f073a7",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/RenderUtils.java": {
+    "mtime": 1788817905.0270731,
+    "seen": 1789908223.702376,
+    "ast_hash": "989bee6d29f2632a1103558544b34d94",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/UiSoundManager.java": {
+    "mtime": 1788814542.0199854,
+    "seen": 1789908223.7023768,
+    "ast_hash": "354ef0c328d6c2d50b79676baf26ea6b",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/Arc2DRenderer.java": {
+    "mtime": 1788817616.5611954,
+    "seen": 1789908223.702378,
+    "ast_hash": "eb2f3ea1f53cc135f479cc1cef8e51c3",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/AwtFontRenderer.java": {
+    "mtime": 1788814204.1333477,
+    "seen": 1789908223.702379,
+    "ast_hash": "41728831ea6ccae156bd4c7e570396af",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/Blur2DRenderer.java": {
+    "mtime": 1788817616.5637867,
+    "seen": 1789908223.70238,
+    "ast_hash": "47c166664180b37dc0c5467faa8ded03",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/ESPGlowPipeline.java": {
+    "mtime": 1788814204.1405218,
+    "seen": 1789908223.7023814,
+    "ast_hash": "4238f00f2ff3b88f50b5f7f5f36879fe",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/ESPGlowRenderer.java": {
+    "mtime": 1789505453.293984,
+    "seen": 1789908223.7023823,
+    "ast_hash": "5b6a2486124f852d1fc6eb0c2ccdbef5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/GuiRenderer.java": {
+    "mtime": 1788817616.5590665,
+    "seen": 1789908223.7023833,
+    "ast_hash": "99e3eb9ca9b9d559cec867446696e476",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/Outline2DRenderer.java": {
+    "mtime": 1788817616.5663984,
+    "seen": 1789908223.7023845,
+    "ast_hash": "7c6bd88b7a59a845fc69a8e56eb664d5",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/ProjectionUtil.java": {
+    "mtime": 1788817616.5686567,
+    "seen": 1789908223.7023854,
+    "ast_hash": "bed495c8a0f2c521a95970730ba6a85a",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/Rectangle2DRenderer.java": {
+    "mtime": 1788817616.571307,
+    "seen": 1789908223.7023864,
+    "ast_hash": "012e552a85bedd2647dbdf10f9d77264",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/RenderUtil.java": {
+    "mtime": 1788814204.1570923,
+    "seen": 1789908223.7023876,
+    "ast_hash": "7f82a50b7e9de738ba522c95909caef0",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/Texture2DRenderer.java": {
+    "mtime": 1788817616.4846954,
+    "seen": 1789908223.7023885,
+    "ast_hash": "26c155305c3cd7fe5f8bc9f6f9bc2def",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/WaterFontRenderer.java": {
+    "mtime": 1788817616.551812,
+    "seen": 1789908223.7023897,
+    "ast_hash": "53d1cdd86eeb1b16a0cb88c1573d420d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/arc/ArcOutlinePipeline.java": {
+    "mtime": 1788814204.1774864,
+    "seen": 1789908223.7023907,
+    "ast_hash": "48ccaccef50df2e942376947794caa62",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/arc/ArcPipeline.java": {
+    "mtime": 1788814204.1805217,
+    "seen": 1789908223.7023916,
+    "ast_hash": "5fb9eef37b7680c10cef6b7c3147563e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/blur/KawasePipeline.java": {
+    "mtime": 1788814204.1856296,
+    "seen": 1789908223.7023926,
+    "ast_hash": "f041b3ece52a8ef8557ab38e0377fcd9",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/glass/LiquidGlassPipeline.java": {
+    "mtime": 1788814204.187157,
+    "seen": 1789908223.7023935,
+    "ast_hash": "5a9ae262e70c8d05395448a7c06fbc33",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/outline/OutlinePipeline.java": {
+    "mtime": 1788814204.1902137,
+    "seen": 1789908223.7023947,
+    "ast_hash": "689b4be7942ae9f9d89314680cd25494",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/rect/RectPipeline.java": {
+    "mtime": 1788814204.1933482,
+    "seen": 1789908223.7023957,
+    "ast_hash": "280e63af2e796f1aaa9ea9c878313118",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/water/utils/renderer/texture/TexturePipeline.java": {
+    "mtime": 1788814204.1974187,
+    "seen": 1789908223.7023969,
+    "ast_hash": "bb45cfab5b7ff812e11fe5f56c1c2139",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/build.json": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702398,
+    "ast_hash": "90eef4334418391e96b747279c2774e2",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/bold.json": {
+    "mtime": 1789212576.5956514,
+    "seen": 1789908223.702399,
+    "ast_hash": "1d654a836e34ed43e57beec042273aa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/icons.json": {
+    "mtime": 1789212576.5987787,
+    "seen": 1789908223.7024,
+    "ast_hash": "1d654a836e34ed43e57beec042273aa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/medium.json": {
+    "mtime": 1789212576.5966904,
+    "seen": 1789908223.702401,
+    "ast_hash": "1d654a836e34ed43e57beec042273aa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/regular.json": {
+    "mtime": 1789212576.5972183,
+    "seen": 1789908223.702402,
+    "ast_hash": "1d654a836e34ed43e57beec042273aa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/roundbold.json": {
+    "mtime": 1789212576.5982602,
+    "seen": 1789908223.702403,
+    "ast_hash": "1d654a836e34ed43e57beec042273aa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/semibold.json": {
+    "mtime": 1789212576.5977285,
+    "seen": 1789908223.7024043,
+    "ast_hash": "1d654a836e34ed43e57beec042273aa9",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/nyx/font/main.json": {
+    "mtime": 1788210992.0,
+    "seen": 1789908223.7024055,
+    "ast_hash": "a5f1ec6ef90ebba5171748825aef242d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds.json": {
+    "mtime": 1788895972.7930984,
+    "seen": 1789908223.7024064,
+    "ast_hash": "795ec220972b9a1fe46cec4d10a37a84",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/font/clickgui.json": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024076,
+    "ast_hash": "f9f907a3b351ce13f777c23e579e2e65",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/shaders/core/liquidglass.json": {
+    "mtime": 1786276617.0,
+    "seen": 1789908223.7024088,
+    "ast_hash": "db64d5f3eae1d06687ddc626b7b4f1e3",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/shaders/core/tapered_line.json": {
+    "mtime": 1786276617.0,
+    "seen": 1789908223.7024097,
+    "ast_hash": "f2f2fa4a4de243317336bd9478512f19",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/sounds.json": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024105,
+    "ast_hash": "68cd2c6be47246a321c2af94eed2c21f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/fabric.mod.json": {
+    "mtime": 1789418123.825441,
+    "seen": 1789908223.7024114,
+    "ast_hash": "9d62b57ec72bc2193ca375ef9ea20d6f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/feclient.mixins.json": {
+    "mtime": 1789506101.6135993,
+    "seen": 1789908223.7024128,
+    "ast_hash": "3853368ceb463f722f8a0c5e9bef21e3",
+    "semantic_hash": ""
+  },
+  "src/main/resources/feclient.nyx.mixins.json": {
+    "mtime": 1789415774.1247892,
+    "seen": 1789908223.7024138,
+    "ast_hash": "c3811be138607291de8483e4e250abde",
+    "semantic_hash": ""
+  },
+  "src/main/resources/feclient.sodium.mixins.json": {
+    "mtime": 1789418115.4208992,
+    "seen": 1789908223.7024148,
+    "ast_hash": "ac61fe82d8def7d554727f925a52a08b",
+    "semantic_hash": ""
+  },
+  "stonecutter.gradle": {
+    "mtime": 1789770072.377852,
+    "seen": 1789908223.702416,
+    "ast_hash": "5f595eea352f37bf587a934bec90b358",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1789830214.0697374,
+    "seen": 1789908223.702417,
+    "ast_hash": "39fcb37eb095bf8ba90ccbb1ea5aa65d",
+    "semantic_hash": ""
+  },
+  "fede_core.txt": {
+    "mtime": 1783520206.2867656,
+    "seen": 1789908223.7024179,
+    "ast_hash": "defb1ac276021a2c551f3c982c9c138a",
+    "semantic_hash": ""
+  },
+  "fede_style.txt": {
+    "mtime": 1783519475.7243505,
+    "seen": 1789908223.702419,
+    "ast_hash": "b81616bc8f11627ec32cd0646a082dbf",
+    "semantic_hash": ""
+  },
+  "logs/fede_20260920_143140.txt": {
+    "mtime": 1789907500.4955525,
+    "seen": 1789908223.70242,
+    "ast_hash": "f6be2b21f07d399807ac7df463181ba4",
+    "semantic_hash": ""
+  },
+  "logs/fede_20260920_143429.txt": {
+    "mtime": 1789907669.917042,
+    "seen": 1789908223.702421,
+    "ast_hash": "877ee070ac4da54d634b03c72e2ec4fb",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/Monocraft-OFL.txt": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702422,
+    "ast_hash": "4035f7061a0dc9ce19d0a2c92655680c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/Xuong-OFL.txt": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702423,
+    "ast_hash": "07a1ffc38354528e705bdc8f9687e607",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/LICENSE-lawnicons.txt": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024243,
+    "ast_hash": "86d3f3a95c324c9479bd8986968f4327",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/nyx/fonts/FA-LICENSE.txt": {
+    "mtime": 1788210992.0,
+    "seen": 1789908223.7024252,
+    "ast_hash": "9b9d97c72a232b7715f2aed4bf4a4d45",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/nyx/fonts/OFL.txt": {
+    "mtime": 1788210992.0,
+    "seen": 1789908223.7024264,
+    "ast_hash": "481fed197dac47775fb62cefafa2555e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/bold.png": {
+    "mtime": 1789212584.1578739,
+    "seen": 1789908223.7024274,
+    "ast_hash": "8bc521926a549993e83083e34cdf7af8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/icons.png": {
+    "mtime": 1789212584.1658738,
+    "seen": 1789908223.7024283,
+    "ast_hash": "8bc521926a549993e83083e34cdf7af8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/medium.png": {
+    "mtime": 1789212584.1589103,
+    "seen": 1789908223.7024298,
+    "ast_hash": "8bc521926a549993e83083e34cdf7af8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/regular.png": {
+    "mtime": 1789212584.1620235,
+    "seen": 1789908223.7024307,
+    "ast_hash": "8bc521926a549993e83083e34cdf7af8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/roundbold.png": {
+    "mtime": 1789212584.1648297,
+    "seen": 1789908223.7024317,
+    "ast_hash": "8bc521926a549993e83083e34cdf7af8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/fonts/msdf/semibold.png": {
+    "mtime": 1789212584.1632676,
+    "seen": 1789908223.702433,
+    "ast_hash": "8bc521926a549993e83083e34cdf7af8",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icon.png": {
+    "mtime": 1789211456.6362748,
+    "seen": 1789908223.7024338,
+    "ast_hash": "cf03c6e1b1326de830e38d2e694d541f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/client.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024348,
+    "ast_hash": "68233ba8f0eaf79a625890f2e20a7195",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/combat.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024357,
+    "ast_hash": "a55475a1640ef5327a2688287582998d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/hud.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024372,
+    "ast_hash": "b00f370b64cc497c2f1e2f77af44352e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/misc.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024379,
+    "ast_hash": "377566b3f8471aabf7c83aaeb0f26258",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/movement.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702439,
+    "ast_hash": "33aac432b73ebc0cd53534ebad0aa90f",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/player.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024405,
+    "ast_hash": "ae2e5456a433b2c4a87001a2f95a00ac",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/render.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024415,
+    "ast_hash": "74b4768b7ba46e1e80802ffbcc4ae952",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/visuals.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024426,
+    "ast_hash": "4f5a14d06dc0c7a85377f07a6f394e44",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/icons/world.svg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024438,
+    "ast_hash": "4385d6f9d63a791c77d04262a68fd08a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/nyx/textures/hud/watermark_logo.png": {
+    "mtime": 1788210994.0,
+    "seen": 1789908223.7024448,
+    "ast_hash": "68bfa5649e6fcf38138f644f58103564",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/fe_logo.png": {
+    "mtime": 1789828658.5667353,
+    "seen": 1789908223.7024457,
+    "ast_hash": "759c9bfadbb0e51aa6ea25bee65ef306",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/abyss.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702447,
+    "ast_hash": "21f220ae9a747b363fbced69a0136723",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/amethyst.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024484,
+    "ast_hash": "beec626e51fed72af86912e5f8c23531",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/cyber.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024493,
+    "ast_hash": "4ac91d7d054c77648c95b0462f744d15",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/ender.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024505,
+    "ast_hash": "ea7fe5f160e49506022fd0370c8d05fc",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/galaxy.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024515,
+    "ast_hash": "e40282f4e2167cdfd255d3b20451750e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/prismatic.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024524,
+    "ast_hash": "ce76e44890007c3c0567e13be6b3af4b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/solar.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024536,
+    "ast_hash": "031b9a063bdac6025b6016fd99348dd1",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/toxic.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024546,
+    "ast_hash": "eba7a9c84c8a6184b1821f7b8e957c09",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/glints/void.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024555,
+    "ast_hash": "9d523e9233a06fb92bea1a4bf386a1ce",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/textures/misc/ring.png": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024565,
+    "ast_hash": "45aa433a3cb7a2f7f73e5be575f9d78b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/texture/square.png": {
+    "mtime": 1786276617.0,
+    "seen": 1789908223.7024577,
+    "ast_hash": "ec246bcc8ff7dc58f56be9d0d979c686",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/categories/client.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024586,
+    "ast_hash": "cab60af3997969874af76641f5cacb11",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/categories/combat.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024596,
+    "ast_hash": "c556a87733e31c68f524a22ac64e27bb",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/categories/donut.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024608,
+    "ast_hash": "2a8fd77fce499bab2105568244886d0e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/categories/misc.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024617,
+    "ast_hash": "899daea98f080d23095b5ee6e2f2fe69",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/categories/render.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024627,
+    "ast_hash": "9fd5f2bb95c6190632ab33be0689a626",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/spotify_logo.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.702464,
+    "ast_hash": "cc6c069724766b0daa00f481d6ac0258",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/textures/gui/sprites/hud/heart/icon.png.png": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.702465,
+    "ast_hash": "9e9ac2042727da4539859f0416ac439c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/startup/startup_main.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024662,
+    "ast_hash": "298a0a1d76a66f0e29717e6946b4933c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/startup/startup_sad.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702467,
+    "ast_hash": "a20cd5c180c28d0f1340d91413a22b14",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/startup/startup_song.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024682,
+    "ast_hash": "75be74bb1a93d72467bd52f2bccf68dd",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/startup/startup_tiki.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.702469,
+    "ast_hash": "096e716adf114dfe0c82c338e04560c1",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/gui_close.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.70247,
+    "ast_hash": "95c9a873b4fc87320890cc60a5c353b2",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/gui_open.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024715,
+    "ast_hash": "eb2d703c6fc1958f6a97442217313e8d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/hover.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024722,
+    "ast_hash": "b1a92b20ffddd84a9c376f531c8e9a13",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/keybind.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024734,
+    "ast_hash": "0e214ba94024938a106fe76fffeba241",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/notify_off.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024746,
+    "ast_hash": "a10b262bf6e267e6cb3239788a09c973",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/notify_on.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024755,
+    "ast_hash": "68ef76da3e36eabb01648b17a8db6585",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/select.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024763,
+    "ast_hash": "d62a4b4227ab2842dedca317379eda4c",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/slider.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024772,
+    "ast_hash": "c15b23ab440c83a3d71486217d11cb62",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/toggle_off.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024784,
+    "ast_hash": "f80ab942b54a495c7f40af47d7d85f9b",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/sounds/ui/toggle_on.ogg": {
+    "mtime": 1788359358.0,
+    "seen": 1789908223.7024796,
+    "ast_hash": "7e83aa80c295b655b605e50c5ef3e688",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/sounds/ui/gui_close.ogg": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024803,
+    "ast_hash": "37d1fa749b6079b41f83090d755feec0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/sounds/ui/gui_open.ogg": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024815,
+    "ast_hash": "fb5b14c68e122941620f1e54ffa30c6e",
+    "semantic_hash": ""
+  },
+  "src/main/resources/assets/feclient/water/sounds/ui/module_on.ogg": {
+    "mtime": 1786276616.0,
+    "seen": 1789908223.7024825,
+    "ast_hash": "e2fd44c5def3310175b375157e60cd69",
+    "semantic_hash": ""
+  }
+}

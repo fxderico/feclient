@@ -22,3 +22,7 @@ Thumbs.db
 
 # Fabric loom
 run/
+
+# graphify local AST/embedding cache -- regenerated per-machine, not the
+# actual graph output (graph.json/graph.html/GRAPH_REPORT.md are checked in)
+graphify-out/cache/
