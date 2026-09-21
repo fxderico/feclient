@@ -612,9 +612,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/ModuleManager.java": {
-    "mtime": 1789923386.7648017,
-    "seen": 1789924869.8135674,
-    "ast_hash": "312605fb55060b3f94a60600d3b930aa",
+    "mtime": 1790019855.5345867,
+    "seen": 1790019982.5236137,
+    "ast_hash": "98ee78c0dea63387c9ed7d65c1ba4074",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/Modules.java": {
@@ -3777,6 +3777,18 @@
     "mtime": 1789923276.4962387,
     "seen": 1789924869.813861,
     "ast_hash": "a1865d1db0c12baa4b3dbea1ef8b5f8d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/JumpResetModule.java": {
+    "mtime": 1790019846.430353,
+    "seen": 1790019982.5239081,
+    "ast_hash": "f5f3b229b435ce49216f952cd9e7d58d",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/NoWebModule.java": {
+    "mtime": 1790019828.4744992,
+    "seen": 1790019982.5239146,
+    "ast_hash": "3994eea8dcffe03f4cf6bff21a7fc806",
     "semantic_hash": ""
   }
 }
