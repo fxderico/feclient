@@ -1764,9 +1764,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/movement/AirJumpModule.java": {
-    "mtime": 1788814203.0253527,
-    "seen": 1789908223.702116,
-    "ast_hash": "14fddb867703c88cb6ba8d5b7b71474f",
+    "mtime": 1790014034.9271376,
+    "seen": 1790014169.3483334,
+    "ast_hash": "34185b3efef262b0941fd2b6e193030b",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/movement/AntiVoidModule.java": {

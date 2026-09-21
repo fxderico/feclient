@@ -22,6 +22,7 @@ public class AirJumpModule extends Module {
       this.run6(new Setting[]{this.maxJumps, this.resetOnGround, this.resetOnWall});
    }
 
+   // onEnable
    @Override
    public void run() {
       this.intVal = 0;
@@ -29,11 +30,24 @@ public class AirJumpModule extends Module {
       this.bool2 = class310.player == null || class310.player.isOnGround();
    }
 
+   // onDisable — was holding the entire per-tick jump logic (so it only ever
+   // ran once, the instant you turned the module OFF), just reset now.
    @Override
    public void run2() {
+      this.intVal = 0;
+   }
+
+   // onTick — the manager calls run3() every tick. This used to be the raw
+   // "launch up 0.42" helper with NO key/count check, so every tick it forced
+   // the player upward => flying/jumping without pressing space. The actual
+   // double-jump logic (edge-detect the jump key, gate on air + jump count)
+   // was mislocated in run2/onDisable. Correct roles: detection runs here on
+   // tick, and only fires an air-jump on a fresh jump-key press while airborne.
+   @Override
+   public void run3() {
       if (class310.player != null) {
-         boolean var1 = class310.player.isOnGround();
-         if (this.resetOnGround.getValue() && var1) {
+         boolean onGround = class310.player.isOnGround();
+         if (this.resetOnGround.getValue() && onGround) {
             this.intVal = 0;
          }
 
@@ -41,21 +55,21 @@ public class AirJumpModule extends Module {
             this.intVal = 0;
          }
 
-         boolean var2 = class310.options.jumpKey.isPressed();
-         boolean var3 = var2 && !this.bool;
-         if (var1 && var3 && this.intVal == 0) {
+         boolean jumpNow = class310.options.jumpKey.isPressed();
+         boolean jumpEdge = jumpNow && !this.bool; // rising edge only — a fresh press, not held
+         if (onGround && jumpEdge && this.intVal == 0) {
             this.intVal = 1;
-         } else if (!var1 && var3 && this.intVal < this.maxJumps.getValueInt()) {
-            this.run3();
+         } else if (!onGround && jumpEdge && this.intVal < this.maxJumps.getValueInt()) {
+            this.applyJump();
             this.intVal++;
          }
 
-         this.bool = var2;
-         this.bool2 = var1;
+         this.bool = jumpNow;
+         this.bool2 = onGround;
       }
    }
 
-   public void run3() {
+   private void applyJump() {
       Vec3d var1 = class310.player.getVelocity();
       double var2 = var1.x;
       double var4 = var1.z;
