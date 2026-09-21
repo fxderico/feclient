@@ -261,6 +261,7 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.movement.NoWebModule(),        Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.JumpResetModule(),    Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.FastStairsModule(),   Category.MOVEMENT);
+        nyx(new dev.fede.nyx.module.modules.movement.AutoJumpModule(),     Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.FlyModule(),          Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.ChunkSpoof(),         Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.AirJumpModule(),      Category.MOVEMENT);
@@ -279,6 +280,7 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.movement.StrafeModule(),       Category.MOVEMENT);
 
         // PLAYER
+        nyx(new dev.fede.nyx.module.modules.player.DeathCoordinatesModule(), Category.PLAYER);
         nyx(new dev.fede.nyx.module.modules.player.AntiAFKModule(),        Category.PLAYER);
         nyx(new dev.fede.nyx.module.modules.player.AutoEatModule(),        Category.PLAYER);
         nyx(new dev.fede.nyx.module.modules.player.AutoFish(),             Category.PLAYER);
