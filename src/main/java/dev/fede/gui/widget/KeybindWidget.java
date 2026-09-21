@@ -45,9 +45,18 @@ public class KeybindWidget extends SettingWidget {
    public boolean mouseClicked(float mx, float my, int button) {
       if (this.listening) {
          if (button == 0) {
+            // left-click while armed = cancel (no change)
             this.listening = false;
             return this.contains(mx, my);
+         } else if (button == 1) {
+            // right-click while armed = REMOVE the bind. The gesture is:
+            // left-click the box to arm it, then right-click to clear it.
+            this.setting.set(-1);
+            this.listening = false;
+            UiSounds.keybindSet();
+            return true;
          } else {
+            // middle / side mouse buttons can still be bound as the key
             this.setting.set(button);
             this.listening = false;
             UiSounds.keybindSet();

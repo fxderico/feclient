@@ -113,6 +113,87 @@ public class ConfigManager {
       }
    }
 
+   // ── named configs ──────────────────────────────────────────────────────────
+   // Saved presets live in config/feclient-configs/<name>.json. This is the
+   // backing for the Themes → Configs dropdown (create / load / rename / delete).
+   private final Path configsDir = FabricLoader.getInstance().getConfigDir().resolve("feclient-configs");
+
+   private Path configFile(String name) {
+      return this.configsDir.resolve(sanitize(name) + ".json");
+   }
+
+   /** Strip anything that isn't a safe filename char so a config name can't escape the dir. */
+   private static String sanitize(String name) {
+      return name == null ? "" : name.replaceAll("[^A-Za-z0-9 _\\-]", "").trim();
+   }
+
+   /** Alphabetical list of saved config names (no extension). */
+   public synchronized java.util.List<String> listConfigs() {
+      java.util.List<String> out = new java.util.ArrayList<>();
+      if (Files.isDirectory(this.configsDir)) {
+         try (java.util.stream.Stream<Path> s = Files.list(this.configsDir)) {
+            s.filter(p -> p.getFileName().toString().endsWith(".json"))
+             .forEach(p -> out.add(p.getFileName().toString().replaceFirst("\\.json$", "")));
+         } catch (IOException var3) {
+            FeClient.LOGGER.error("Failed to list configs", var3);
+         }
+      }
+      out.sort(String.CASE_INSENSITIVE_ORDER);
+      return out;
+   }
+
+   /** Write the current live state to a named preset (create or overwrite). */
+   public synchronized boolean saveConfig(String name) {
+      String clean = sanitize(name);
+      if (clean.isEmpty()) return false;
+      try {
+         Files.createDirectories(this.configsDir);
+         Files.writeString(this.configFile(clean), GSON.toJson(this.captureState()));
+         return true;
+      } catch (IOException var4) {
+         FeClient.LOGGER.error("Failed to save config '{}'", clean, var4);
+         return false;
+      }
+   }
+
+   /** Apply a named preset to the live state and persist it as the active config. */
+   public synchronized boolean loadConfig(String name) {
+      Path p = this.configFile(name);
+      if (!Files.exists(p)) return false;
+      try {
+         this.applyState(JsonParser.parseString(Files.readString(p)).getAsJsonObject());
+         this.save(); // make the loaded preset the active/persisted config too
+         return true;
+      } catch (Exception var4) {
+         FeClient.LOGGER.error("Failed to load config '{}'", name, var4);
+         return false;
+      }
+   }
+
+   public synchronized boolean deleteConfig(String name) {
+      try {
+         return Files.deleteIfExists(this.configFile(name));
+      } catch (IOException var3) {
+         FeClient.LOGGER.error("Failed to delete config '{}'", name, var3);
+         return false;
+      }
+   }
+
+   public synchronized boolean renameConfig(String oldName, String newName) {
+      String clean = sanitize(newName);
+      if (clean.isEmpty()) return false;
+      Path from = this.configFile(oldName);
+      Path to = this.configFile(clean);
+      if (!Files.exists(from)) return false;
+      try {
+         Files.move(from, to, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+         return true;
+      } catch (IOException var6) {
+         FeClient.LOGGER.error("Failed to rename config '{}' -> '{}'", oldName, clean, var6);
+         return false;
+      }
+   }
+
    public synchronized void load() {
       if (Files.exists(this.file)) {
          JsonObject root;

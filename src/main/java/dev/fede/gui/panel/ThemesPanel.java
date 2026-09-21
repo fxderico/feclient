@@ -1,6 +1,7 @@
 package dev.fede.gui.panel;
 
 import dev.fede.FeClient;
+import dev.fede.config.ConfigManager;
 import dev.fede.gui.ClickGuiState;
 import dev.fede.gui.widget.BooleanWidget;
 import dev.fede.gui.widget.ColorWidget;
@@ -35,6 +36,18 @@ public class ThemesPanel extends Panel {
    private static final int STARTUP_FIRST_WIDGET = 5;
    private int hoveredRow = -1;
    private float lastStartY = Float.MIN_VALUE;
+
+   // ── Configs (cfg) section state ──────────────────────────────────────────
+   private final List<String> configNames = new ArrayList<>();
+   private boolean configsLoaded = false;
+   private String selectedConfig = "";
+   private String cfgNameInput = "";
+   private boolean cfgNameFocused = false;
+   // hit-test rects captured during render, consumed in mouseClicked (same
+   // pattern ModeWidget uses): [x, y, w, h]
+   private float[] cfgFieldBounds;
+   private final float[][] cfgButtonBounds = new float[4][]; // Save, Load, Rename, Delete
+   private final List<float[]> cfgRowBounds = new ArrayList<>();
 
    public ThemesPanel(ThemeManager themes, ClickGuiState state) {
       super(themes, state.panel("__themes__"));
@@ -77,6 +90,13 @@ public class ThemesPanel extends Panel {
       for (SettingWidget widget : this.soundWidgets) {
          h += widget.height(vg) + 3.0F;
       }
+
+      // Configs section: header(24) + name field(23) + 2 button rows(24+24) +
+      // gap(6) + one row(18) per saved config (min 1 for the "none" line).
+      if (!this.configsLoaded) {
+         this.refreshConfigs();
+      }
+      h += 24.0F + 23.0F + 24.0F + 24.0F + 6.0F + Math.max(1, this.configNames.size()) * 18.0F;
 
       return h;
    }
@@ -167,11 +187,163 @@ public class ThemesPanel extends Panel {
          rowY += widget.height(vg) + 3.0F;
       }
 
+      rowY = this.renderConfigsSection(vg, rowY, mx, my, viewTop, viewBottom);
+
       if (newHoveredRow != this.hoveredRow && newHoveredRow != -1) {
          UiSounds.hover();
       }
 
       this.hoveredRow = newHoveredRow;
+   }
+
+   private float renderConfigsSection(NVGRenderer vg, float rowY, float mx, float my, float viewTop, float viewBottom) {
+      if (!this.configsLoaded) {
+         this.refreshConfigs();
+      }
+
+      float px = this.clickGuiStatePanelState.floatVal;
+      Theme theme = this.theme();
+      rowY = this.sectionHeader(vg, "Configs", rowY, viewTop, viewBottom);
+
+      // name input field
+      float fx = px + 14.0F;
+      float fw = 147.0F;
+      float fh = 18.0F;
+      this.cfgFieldBounds = new float[]{fx, rowY, fw, fh};
+      vg.rect(fx, rowY, fw, fh, 9.0F, Colors.withAlpha(-16777216, 0.45F));
+      vg.rectOutline(fx, rowY, fw, fh, 9.0F, 1.1F, Colors.withAlpha(this.cfgNameFocused ? theme.accentBright() : theme.accent(), this.cfgNameFocused ? 0.9F : 0.35F));
+      if (this.cfgNameInput.isEmpty() && !this.cfgNameFocused) {
+         vg.text("config name…", fx + 8.0F, rowY + 9.0F, 12.0F, theme.textDisabled());
+      } else {
+         float tw = vg.text(this.cfgNameInput, fx + 8.0F, rowY + 9.0F, 12.0F, theme.textPrimary());
+         if (this.cfgNameFocused && System.nanoTime() / 400000000L % 2L == 0L) {
+            vg.rect(fx + 8.0F + tw + 1.5F, rowY + 3.0F, 1.4F, 12.0F, 0.7F, theme.accentBright());
+         }
+      }
+      rowY += fh + 5.0F;
+
+      // action buttons: [Save] [Load] / [Rename] [Delete]
+      float bw = (fw - 5.0F) / 2.0F;
+      float bh = 18.0F;
+      float gap = 5.0F;
+      this.cfgButtonBounds[0] = this.drawCfgButton(vg, fx, rowY, bw, bh, "Save", mx, my);
+      this.cfgButtonBounds[1] = this.drawCfgButton(vg, fx + bw + gap, rowY, bw, bh, "Load", mx, my);
+      rowY += bh + gap;
+      this.cfgButtonBounds[2] = this.drawCfgButton(vg, fx, rowY, bw, bh, "Rename", mx, my);
+      this.cfgButtonBounds[3] = this.drawCfgButton(vg, fx + bw + gap, rowY, bw, bh, "Delete", mx, my);
+      rowY += bh + 6.0F;
+
+      // saved-config list (click a row to select it — fills the name field)
+      this.cfgRowBounds.clear();
+      if (this.configNames.isEmpty()) {
+         vg.text("no saved configs", fx + 2.0F, rowY + 9.0F, 11.5F, theme.textDisabled());
+         rowY += 18.0F;
+      } else {
+         for (String name : this.configNames) {
+            boolean sel = name.equals(this.selectedConfig);
+            boolean hov = my >= rowY && my <= rowY + 18.0F && mx >= fx && mx <= fx + fw;
+            if (sel || hov) {
+               vg.rect(fx, rowY, fw, 18.0F, 6.0F, Colors.withAlpha(theme.accent(), sel ? 0.18F : 0.08F));
+            }
+
+            vg.text(name, fx + 6.0F, rowY + 9.0F, 12.0F, sel ? theme.textPrimary() : theme.textMuted());
+            this.cfgRowBounds.add(new float[]{fx, rowY, fw, 18.0F});
+            rowY += 18.0F;
+         }
+      }
+
+      return rowY;
+   }
+
+   private float[] drawCfgButton(NVGRenderer vg, float x, float y, float w, float h, String label, float mx, float my) {
+      Theme t = this.theme();
+      boolean hov = mx >= x && mx <= x + w && my >= y && my <= y + h;
+      vg.rect(x, y, w, h, h / 2.0F, Colors.withAlpha(t.accent(), hov ? 0.28F : 0.14F));
+      vg.text(label, x + (w - vg.textWidth(label, 11.5F)) / 2.0F, y + h / 2.0F, 11.5F, hov ? t.accentBright() : t.textPrimary());
+      return new float[]{x, y, w, h};
+   }
+
+   private void refreshConfigs() {
+      ConfigManager cfg = FeClient.config();
+      this.configNames.clear();
+      if (cfg != null) {
+         this.configNames.addAll(cfg.listConfigs());
+      }
+
+      this.configsLoaded = true;
+   }
+
+   private static boolean cfgHit(float mx, float my, float[] b) {
+      return b != null && mx >= b[0] && mx <= b[0] + b[2] && my >= b[1] && my <= b[1] + b[3];
+   }
+
+   private boolean handleConfigClick(float mx, float my, int button) {
+      if (button != 0) {
+         return false;
+      }
+
+      ConfigManager cfg = FeClient.config();
+      if (cfg == null) {
+         return false;
+      }
+
+      if (cfgHit(mx, my, this.cfgFieldBounds)) {
+         this.cfgNameFocused = true;
+         UiSounds.select();
+         return true;
+      }
+
+      String typed = this.cfgNameInput.trim();
+      if (cfgHit(mx, my, this.cfgButtonBounds[0])) { // Save current state under the typed name
+         if (!typed.isEmpty() && cfg.saveConfig(typed)) {
+            this.selectedConfig = typed;
+            this.refreshConfigs();
+         }
+         this.cfgNameFocused = false;
+         UiSounds.select();
+         return true;
+      }
+      if (cfgHit(mx, my, this.cfgButtonBounds[1])) { // Load typed-or-selected
+         String target = !typed.isEmpty() ? typed : this.selectedConfig;
+         if (!target.isEmpty() && cfg.loadConfig(target)) {
+            this.selectedConfig = target;
+         }
+         this.cfgNameFocused = false;
+         UiSounds.select();
+         return true;
+      }
+      if (cfgHit(mx, my, this.cfgButtonBounds[2])) { // Rename selected -> typed
+         if (!this.selectedConfig.isEmpty() && !typed.isEmpty() && cfg.renameConfig(this.selectedConfig, typed)) {
+            this.selectedConfig = typed;
+            this.refreshConfigs();
+         }
+         this.cfgNameFocused = false;
+         UiSounds.select();
+         return true;
+      }
+      if (cfgHit(mx, my, this.cfgButtonBounds[3])) { // Delete selected-or-typed
+         String target = !this.selectedConfig.isEmpty() ? this.selectedConfig : typed;
+         if (!target.isEmpty() && cfg.deleteConfig(target)) {
+            if (target.equals(this.selectedConfig)) {
+               this.selectedConfig = "";
+            }
+            this.refreshConfigs();
+         }
+         this.cfgNameFocused = false;
+         UiSounds.select();
+         return true;
+      }
+
+      for (int i = 0; i < this.cfgRowBounds.size() && i < this.configNames.size(); i++) {
+         if (cfgHit(mx, my, this.cfgRowBounds.get(i))) {
+            this.selectedConfig = this.configNames.get(i);
+            this.cfgNameInput = this.configNames.get(i);
+            UiSounds.select();
+            return true;
+         }
+      }
+
+      return false;
    }
 
    private float sectionHeader(NVGRenderer vg, String title, float rowY, float viewTop, float viewBottom) {
@@ -204,6 +376,15 @@ public class ThemesPanel extends Panel {
             if (widget.mouseClicked(mx, my, button)) {
                return true;
             }
+         }
+
+         if (this.handleConfigClick(mx, my, button)) {
+            return true;
+         }
+
+         // a left-click that missed the name field unfocuses it
+         if (button == 0 && !cfgHit(mx, my, this.cfgFieldBounds)) {
+            this.cfgNameFocused = false;
          }
 
          if (button != 0) {
@@ -277,12 +458,41 @@ public class ThemesPanel extends Panel {
 
    @Override
    public boolean keyPressed(int keyCode) {
+      if (this.cfgNameFocused) {
+         switch (keyCode) {
+            case 256: // escape
+            case 257: // enter
+            case 335: // numpad enter
+               this.cfgNameFocused = false;
+               break;
+            case 259: // backspace
+               if (!this.cfgNameInput.isEmpty()) {
+                  this.cfgNameInput = this.cfgNameInput.substring(0, this.cfgNameInput.length() - 1);
+               }
+         }
+
+         return true;
+      }
+
       return this.accentWidget.keyPressed(keyCode);
    }
 
    @Override
+   public boolean charTyped(int codepoint) {
+      if (this.cfgNameFocused) {
+         if (this.cfgNameInput.length() < 24 && Character.isValidCodePoint(codepoint) && !Character.isISOControl(codepoint)) {
+            this.cfgNameInput = this.cfgNameInput + new String(Character.toChars(codepoint));
+         }
+
+         return true;
+      }
+
+      return false;
+   }
+
+   @Override
    public boolean isListening() {
-      return this.accentWidget.isListening();
+      return this.cfgNameFocused || this.accentWidget.isListening();
    }
 }
 
