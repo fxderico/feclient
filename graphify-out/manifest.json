@@ -612,9 +612,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/ModuleManager.java": {
-    "mtime": 1790019855.5345867,
-    "seen": 1790019982.5236137,
-    "ast_hash": "98ee78c0dea63387c9ed7d65c1ba4074",
+    "mtime": 1790020228.0929308,
+    "seen": 1790020346.3311908,
+    "ast_hash": "b2fdcaf00243b1af3d619403def64e16",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/Modules.java": {
@@ -3789,6 +3789,12 @@
     "mtime": 1790019828.4744992,
     "seen": 1790019982.5239146,
     "ast_hash": "3994eea8dcffe03f4cf6bff21a7fc806",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/FastStairsModule.java": {
+    "mtime": 1790020175.5665195,
+    "seen": 1790020346.3314776,
+    "ast_hash": "1d4a7673dd922dc05f9080c9f45e7dfc",
     "semantic_hash": ""
   }
 }

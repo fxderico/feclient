@@ -260,6 +260,7 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.movement.SwimSpeedModule(),    Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.NoWebModule(),        Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.JumpResetModule(),    Category.MOVEMENT);
+        nyx(new dev.fede.nyx.module.modules.movement.FastStairsModule(),   Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.FlyModule(),          Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.ChunkSpoof(),         Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.AirJumpModule(),      Category.MOVEMENT);
