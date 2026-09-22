@@ -58,6 +58,16 @@ public class NetheriteFinderModule extends Module {
       if (class310.player == null || class310.world == null) {
          return;
       }
+      // Ancient debris ONLY generates in the Nether. Scanning the overworld/end
+      // is pure wasted work — and at radius 128 in the overworld that's a ~17M
+      // block sweep (the Nether caps Y to the 8..22 debris band, a thin slab).
+      // Skip entirely and drop any stale results when you're not in the Nether.
+      if (class310.world.getRegistryKey() != World.NETHER) {
+         if (!this.set.isEmpty()) {
+            this.set.clear();
+         }
+         return;
+      }
       if (this.intVal4++ % 10 != 0) {
          return;
       }

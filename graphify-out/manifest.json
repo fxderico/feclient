@@ -1722,9 +1722,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/donutsmp/NetheriteFinderModule.java": {
-    "mtime": 1790109049.0279195,
-    "seen": 1790109637.4013247,
-    "ast_hash": "f024e9497486156a2d6afe397607155f",
+    "mtime": 1790111968.9040778,
+    "seen": 1790112076.349797,
+    "ast_hash": "1eea185cd051b66e96e8ff8b08d99de4",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/donutsmp/NicknameModule.java": {
