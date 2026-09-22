@@ -48,6 +48,7 @@ public class ThemesPanel extends Panel {
    private float[] cfgFieldBounds;
    private final float[][] cfgButtonBounds = new float[4][]; // Save, Load, Rename, Delete
    private final List<float[]> cfgRowBounds = new ArrayList<>();
+   private float[] discordToggleBounds; // Discord Presence toggle hit-rect
 
    public ThemesPanel(ThemeManager themes, ClickGuiState state) {
       super(themes, state.panel("__themes__"));
@@ -86,6 +87,7 @@ public class ThemesPanel extends Panel {
       }
 
       h += 48.0F;
+      h += 44.0F; // Discord section: header(24) + toggle row(20)
 
       for (SettingWidget widget : this.soundWidgets) {
          h += widget.height(vg) + 3.0F;
@@ -170,6 +172,28 @@ public class ThemesPanel extends Panel {
       }
 
       rowY += 28.0F;
+
+      // ── Discord Presence toggle ──
+      rowY = this.sectionHeader(vg, "Discord", rowY, viewTop, viewBottom);
+      {
+         float px = this.clickGuiStatePanelState.floatVal;
+         Theme t = this.theme();
+         boolean on = this.themes.isDiscordPresence();
+         float ty = rowY;
+         vg.text("Discord Presence", px + 14.0F, ty + 9.0F, 12.5F, t.textMuted());
+         // toggle pill on the right
+         float pw = 26.0F;
+         float ph = 14.0F;
+         float pxx = px + 175.0F - 14.0F - pw;
+         float py = ty + 2.0F;
+         vg.rect(pxx, py, pw, ph, ph / 2.0F, Colors.withAlpha(on ? t.accent() : -16777216, on ? 0.55F : 0.45F));
+         float knob = ph - 4.0F;
+         float kx = on ? pxx + pw - knob - 2.0F : pxx + 2.0F;
+         vg.circle(kx + knob / 2.0F, py + ph / 2.0F, knob / 2.0F, on ? t.accentBright() : t.textDisabled());
+         this.discordToggleBounds = new float[]{px + 14.0F, ty, 175.0F - 28.0F, 18.0F};
+         rowY += 20.0F;
+      }
+
       rowY = this.sectionHeader(vg, "Sounds", rowY, viewTop, viewBottom);
 
       for (int i = 0; i < this.soundWidgets.size(); i++) {
@@ -379,6 +403,12 @@ public class ThemesPanel extends Panel {
          }
 
          if (this.handleConfigClick(mx, my, button)) {
+            return true;
+         }
+
+         if (button == 0 && cfgHit(mx, my, this.discordToggleBounds)) {
+            this.themes.setDiscordPresence(!this.themes.isDiscordPresence());
+            UiSounds.select();
             return true;
          }
 

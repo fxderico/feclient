@@ -55,9 +55,25 @@ public class ThemeManager {
       }
    }
 
+   private boolean discordPresence = false;
+
+   public boolean isDiscordPresence() {
+      return this.discordPresence;
+   }
+
+   public void setDiscordPresence(boolean on) {
+      this.discordPresence = on;
+      if (on) {
+         dev.fede.discord.DiscordPresence.start();
+      } else {
+         dev.fede.discord.DiscordPresence.stop();
+      }
+   }
+
    public JsonObject toJson() {
       JsonObject json = new JsonObject();
       json.addProperty("current", this.current.getName());
+      json.addProperty("discordPresence", this.discordPresence);
       JsonArray customs = new JsonArray();
 
       for (Theme t : this.themes) {
@@ -91,6 +107,13 @@ public class ThemeManager {
                   this.current = t;
                   break;
                }
+            }
+         }
+
+         if (json.has("discordPresence")) {
+            this.discordPresence = json.get("discordPresence").getAsBoolean();
+            if (this.discordPresence) {
+               dev.fede.discord.DiscordPresence.start();
             }
          }
       }
