@@ -53,12 +53,9 @@ public class LightFinderModule extends Module {
    }
 
    @Override
+   // onEnable reset — throttle moved into run3() (see HoleESP note).
    public void run() {
-      if (class310.player != null && class310.world != null) {
-         if (this.intVal7++ % 6 == 0) {
-            this.run3();
-         }
-      }
+      this.intVal7 = 0;
    }
 
    @Override
@@ -124,6 +121,10 @@ public class LightFinderModule extends Module {
    }
 
    public void run3() {
+      if (class310.player == null || class310.world == null || this.intVal7++ % 6 != 0) {
+         return; // throttle + null-guard (run3 dereferences player directly)
+      }
+
       this.set.clear();
       int var1 = this.radius.getValueInt();
       int var2 = (int)Math.floor(class310.player.getX());

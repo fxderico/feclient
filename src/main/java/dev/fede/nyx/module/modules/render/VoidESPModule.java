@@ -37,12 +37,9 @@ public class VoidESPModule extends Module {
    }
 
    @Override
+   // onEnable reset — throttle moved into run3() (see HoleESP note).
    public void run() {
-      if (class310.player != null && class310.world != null) {
-         if (this.intVal3++ % 5 == 0) {
-            this.run3();
-         }
-      }
+      this.intVal3 = 0;
    }
 
    @Override
@@ -58,6 +55,10 @@ public class VoidESPModule extends Module {
    }
 
    public void run3() {
+      if (class310.player == null || class310.world == null || this.intVal3++ % 5 != 0) {
+         return; // throttle + null-guard (run3 dereferences player directly)
+      }
+
       this.list.clear();
       int var1 = this.radius.getValueInt();
       int var2 = (int)Math.floor(class310.player.getX());

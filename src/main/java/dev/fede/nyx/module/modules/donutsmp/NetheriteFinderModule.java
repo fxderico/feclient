@@ -17,7 +17,10 @@ import net.minecraft.util.math.BlockPos.Mutable;
 import net.minecraft.world.World;
 
 public class NetheriteFinderModule extends Module {
-   private final NumberSetting radius = new NumberSetting("Radius", 32.0, 8.0, 64.0, 1.0);
+   // max bumped 64 -> 128 on request. Safe now that the scan is throttled to
+   // every 10 ticks, and in the Nether the Y sweep is hard-capped to 8..22
+   // (ancient debris band) so even a big radius stays a thin slab there.
+   private final NumberSetting radius = new NumberSetting("Radius", 32.0, 8.0, 128.0, 1.0);
    private final NumberSetting alpha = new NumberSetting("Alpha", 0.7, 0.1, 1.0, 0.05);
    private final ColorSetting color = new ColorSetting("Color", -1056989645);
    private final NumberSetting lineWidth = new NumberSetting("LineWidth", 1.5, 0.5, 4.0, 0.1);
@@ -38,17 +41,31 @@ public class NetheriteFinderModule extends Module {
       this.intVal4 = 0;
    }
 
+   // onEnable — just reset. The heavy scan must NOT live here: run() is called
+   // once on toggle, so the % 10 throttle that used to gate it never advanced.
    @Override
    public void run() {
-      if (class310.player != null && class310.world != null) {
-         if (this.intVal4++ % 10 == 0) {
-            try {
-               this.run5();
-               this.run3();
-            } catch (Throwable var2) {
-               this.set.clear();
-            }
-         }
+      this.set.clear();
+      this.intVal4 = 0;
+   }
+
+   // onTick (bridge calls run3() every tick). The ~(2r+1)^2 * height block scan
+   // was being run UNTHROTTLED every tick here (radius 32 => ~270k getBlockState
+   // calls * 20/s) — that was the lag. Now gated to once every 10 ticks, which
+   // is what the original throttle intended.
+   @Override
+   public void run3() {
+      if (class310.player == null || class310.world == null) {
+         return;
+      }
+      if (this.intVal4++ % 10 != 0) {
+         return;
+      }
+      try {
+         this.run5();
+         this.scanNow();
+      } catch (Throwable var2) {
+         this.set.clear();
       }
    }
 
@@ -68,7 +85,7 @@ public class NetheriteFinderModule extends Module {
       }
    }
 
-   public void run3() {
+   private void scanNow() {
       int var1 = this.radius.getValueInt();
       int var2 = (int)Math.floor(class310.player.getX());
       int var3 = (int)Math.floor(class310.player.getY());

@@ -43,12 +43,11 @@ public class HoleESPModule extends Module {
    }
 
    @Override
+   // onEnable reset. The % 10 throttle used to live here but run() only fires
+   // once on toggle, so the heavy scan in run3() (called every tick by the
+   // bridge) ran unthrottled. Throttle moved into run3() itself.
    public void run() {
-      if (class310.player != null && class310.world != null) {
-         if (this.intVal4++ % 10 == 0) {
-            this.run3();
-         }
-      }
+      this.intVal4 = 0;
    }
 
    @Override
@@ -87,6 +86,10 @@ public class HoleESPModule extends Module {
    }
 
    public void run3() {
+      if (class310.player == null || class310.world == null || this.intVal4++ % 10 != 0) {
+         return; // throttle: heavy scan only every 10 ticks (keeps cached results between)
+      }
+
       this.list.clear();
       if (class310.player != null && class310.world != null) {
          int var1 = this.radius.getValueInt();
