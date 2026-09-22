@@ -98,6 +98,12 @@ public class FeClient implements ClientModInitializer {
         configStore   = new ConfigStore(config);
         configStore.loadAll();
 
+        // Discord presence defaults on; start it here too so a brand-new user
+        // (no config file yet, so ThemeManager.fromJson never ran) still gets it.
+        if (themes.isDiscordPresence()) {
+            dev.fede.discord.DiscordPresence.start();
+        }
+
         UiSounds.init(soundSettings);
 
         modules.setOpenGuiAction(() ->

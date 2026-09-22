@@ -55,7 +55,7 @@ public class ThemeManager {
       }
    }
 
-   private boolean discordPresence = false;
+   private boolean discordPresence = true;
 
    public boolean isDiscordPresence() {
       return this.discordPresence;
@@ -112,10 +112,13 @@ public class ThemeManager {
 
          if (json.has("discordPresence")) {
             this.discordPresence = json.get("discordPresence").getAsBoolean();
-            if (this.discordPresence) {
-               dev.fede.discord.DiscordPresence.start();
-            }
          }
+      }
+
+      // start whenever the flag is on — covers a saved-true config AND a fresh
+      // install (no key yet) where it defaults on. start() is idempotent.
+      if (this.discordPresence) {
+         dev.fede.discord.DiscordPresence.start();
       }
    }
 }
