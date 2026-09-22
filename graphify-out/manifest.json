@@ -2154,9 +2154,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/world/AutoMLGModule.java": {
-    "mtime": 1788814203.2243888,
-    "seen": 1789908223.702204,
-    "ast_hash": "634432a4ea66299bb7d6baa523130ab0",
+    "mtime": 1790106184.4708333,
+    "seen": 1790106423.720365,
+    "ast_hash": "1c095f46b08ae06f24431c4399964112",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/world/AutoSmeltModule.java": {

@@ -38,6 +38,7 @@ public class AutoMLGModule extends Module {
       this.run6(new Setting[]{this.preferred, this.minFall, this.swapBack});
    }
 
+   // onDisable
    @Override
    public void run2() {
       this.run5();
@@ -45,8 +46,19 @@ public class AutoMLGModule extends Module {
       this.bool = false;
    }
 
+   // onEnable — just reset state; the actual per-tick fall watch lives in run3()
    @Override
    public void run() {
+      this.intVal2 = -1;
+      this.bool = false;
+   }
+
+   // onTick — was mis-slotted into run() (onEnable), so the whole MLG watch only
+   // ever ran once the instant you toggled the module on (never while falling).
+   // The manager calls run3() every tick, which is where the fall detection +
+   // clutch placement belongs.
+   @Override
+   public void run3() {
       if (class310.player != null && class310.world != null && class310.interactionManager != null) {
          if (!class310.player.isOnGround() && !class310.player.isTouchingWater()) {
             if (!(class310.player.getVelocity().y >= 0.0)) {
