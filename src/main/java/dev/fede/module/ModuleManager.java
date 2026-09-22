@@ -244,6 +244,7 @@ public final class ModuleManager {
     private void registerCodeEngine() {
         // COMBAT
         nyx(new dev.fede.nyx.module.modules.combat.KillAura(),             Category.COMBAT);
+        nyx(new dev.fede.nyx.module.modules.combat.TargetPearlModule(),    Category.COMBAT);
         nyx(new dev.fede.nyx.module.modules.combat.ReachModule(),          Category.COMBAT);
         nyx(new dev.fede.nyx.module.modules.combat.VelocityModule(),       Category.COMBAT);
         nyx(new dev.fede.nyx.module.modules.combat.AntiKnockbackModule(),  Category.COMBAT);
