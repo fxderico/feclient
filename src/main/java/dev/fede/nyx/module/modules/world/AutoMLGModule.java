@@ -67,38 +67,72 @@ public class AutoMLGModule extends Module {
                   if (!this.bool) {
                      BlockPos var3 = this.getclass2338();
                      if (var3 != null) {
-                        if (this.antiVoidModuleHelper.check(100L)) {
-                           Item var4 = this.getclass1792();
-                           if (var4 != null) {
-                              int var5 = this.intOf(var4);
-                              if (var5 < 0) {
-                                 var5 = this.intOf2(var4);
+                        // Only place once the landing surface is actually within
+                        // interaction reach. The old trigger fired at up to ~10
+                        // blocks down — the placement raycast (esp. the bucket's
+                        // own) can't reach that far, so the single shot was wasted
+                        // in the air and you died anyway. Gate to real reach.
+                        double eyeY = class310.player.getEyeY();
+                        double distToTop = eyeY - (var3.getY() + 1.0);
+                        double reach = 4.3;
+                        try {
+                           reach = class310.player.getBlockInteractionRange() + 0.3;
+                        } catch (Throwable ignored) {
+                        }
+
+                        if (distToTop <= reach) {
+                           if (this.antiVoidModuleHelper.check(100L)) {
+                              Item var4 = this.getclass1792();
+                              if (var4 != null) {
+                                 int var5 = this.intOf(var4);
                                  if (var5 < 0) {
-                                    NotificationUtils.run("AutoMLG", "No " + stringOf(var4) + " available", INFO.UNKNOWN_3, 1500L);
-                                    return;
+                                    var5 = this.intOf2(var4);
+                                    if (var5 < 0) {
+                                       NotificationUtils.run("AutoMLG", "No " + stringOf(var4) + " available", INFO.UNKNOWN_3, 1500L);
+                                       return;
+                                    }
                                  }
+
+                                 int var6 = class310.player.getInventory().getSelectedSlot();
+                                 if (var6 != var5) {
+                                    if (this.intVal2 < 0) {
+                                       this.intVal2 = var6;
+                                    }
+
+                                    class310.player.getInventory().setSelectedSlot(var5);
+                                    if (class310.getNetworkHandler() != null) {
+                                       class310.getNetworkHandler().sendPacket(new UpdateSelectedSlotC2SPacket(var5));
+                                    }
+                                 }
+
+                                 // Physically snap the REAL camera straight down for
+                                 // this one tick. A water bucket ignores a synthetic
+                                 // BlockHitResult and re-raycasts from the real look
+                                 // vector, so packet-only spoofing never placed it.
+                                 // Restore the camera the same tick — the interact
+                                 // packet already captured pitch 90, movement packets
+                                 // restore afterwards, so it stays near-silent.
+                                 float realYaw = class310.player.getYaw();
+                                 float realPitch = class310.player.getPitch();
+                                 class310.player.setPitch(90.0F);
+
+                                 if (var4 == Items.WATER_BUCKET) {
+                                    // bucket: let its own downward raycast pick the block
+                                    class310.interactionManager.interactItem(class310.player, Hand.MAIN_HAND);
+                                 } else {
+                                    // block items honor the explicit hit result
+                                    Vec3d var7 = new Vec3d(var3.getX() + 0.5, var3.getY() + 1.0, var3.getZ() + 0.5);
+                                    BlockHitResult var8 = new BlockHitResult(var7, Direction.UP, var3, false);
+                                    class310.interactionManager.interactBlock(class310.player, Hand.MAIN_HAND, var8);
+                                 }
+
+                                 class310.player.swingHand(Hand.MAIN_HAND);
+                                 class310.player.setYaw(realYaw);
+                                 class310.player.setPitch(realPitch);
+                                 this.bool = true;
+                                 this.antiVoidModuleHelper.run();
+                                 NotificationUtils.run("AutoMLG", stringOf(var4) + " deployed", INFO.UNKNOWN_2, 1500L);
                               }
-
-                              int var6 = class310.player.getInventory().getSelectedSlot();
-                              if (var6 != var5) {
-                                 if (this.intVal2 < 0) {
-                                    this.intVal2 = var6;
-                                 }
-
-                                 class310.player.getInventory().setSelectedSlot(var5);
-                                 if (class310.getNetworkHandler() != null) {
-                                    class310.getNetworkHandler().sendPacket(new UpdateSelectedSlotC2SPacket(var5));
-                                 }
-                              }
-
-                              AntiAFKModuleUtil.run(class310.player.getYaw(), 90.0F);
-                              Vec3d var7 = new Vec3d(var3.getX() + 0.5, var3.getY() + 1.0, var3.getZ() + 0.5);
-                              BlockHitResult var8 = new BlockHitResult(var7, Direction.UP, var3, false);
-                              class310.interactionManager.interactBlock(class310.player, Hand.MAIN_HAND, var8);
-                              class310.player.swingHand(Hand.MAIN_HAND);
-                              this.bool = true;
-                              this.antiVoidModuleHelper.run();
-                              NotificationUtils.run("AutoMLG", stringOf(var4) + " deployed", INFO.UNKNOWN_2, 1500L);
                            }
                         }
                      }

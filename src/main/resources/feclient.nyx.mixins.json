@@ -59,7 +59,8 @@
     "ContainerSnapshotMixin",
     "SwingDurationMixin",
     "MixinClientTickGate",
-    "OutlineThicknessMixin"
+    "OutlineThicknessMixin",
+    "ItemUseNullGuardMixin"
   ],
   "injectors": {
     "defaultRequire": 0
