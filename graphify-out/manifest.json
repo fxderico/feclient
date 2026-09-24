@@ -2154,9 +2154,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/world/AutoMLGModule.java": {
-    "mtime": 1790106184.4708333,
-    "seen": 1790106423.720365,
-    "ast_hash": "1c095f46b08ae06f24431c4399964112",
+    "mtime": 1790191870.125912,
+    "seen": 1790193090.7039418,
+    "ast_hash": "79e6961e9b7c00bbbf037e55b0dedfe2",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/world/AutoSmeltModule.java": {
@@ -3396,9 +3396,9 @@
     "semantic_hash": ""
   },
   "src/main/resources/feclient.nyx.mixins.json": {
-    "mtime": 1789921830.1882567,
-    "seen": 1789921984.1138513,
-    "ast_hash": "15097db56ebd866901fad8347227172a",
+    "mtime": 1790192818.940621,
+    "seen": 1790193090.704312,
+    "ast_hash": "c6d6579e3c3042d98d1a76fc0209bb9f",
     "semantic_hash": ""
   },
   "src/main/resources/feclient.sodium.mixins.json": {
@@ -3825,6 +3825,12 @@
     "mtime": 1790111048.1756306,
     "seen": 1790111518.1693082,
     "ast_hash": "5a295e8312604b9984cf2f70b0733fbd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ItemUseNullGuardMixin.java": {
+    "mtime": 1790192813.6016786,
+    "seen": 1790193090.7036576,
+    "ast_hash": "c535c2ead86b1e4b171c2fe8124bc78b",
     "semantic_hash": ""
   }
 }

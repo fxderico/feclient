@@ -356,6 +356,7 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.donutsmp.SeedChunkFinder(),      Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.BlockEntityDebugModule(),Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.LightFinderModule(),    Category.DONUT);
+        nyx(new dev.fede.nyx.module.modules.donutsmp.LightDebugModule(),     Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.ChunkFinderModule(),    Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.PlayerChunksModule(),   Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.HoleESPModule(),        Category.DONUT);
