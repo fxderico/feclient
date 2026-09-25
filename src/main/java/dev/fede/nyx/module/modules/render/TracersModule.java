@@ -340,6 +340,33 @@ public class TracersModule extends Module {
    }
 
    private static void run(DrawContext var0, double var1, double var3, double var5, double var7, int var9, int var10, int var11, float var12) {
+      // Clip the target endpoint to the screen along the anchor->target direction.
+      // Off-screen / beside-you targets project to extreme coordinates; without
+      // this the line rasterizer draws all the way out to that garbage point
+      // (the stray lines-to-the-horizon). Clipping keeps the line on-screen and
+      // still pointing at the target, and preserves the exact direction (unlike a
+      // plain rectangular clamp of the point).
+      int sw = MinecraftClient.getInstance().getWindow().getScaledWidth();
+      int sh = MinecraftClient.getInstance().getWindow().getScaledHeight();
+      if (var5 < 0.0 || var5 > sw || var7 < 0.0 || var7 > sh) {
+         double dx = var5 - var1;
+         double dy = var7 - var3;
+         double s = 1.0;
+         if (dx < 0.0) {
+            s = Math.min(s, (0.0 - var1) / dx);
+         } else if (dx > 0.0) {
+            s = Math.min(s, (sw - var1) / dx);
+         }
+         if (dy < 0.0) {
+            s = Math.min(s, (0.0 - var3) / dy);
+         } else if (dy > 0.0) {
+            s = Math.min(s, (sh - var3) / dy);
+         }
+         s = Math.max(0.0, Math.min(1.0, s));
+         var5 = var1 + dx * s;
+         var7 = var3 + dy * s;
+      }
+
       double var13 = var5 - var1;
       double var15 = var7 - var3;
       double var17 = Math.hypot(var13, var15);
