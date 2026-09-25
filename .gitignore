@@ -17,6 +17,10 @@ out/
 .DS_Store
 Thumbs.db
 
+# local reverse-engineering / reference material — third-party binaries, not
+# part of this project and not for redistribution
+reference/
+
 # Logs
 *.log
 

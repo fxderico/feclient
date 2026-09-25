@@ -6,6 +6,7 @@ import dev.fede.nyx.render.ListUtils;
 import dev.fede.nyx.setting.BooleanSetting;
 import dev.fede.nyx.setting.NumberSetting;
 import dev.fede.nyx.setting.Setting;
+import dev.fede.suschunk.ServerLightCache;
 import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.client.gui.DrawContext;
@@ -36,6 +37,15 @@ public class LightDebugModule extends Module {
    // one marker per (x,z) column (the brightest block) keeps the render sane and
    // reads like a top-down heatmap; off = box every lit block (heavier).
    private final BooleanSetting perColumn = new BooleanSetting("PerColumn", true);
+   // Source of the light read:
+   //   on  = raw server-streamed block light (ServerLightCache) — sees hidden/anti-xray
+   //         pockets through walls, the real base-finding signal.
+   //   off = client's recomputed World light (visible areas only, weaker).
+   private final BooleanSetting serverLight = new BooleanSetting("ServerLight", true);
+   // When ServerLight is on, only keep cells the server lit but the CLIENT world
+   // shows as dark — i.e. light with no visible source = walled-off / buried base.
+   // Cuts surface torches and your own placed light out of the heatmap.
+   private final BooleanSetting hiddenOnly = new BooleanSetting("HiddenOnly", true);
    private final BooleanSetting countHUD = new BooleanSetting("CountHUD", true);
    // packed BlockPos -> block-light level (1..15), so render colours without a re-read
    private final Map<Long, Integer> hits = new HashMap<>();
@@ -43,7 +53,7 @@ public class LightDebugModule extends Module {
 
    public LightDebugModule() {
       super("LightDebug", "Server block-light heatmap (through walls) — base recon", Category.DONUTSMP);
-      this.run6(new Setting[]{this.radius, this.minLight, this.alpha, this.lineWidth, this.perColumn, this.countHUD});
+      this.run6(new Setting[]{this.radius, this.minLight, this.alpha, this.lineWidth, this.perColumn, this.serverLight, this.hiddenOnly, this.countHUD});
    }
 
    // onEnable
@@ -105,6 +115,9 @@ public class LightDebugModule extends Module {
       int r = this.radius.getValueInt();
       int threshold = (int)Math.round(this.minLight.getValue());
       boolean columnMode = this.perColumn.getValue();
+      boolean useServer = this.serverLight.getValue();
+      boolean hidden = useServer && this.hiddenOnly.getValue();
+      ServerLightCache cache = useServer ? ServerLightCache.get() : null;
 
       int px = (int)Math.floor(class310.player.getX());
       int py = (int)Math.floor(class310.player.getY());
@@ -129,7 +142,28 @@ public class LightDebugModule extends Module {
                m.set(x, y, z);
                int level;
                try {
-                  level = class310.world.getLightLevel(LightType.BLOCK, m);
+                  if (useServer) {
+                     // raw server-streamed block light; -1 = server never sent this cell
+                     level = cache.serverBlockLight(x, y, z);
+                     if (level < 0) {
+                        continue;
+                     }
+                     if (hidden) {
+                        // keep only cells the server lit but the client renders as dark:
+                        // light with no client-visible source = walled-off / buried base.
+                        int clientLevel;
+                        try {
+                           clientLevel = class310.world.getLightLevel(LightType.BLOCK, m);
+                        } catch (Throwable t) {
+                           clientLevel = 0;
+                        }
+                        if (clientLevel >= level) {
+                           continue;
+                        }
+                     }
+                  } else {
+                     level = class310.world.getLightLevel(LightType.BLOCK, m);
+                  }
                } catch (Throwable t) {
                   continue;
                }
