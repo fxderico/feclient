@@ -54,13 +54,36 @@ public class KeyboardHandlerMixin {
    }
 
    private static boolean shiftOpensGui(Screen screen) {
-      return !(screen instanceof ClickGuiScreen)
-            && !(screen instanceof ChatScreen)
-            && !(screen instanceof HandledScreen)
-            && !(screen instanceof AbstractSignEditScreen)
-            && !(screen instanceof BookEditScreen)
-         ? !(screen.getFocused() instanceof TextFieldWidget editBox && editBox.isFocused())
-         : false;
+      if (screen instanceof ClickGuiScreen
+            || screen instanceof ChatScreen
+            || screen instanceof HandledScreen
+            || screen instanceof AbstractSignEditScreen
+            || screen instanceof BookEditScreen) {
+         return false;
+      }
+      // don't hijack shift while the user is typing — text fields are frequently
+      // nested inside container widgets (server-add, search boxes, config panels),
+      // so getFocused() one level down isn't enough. walk the whole focus chain.
+      return !isTypingInTextField(screen);
+   }
+
+   private static boolean isTypingInTextField(Screen screen) {
+      net.minecraft.client.gui.Element focused = screen.getFocused();
+      int guard = 0;
+      while (focused != null && guard++ < 32) {
+         if (focused instanceof TextFieldWidget field && field.isFocused()) {
+            return true;
+         }
+         if (focused instanceof net.minecraft.client.gui.widget.EditBoxWidget box && box.isFocused()) {
+            return true;
+         }
+         if (focused instanceof net.minecraft.client.gui.ParentElement parent) {
+            focused = parent.getFocused();
+         } else {
+            break;
+         }
+      }
+      return false;
    }
 }
 

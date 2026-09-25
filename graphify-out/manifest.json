@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/mixin/KeyboardHandlerMixin.java": {
-    "mtime": 1789330715.460575,
-    "seen": 1789908223.7019017,
-    "ast_hash": "adfb80dfc6312290ff6b1e29de0d1e2f",
+    "mtime": 1790365539.4042158,
+    "seen": 1790365624.317322,
+    "ast_hash": "643d7566583eca8ca680bae899027c17",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/mixin/KeyboardInputFreecamMixin.java": {
