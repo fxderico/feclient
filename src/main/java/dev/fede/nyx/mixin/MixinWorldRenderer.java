@@ -24,15 +24,18 @@ public class MixinWorldRenderer {
       RenderTickCounter var2,
       boolean var3,
       Camera var4,
-      Matrix4f var5,
-      Matrix4f var6,
-      Matrix4f var7,
+      Matrix4f var5, // positionMatrix (view)
+      Matrix4f var6, // basicProjectionMatrix (1.21.11: new, NOT the render projection)
+      Matrix4f var7, // projectionMatrix (the real one used for rendering + frustum)
       GpuBufferSlice var8,
       Vector4f var9,
       boolean var10,
       CallbackInfo var11
    ) {
-      Matrix4fUtils.run(var5, var6, var4.getCameraPos());
+      // 1.21.11 inserted basicProjectionMatrix ahead of the real projection, so the
+      // screen-space projection (Tracers etc.) must use var7, not var6 — otherwise
+      // every world->screen point lands in the wrong place.
+      Matrix4fUtils.run(var5, var7, var4.getCameraPos());
    }
 }
 

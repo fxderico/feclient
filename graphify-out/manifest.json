@@ -1320,9 +1320,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/mixin/MixinWorldRenderer.java": {
-    "mtime": 1788814202.8117185,
-    "seen": 1789908223.702042,
-    "ast_hash": "de5a11163f5ad2ee79405f88a9877ee9",
+    "mtime": 1790368567.0445836,
+    "seen": 1790368630.4680846,
+    "ast_hash": "ff66ba4bb8077fa360660892a46737e5",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/mixin/MovementSpeedMixin.java": {
