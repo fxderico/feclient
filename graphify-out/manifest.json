@@ -504,9 +504,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/mixin/LevelRendererMixin.java": {
-    "mtime": 1789769465.407173,
-    "seen": 1789908223.7019036,
-    "ast_hash": "723ee456b4369478881bc8d19c5b814c",
+    "mtime": 1790373097.9224868,
+    "seen": 1790373172.49113,
+    "ast_hash": "c99e200f1bfb8ab82ee73f61325db9df",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/mixin/LightPacketMixin.java": {

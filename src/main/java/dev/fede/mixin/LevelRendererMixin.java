@@ -28,7 +28,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin({WorldRenderer.class})
 public class LevelRendererMixin {
    @Inject(
-      method = {"method_62210(Lnet/minecraft/class_4597$class_4598;Lnet/minecraft/class_4587;ZLnet/minecraft/class_11658;)V"},
+      method = {"renderTargetBlockOutline"},
       at = {@At("HEAD")},
       cancellable = true
    )
