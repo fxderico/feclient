@@ -39,6 +39,8 @@ import dev.fede.nyx.module.modules.config.ConfigsModule;
 import dev.fede.nyx.module.modules.donutsmp.AntiTrapModule;
 import dev.fede.nyx.module.modules.donutsmp.AutoSell;
 import dev.fede.nyx.module.modules.donutsmp.AutoSpawnerSellModule;
+import dev.fede.nyx.module.modules.donutsmp.BaseAlertModule;
+import dev.fede.nyx.module.modules.donutsmp.PearlAlertModule;
 import dev.fede.nyx.module.modules.donutsmp.BlockEntityDebugModule;
 import dev.fede.nyx.module.modules.donutsmp.ChunkFinderModule;
 import dev.fede.nyx.module.modules.donutsmp.HoleESPModule;
@@ -244,6 +246,8 @@ public final class ModuleManager {
       this.run2(new NicknameModule());
       this.run2(new AutoSell());
       this.run2(new AutoSpawnerSellModule());
+      this.run2(new BaseAlertModule());
+      this.run2(new PearlAlertModule());
       this.run2(new AntiTrapModule());
       this.run2(new ItemDropperModule());
       this.run2(new SpawnerProtectModule());
