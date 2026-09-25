@@ -83,25 +83,34 @@ public abstract class SodiumXRayCullMixin {
       });
    }
 
-   @Inject(method = "shouldDrawSide(Lnet/minecraft/util/math/Direction;)Z", at = @At("RETURN"), cancellable = true)
-   private void fe$sodiumXrayCull(Direction direction, CallbackInfoReturnable<Boolean> cir) {
-      if (!XRayModule.ACTIVE || this.state == null || this.pos == null) {
+   // Sodium 0.8.x: renderQuad() gates every terrain face through isFaceCulled(face),
+   // which is THE culling decision (it caches shouldDrawSide internally). Hooking it
+   // at HEAD is the robust place — bypasses the enableCulling short-circuit and the
+   // internal result cache. Name-only target so remap=false can't trip on the
+   // yarn-vs-intermediary Direction descriptor.
+   //   isFaceCulled == true  -> face hidden (not drawn)
+   //   isFaceCulled == false -> face drawn
+   @Inject(method = "isFaceCulled", at = @At("HEAD"), cancellable = true)
+   private void fe$sodiumXrayCull(Direction face, CallbackInfoReturnable<Boolean> cir) {
+      if (!XRayModule.ACTIVE || this.state == null || this.pos == null || face == null) {
          return;
       }
 
-      boolean selfVisible = XRayModule.isVisible(this.state.getBlock());
-      if (!selfVisible) {
-         cir.setReturnValue(false);
+      // non-whitelisted block: hide every face of it
+      if (!XRayModule.isVisible(this.state.getBlock())) {
+         cir.setReturnValue(true);
          return;
       }
 
+      // ore/whitelisted block sitting against a hidden neighbour: force the face
+      // to draw so the ore is visible through the culled terrain
       try {
          Object levelHolder = levelField().get(this);
          if (levelHolder == null) return;
          Method getBlockState = getBlockStateMethod(levelHolder);
-         BlockState adjacentState = (BlockState) getBlockState.invoke(levelHolder, this.pos.offset(direction));
+         BlockState adjacentState = (BlockState) getBlockState.invoke(levelHolder, this.pos.offset(face));
          if (!XRayModule.isVisible(adjacentState.getBlock())) {
-            cir.setReturnValue(true);
+            cir.setReturnValue(false);
          }
       } catch (Exception e) {
          // never let a reflection surprise crash rendering — worst case xray
