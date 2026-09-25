@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/mixin/LightTextureMixin.java": {
-    "mtime": 1788814202.5246768,
-    "seen": 1789908223.701907,
-    "ast_hash": "2518c3917c50d918bf53c189882b4e9c",
+    "mtime": 1790364034.5867572,
+    "seen": 1790364143.2542772,
+    "ast_hash": "9d589d09b0570f37b56f1a2640a39bc3",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/mixin/LivingEntityJumpMixin.java": {
@@ -3390,9 +3390,9 @@
     "semantic_hash": ""
   },
   "src/main/resources/feclient.mixins.json": {
-    "mtime": 1789921825.2984128,
-    "seen": 1789921984.1138477,
-    "ast_hash": "191a7693b0d67249a7c26c3ceefeb468",
+    "mtime": 1790364057.3550973,
+    "seen": 1790364143.2549922,
+    "ast_hash": "e0256cd2d930707be49d3ed137eb068e",
     "semantic_hash": ""
   },
   "src/main/resources/feclient.nyx.mixins.json": {
@@ -3849,6 +3849,12 @@
     "mtime": 1790362966.9120553,
     "seen": 1790363021.1521862,
     "ast_hash": "1718f448e9ba1e9f5bc0b9d6e4da4d25",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/mixin/ScoreboardTeamSpamMixin.java": {
+    "mtime": 1790364043.89063,
+    "seen": 1790364143.2542918,
+    "ast_hash": "f05cbff80d8266495f7a3c9f6ecfb889",
     "semantic_hash": ""
   }
 }
