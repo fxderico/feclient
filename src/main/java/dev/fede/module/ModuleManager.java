@@ -355,9 +355,16 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.donutsmp.PrimeChunkFinderModule(),Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.SeedChunkFinder(),      Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.BlockEntityDebugModule(),Category.DONUT);
-        nyx(new dev.fede.nyx.module.modules.donutsmp.LightFinderModule(),    Category.DONUT);
-        nyx(new dev.fede.nyx.module.modules.donutsmp.LightDebugModule(),     Category.DONUT);
+        // LightFinder + LightDebug merged into LightBaseFinder (fuses server+client
+        // light and clusters lit cells into base markers). Old two retired but kept
+        // on disk — flip these back on if the merge ever regresses.
+        // nyx(new dev.fede.nyx.module.modules.donutsmp.LightFinderModule(),    Category.DONUT);
+        // nyx(new dev.fede.nyx.module.modules.donutsmp.LightDebugModule(),     Category.DONUT);
+        nyx(new dev.fede.nyx.module.modules.donutsmp.LightBaseFinderModule(), Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.ChunkFinderModule(),    Category.DONUT);
+        nyx(new dev.fede.nyx.module.modules.donutsmp.OGChunkFinderModule(),  Category.DONUT);
+        nyx(new dev.fede.nyx.module.modules.donutsmp.NeonChunkFinderModule(),Category.DONUT);
+        nyx(new dev.fede.nyx.module.modules.donutsmp.AmethystChunkFinderModule(), Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.PlayerChunksModule(),   Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.HoleESPModule(),        Category.DONUT);
         nyx(new dev.fede.nyx.module.modules.donutsmp.NetheriteFinderModule(),Category.DONUT);
