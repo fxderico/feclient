@@ -279,6 +279,8 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.movement.SpiderModule(),       Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.StepModule(),         Category.MOVEMENT);
         nyx(new dev.fede.nyx.module.modules.movement.StrafeModule(),       Category.MOVEMENT);
+        nyx(new dev.fede.nyx.module.modules.movement.WTapModule(),         Category.MOVEMENT);
+        nyx(new dev.fede.nyx.module.modules.movement.STapModule(),         Category.MOVEMENT);
 
         // PLAYER
         nyx(new dev.fede.nyx.module.modules.player.DeathCoordinatesModule(), Category.PLAYER);
