@@ -612,9 +612,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/ModuleManager.java": {
-    "mtime": 1790708135.1324148,
-    "seen": 1790708199.5230281,
-    "ast_hash": "39153580a6f77a6bf4ebddce5a28beaf",
+    "mtime": 1790974988.68491,
+    "seen": 1790975188.6323676,
+    "ast_hash": "d08f4a7649396e58e32ace69998b145c",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/Modules.java": {
@@ -3885,6 +3885,24 @@
     "mtime": 1790707266.5327718,
     "seen": 1790708199.523738,
     "ast_hash": "eff06837d05c12fb841a06166f83e44c",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/STapModule.java": {
+    "mtime": 1790714359.4151678,
+    "seen": 1790975188.6327827,
+    "ast_hash": "516db7005f93eb701f8d363eac4cfdfd",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/movement/WTapModule.java": {
+    "mtime": 1790714412.2874072,
+    "seen": 1790975188.6327965,
+    "ast_hash": "0bf93d869c39c77103f1f383f1005c36",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/world/SchematicBuilderModule.java": {
+    "mtime": 1790975116.1639671,
+    "seen": 1790975188.6328914,
+    "ast_hash": "179ec8c72d5cb37401057b608f8b966e",
     "semantic_hash": ""
   }
 }
