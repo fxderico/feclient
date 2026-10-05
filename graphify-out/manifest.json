@@ -3912,9 +3912,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/nyx/module/modules/client/VersionSpooferModule.java": {
-    "mtime": 1791235283.2241046,
-    "seen": 1791235378.4930499,
-    "ast_hash": "c111231362d40db2a33ff715a146e99b",
+    "mtime": 1791235991.8725045,
+    "seen": 1791236064.5787916,
+    "ast_hash": "d5a9672a66bc1c2d36bbee6a53eb194e",
     "semantic_hash": ""
   }
 }
