@@ -400,6 +400,7 @@ public final class ModuleManager {
         nyx(new dev.fede.nyx.module.modules.client.ThemeSelectorModule(),   Category.CLIENT);
         nyx(new dev.fede.nyx.module.modules.client.ChromaXPModule(),        Category.CLIENT);
         nyx(new dev.fede.nyx.module.modules.client.ClickSounds(),           Category.CLIENT);
+        nyx(new dev.fede.nyx.module.modules.client.VersionSpooferModule(),  Category.CLIENT);
         nyx(new dev.fede.nyx.module.modules.config.ConfigsModule(),         Category.CLIENT);
     }
 

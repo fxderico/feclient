@@ -612,9 +612,9 @@
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/ModuleManager.java": {
-    "mtime": 1790974988.68491,
-    "seen": 1790975188.6323676,
-    "ast_hash": "d08f4a7649396e58e32ace69998b145c",
+    "mtime": 1791235299.7328176,
+    "seen": 1791235378.49281,
+    "ast_hash": "0538e00a24e17bbff9db67b3c4793d15",
     "semantic_hash": ""
   },
   "src/main/java/dev/fede/module/Modules.java": {
@@ -3396,9 +3396,9 @@
     "semantic_hash": ""
   },
   "src/main/resources/feclient.nyx.mixins.json": {
-    "mtime": 1790192818.940621,
-    "seen": 1790193090.704312,
-    "ast_hash": "c6d6579e3c3042d98d1a76fc0209bb9f",
+    "mtime": 1791235296.0780783,
+    "seen": 1791235378.4936366,
+    "ast_hash": "a5ef615c143dc3abf7d79bc858426a23",
     "semantic_hash": ""
   },
   "src/main/resources/feclient.sodium.mixins.json": {
@@ -3903,6 +3903,18 @@
     "mtime": 1790975116.1639671,
     "seen": 1790975188.6328914,
     "ast_hash": "179ec8c72d5cb37401057b608f8b966e",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/mixin/ClientBrandRetrieverMixin.java": {
+    "mtime": 1791235290.1592393,
+    "seen": 1791235378.4929478,
+    "ast_hash": "88375306199aff649ddf025c3dcb6dfc",
+    "semantic_hash": ""
+  },
+  "src/main/java/dev/fede/nyx/module/modules/client/VersionSpooferModule.java": {
+    "mtime": 1791235283.2241046,
+    "seen": 1791235378.4930499,
+    "ast_hash": "c111231362d40db2a33ff715a146e99b",
     "semantic_hash": ""
   }
 }
